@@ -1,0 +1,120 @@
+{
+  "level_1_patterns": [
+    {
+      "id": "pat_000_greeting",
+      "pattern": "Hello, I am {name}",
+      "translation": "مرحباً، أنا {اسم}",
+      "slots": [{"name": "name", "type": "noun", "examples": ["Ahmed", "Sara", "Mohammed", "Fatima"]}],
+      "variations": {"question": "Are you {name}?", "negative": "I am not {name}", "polite": "My name is {name}"},
+      "cefr_level": "A0",
+      "phase": 0,
+      "related_patterns": ["pat_001"],
+      "teaching_order": 0
+    },
+    {
+      "id": "pat_001",
+      "pattern": "I am {name}",
+      "translation": "أنا {اسم}",
+      "slots": [
+        {
+          "name": "name",
+          "type": "noun",
+          "examples": ["Ahmed", "Sara", "Mohammed", "Fatima"]
+        }
+      ],
+      "variations": {
+        "question": "Are you {name}?",
+        "negative": "I am not {name}",
+        "polite": "My name is {name}"
+      },
+      "cefr_level": "A1",
+      "phase": 1,
+      "related_patterns": ["pat_002"],
+      "teaching_order": 1
+    },
+    {
+      "id": "pat_002",
+      "pattern": "I would like {noun}",
+      "translation": "أريد {اسم}",
+      "slots": [
+        {
+          "name": "noun",
+          "type": "noun",
+          "examples": ["a window seat", "a coffee", "a burger", "a room"]
+        }
+      ],
+      "variations": {
+        "question": "Would you like {noun}?",
+        "negative": "I would not like {noun}",
+        "polite": "I would like {noun}, please"
+      },
+      "cefr_level": "A1",
+      "phase": 1,
+      "related_patterns": ["pat_003"],
+      "teaching_order": 2
+    },
+    {
+      "id": "pat_003",
+      "pattern": "Can I have {noun}?",
+      "translation": "هل يمكنني الحصول على {اسم}؟",
+      "slots": [
+        {
+          "name": "noun",
+          "type": "noun",
+          "examples": ["the menu", "a glass of water", "the bill", "a receipt"]
+        }
+      ],
+      "variations": {
+        "question": "Can you have {noun}?",
+        "negative": "I cannot have {noun}",
+        "polite": "Could I have {noun}, please?"
+      },
+      "cefr_level": "A1",
+      "phase": 2,
+      "related_patterns": ["pat_002"],
+      "teaching_order": 3
+    },
+    {
+      "id": "pat_004",
+      "pattern": "How much is {item}?",
+      "translation": "كم سعر {شيء}؟",
+      "slots": [
+        {
+          "name": "item",
+          "type": "noun",
+          "examples": ["the ticket", "the room", "this shirt", "the burger"]
+        }
+      ],
+      "variations": {
+        "question": "How much are {items}?",
+        "negative": null,
+        "polite": "Could you tell me the price of {item}?"
+      },
+      "cefr_level": "A1",
+      "phase": 2,
+      "related_patterns": ["pat_005"],
+      "teaching_order": 4
+    },
+    {
+      "id": "pat_005",
+      "pattern": "Where is {place}?",
+      "translation": "أين {مكان}؟",
+      "slots": [
+        {
+          "name": "place",
+          "type": "place",
+          "examples": ["the gate", "the bathroom", "the restaurant", "my room"]
+        }
+      ],
+      "variations": {
+        "question": "Where are {places}?",
+        "negative": null,
+        "polite": "Could you tell me where {place} is?"
+      },
+      "cefr_level": "A1+",
+      "phase": 3,
+      "related_patterns": ["pat_004"],
+      "teaching_order": 5
+    }
+  ]
+}

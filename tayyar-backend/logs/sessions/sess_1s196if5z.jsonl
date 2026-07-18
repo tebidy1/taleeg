@@ -1,0 +1,38 @@
+{"t":"2026-07-18T12:38:16.374Z","type":"session_start","studentId":"student_123","missionId":"mission_01_voice_gate"}
+{"t":"2026-07-18T12:38:17.240Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-18T12:38:17.245Z","type":"user_turn_end"}
+{"t":"2026-07-18T12:38:17.589Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-18T12:38:17.652Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-18T12:38:17.731Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-18T12:38:17.923Z","type":"ai_transcript","text":" — الرحلة"}
+{"t":"2026-07-18T12:38:18.076Z","type":"ai_transcript","text":" ٠٠١"}
+{"t":"2026-07-18T12:38:18.304Z","type":"ai_transcript","text":" إلى"}
+{"t":"2026-07-18T12:38:18.421Z","type":"ai_transcript","text":" دبي"}
+{"t":"2026-07-18T12:38:18.523Z","type":"ai_transcript","text":" جاهزة"}
+{"t":"2026-07-18T12:38:18.692Z","type":"ai_transcript","text":" للإقلاع!"}
+{"t":"2026-07-18T12:38:18.911Z","type":"ai_transcript","text":"\n\nفيصل... وصلك"}
+{"t":"2026-07-18T12:38:19.188Z","type":"ai_transcript","text":" شي"}
+{"t":"2026-07-18T12:38:19.225Z","type":"ai_transcript","text":" ما"}
+{"t":"2026-07-18T12:38:19.409Z","type":"ai_transcript","text":" يوصل"}
+{"t":"2026-07-18T12:38:19.428Z","type":"ai_transcript","text":" إلا"}
+{"t":"2026-07-18T12:38:19.494Z","type":"ai_transcript","text":" لواحد"}
+{"t":"2026-07-18T12:38:19.663Z","type":"ai_transcript","text":" بالمليون."}
+{"t":"2026-07-18T12:38:19.830Z","type":"ai_transcript","text":" رسالة"}
+{"t":"2026-07-18T12:38:19.973Z","type":"ai_transcript","text":" اختيار"}
+{"t":"2026-07-18T12:38:20.122Z","type":"ai_transcript","text":" رسمية —"}
+{"t":"2026-07-18T12:38:20.363Z","type":"ai_transcript","text":" ومعها"}
+{"t":"2026-07-18T12:38:20.406Z","type":"ai_transcript","text":" مغلف"}
+{"t":"2026-07-18T12:38:20.538Z","type":"ai_transcript","text":" ذهبي"}
+{"t":"2026-07-18T12:38:20.590Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-18T12:38:20.626Z","type":"ai_transcript","text":" مقفل،"}
+{"t":"2026-07-18T12:38:20.755Z","type":"ai_transcript","text":" مكتوب"}
+{"t":"2026-07-18T12:38:20.893Z","type":"ai_transcript","text":" عليه:"}
+{"t":"2026-07-18T12:38:21.063Z","type":"ai_transcript","text":" لا"}
+{"t":"2026-07-18T12:38:21.106Z","type":"ai_transcript","text":" يُفتح"}
+{"t":"2026-07-18T12:38:21.207Z","type":"ai_transcript","text":" إلا"}
+{"t":"2026-07-18T12:38:21.358Z","type":"ai_transcript","text":" في دبي."}
+{"t":"2026-07-18T12:38:31.189Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-18T12:38:32.381Z","type":"turn_complete"}
+{"t":"2026-07-18T12:38:56.226Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-18T12:39:56.288Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-18T12:39:56.297Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}

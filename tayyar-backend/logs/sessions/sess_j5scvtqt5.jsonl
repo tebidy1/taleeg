@@ -1,0 +1,50 @@
+{"t":"2026-07-16T14:43:06.697Z","type":"session_start","studentId":"student_123","missionId":"mission_01_voice_gate"}
+{"t":"2026-07-16T14:43:07.387Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-16T14:43:07.756Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-16T14:43:07.852Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-16T14:43:08.003Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-16T14:43:08.435Z","type":"ai_transcript","text":" — الرحلة"}
+{"t":"2026-07-16T14:43:08.590Z","type":"ai_transcript","text":" ٠٠١"}
+{"t":"2026-07-16T14:43:08.794Z","type":"ai_transcript","text":" إلى"}
+{"t":"2026-07-16T14:43:08.882Z","type":"ai_transcript","text":" دبي"}
+{"t":"2026-07-16T14:43:08.992Z","type":"ai_transcript","text":" جاهزة"}
+{"t":"2026-07-16T14:43:09.321Z","type":"ai_transcript","text":" للإقلاع!"}
+{"t":"2026-07-16T14:43:09.541Z","type":"ai_transcript","text":"\n\nفيصل... وصلك"}
+{"t":"2026-07-16T14:43:09.940Z","type":"ai_transcript","text":" شي"}
+{"t":"2026-07-16T14:43:10.079Z","type":"ai_transcript","text":" ما يوصل"}
+{"t":"2026-07-16T14:43:10.125Z","type":"ai_transcript","text":" إلا"}
+{"t":"2026-07-16T14:43:10.335Z","type":"ai_transcript","text":" لواحد"}
+{"t":"2026-07-16T14:43:10.670Z","type":"ai_transcript","text":" بالمليون."}
+{"t":"2026-07-16T14:43:10.809Z","type":"ai_transcript","text":" رسالة"}
+{"t":"2026-07-16T14:43:10.979Z","type":"ai_transcript","text":" اختيار"}
+{"t":"2026-07-16T14:43:11.154Z","type":"ai_transcript","text":" رسمية"}
+{"t":"2026-07-16T14:43:11.258Z","type":"ai_transcript","text":" — ومعها"}
+{"t":"2026-07-16T14:43:11.420Z","type":"ai_transcript","text":" مغلف"}
+{"t":"2026-07-16T14:43:11.677Z","type":"ai_transcript","text":" ذهبي"}
+{"t":"2026-07-16T14:43:11.885Z","type":"ai_transcript","text":" مقفل،"}
+{"t":"2026-07-16T14:43:12.048Z","type":"ai_transcript","text":" مكتوب"}
+{"t":"2026-07-16T14:43:12.201Z","type":"ai_transcript","text":" عليه:"}
+{"t":"2026-07-16T14:43:12.422Z","type":"ai_transcript","text":" لا يُفتح"}
+{"t":"2026-07-16T14:43:12.689Z","type":"ai_transcript","text":" إلا"}
+{"t":"2026-07-16T14:43:12.870Z","type":"ai_transcript","text":" في دبي."}
+{"t":"2026-07-16T14:43:13.026Z","type":"ai_transcript","text":" هل أنت"}
+{"t":"2026-07-16T14:43:13.230Z","type":"ai_transcript","text":" مستعد"}
+{"t":"2026-07-16T14:43:13.327Z","type":"ai_transcript","text":" لفتح"}
+{"t":"2026-07-16T14:43:13.513Z","type":"ai_transcript","text":" المغلف"}
+{"t":"2026-07-16T14:43:13.812Z","type":"ai_transcript","text":" أم تود"}
+{"t":"2026-07-16T14:43:13.934Z","type":"ai_transcript","text":" أن نكتشف"}
+{"t":"2026-07-16T14:43:14.057Z","type":"ai_transcript","text":" محتواه"}
+{"t":"2026-07-16T14:43:14.132Z","type":"ai_transcript","text":" قبل"}
+{"t":"2026-07-16T14:43:14.228Z","type":"ai_transcript","text":" الإقلاع؟"}
+{"t":"2026-07-16T14:43:21.714Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-16T14:43:27.166Z","type":"turn_complete"}
+{"t":"2026-07-16T14:43:46.743Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-16T14:44:46.833Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-16T14:44:46.858Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}
+{"t":"2026-07-16T14:48:22.255Z","type":"phase_change","phase":"multi_context"}
+{"t":"2026-07-16T14:48:22.281Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (multi_context). Finish your current step first, then transiti"}
+{"t":"2026-07-16T14:49:07.324Z","type":"phase_change","phase":"victory_close"}
+{"t":"2026-07-16T14:49:07.332Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (victory_close). Finish your current step first, then transiti"}
+{"t":"2026-07-16T14:49:37.355Z","type":"directive","active":true,"preview":"TIME IS UP. Move to Victory Close NOW: ask for the hero word, one-sentence celeb"}
+{"t":"2026-07-16T14:50:07.395Z","type":"phase_change","phase":"end"}
+{"t":"2026-07-16T14:51:07.452Z","type":"session_end","reason":"time_limit","elapsed":480}

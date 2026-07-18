@@ -1,0 +1,23 @@
+{"t":"2026-07-17T21:57:55.156Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-17T21:57:55.913Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-17T21:57:55.929Z","type":"user_turn_end"}
+{"t":"2026-07-17T21:57:56.224Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-17T21:57:56.454Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-17T21:57:56.614Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-17T21:57:56.664Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-17T21:57:56.830Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-17T21:57:56.949Z","type":"ai_transcript","text":" فيصل!"}
+{"t":"2026-07-17T21:57:57.234Z","type":"ai_transcript","text":" المقعد"}
+{"t":"2026-07-17T21:57:57.297Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-17T21:57:57.642Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-17T21:57:57.649Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-17T21:57:57.655Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-17T21:57:57.690Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-17T21:57:57.918Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-17T21:57:58.301Z","type":"ai_transcript","text":" اللي هناك..."}
+{"t":"2026-07-17T21:57:58.309Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-17T21:57:58.320Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-17T21:57:58.432Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-17T21:58:05.814Z","type":"turn_complete"}
+{"t":"2026-07-17T21:58:10.174Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-17T21:58:35.196Z","type":"phase_change","phase":"warmup"}

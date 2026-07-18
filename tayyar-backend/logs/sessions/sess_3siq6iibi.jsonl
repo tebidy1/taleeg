@@ -1,0 +1,29 @@
+{"t":"2026-07-16T16:30:36.837Z","type":"session_start","studentId":"student_123","missionId":"mission_01_voice_gate"}
+{"t":"2026-07-16T16:30:38.241Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-16T16:30:38.307Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-16T16:30:38.326Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-16T16:30:38.328Z","type":"interrupted"}
+{"t":"2026-07-16T16:30:38.330Z","type":"turn_complete"}
+{"t":"2026-07-16T16:30:43.566Z","type":"user_transcript","text":"يالون، أين أنت؟ تعالي يا لولو. تعالي يا"}
+{"t":"2026-07-16T16:30:43.584Z","type":"ai_transcript","text":"فيصل... وصلك"}
+{"t":"2026-07-16T16:30:43.763Z","type":"ai_transcript","text":" شي"}
+{"t":"2026-07-16T16:30:43.783Z","type":"ai_transcript","text":" ما"}
+{"t":"2026-07-16T16:30:43.821Z","type":"ai_transcript","text":" يوصل"}
+{"t":"2026-07-16T16:30:44.095Z","type":"ai_transcript","text":" إلا"}
+{"t":"2026-07-16T16:30:44.108Z","type":"ai_transcript","text":" لواحد"}
+{"t":"2026-07-16T16:30:44.323Z","type":"ai_transcript","text":" بالمليون."}
+{"t":"2026-07-16T16:30:44.357Z","type":"ai_transcript","text":" رسالة"}
+{"t":"2026-07-16T16:30:44.393Z","type":"ai_transcript","text":" اختيار"}
+{"t":"2026-07-16T16:30:44.912Z","type":"ai_transcript","text":" رسمية"}
+{"t":"2026-07-16T16:30:44.917Z","type":"ai_transcript","text":" ومعها"}
+{"t":"2026-07-16T16:30:45.160Z","type":"ai_transcript","text":" مغلف"}
+{"t":"2026-07-16T16:30:45.164Z","type":"ai_transcript","text":" ذهبي"}
+{"t":"2026-07-16T16:30:45.170Z","type":"ai_transcript","text":" مقفل،"}
+{"t":"2026-07-16T16:30:45.175Z","type":"ai_transcript","text":" مكتوب"}
+{"t":"2026-07-16T16:30:46.258Z","type":"ai_transcript","text":" عليه:"}
+{"t":"2026-07-16T16:30:46.261Z","type":"ai_transcript","text":" لا"}
+{"t":"2026-07-16T16:30:46.765Z","type":"ai_transcript","text":" يُفتح"}
+{"t":"2026-07-16T16:30:46.769Z","type":"ai_transcript","text":" إلا"}
+{"t":"2026-07-16T16:30:46.773Z","type":"ai_transcript","text":" في دبي."}
+{"t":"2026-07-16T16:30:51.849Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-16T16:30:53.482Z","type":"turn_complete"}

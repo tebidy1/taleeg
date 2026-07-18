@@ -1,0 +1,244 @@
+{
+  "level_1_vocabulary": [
+    {
+      "id": "voc_001",
+      "word": "passport",
+      "translation": "جواز السفر",
+      "pattern_id": "pat_001",
+      "phoneme_focus": ["/p/"],
+      "context_examples": ["Here is my passport", "Do you have your passport?"],
+      "cefr_level": "A1",
+      "missions": ["mission_01_airport"]
+    },
+    {
+      "id": "voc_002",
+      "word": "ticket",
+      "translation": "تذكرة",
+      "pattern_id": "pat_002",
+      "phoneme_focus": ["/θ/"],
+      "context_examples": ["I would like a ticket", "Here is your ticket"],
+      "cefr_level": "A1",
+      "missions": ["mission_01_airport", "mission_02_airplane"]
+    },
+    {
+      "id": "voc_003",
+      "word": "window seat",
+      "translation": "مقعد بجوار النافذة",
+      "pattern_id": "pat_002",
+      "phoneme_focus": ["/v/"],
+      "context_examples": ["I would like a window seat", "Window or aisle seat?"],
+      "cefr_level": "A1",
+      "missions": ["mission_01_airport"]
+    },
+    {
+      "id": "voc_004",
+      "word": "boarding pass",
+      "translation": "بطاقة الصعود",
+      "pattern_id": "pat_003",
+      "phoneme_focus": ["/p/", "/ŋ/"],
+      "context_examples": ["Can I have my boarding pass?", "Here is your boarding pass"],
+      "cefr_level": "A1",
+      "missions": ["mission_01_airport"]
+    },
+    {
+      "id": "voc_005",
+      "word": "gate",
+      "translation": "بوابة",
+      "pattern_id": "pat_005",
+      "phoneme_focus": ["/r/"],
+      "context_examples": ["Where is gate 22?", "Gate 22 is on your right"],
+      "cefr_level": "A1",
+      "missions": ["mission_01_airport"]
+    },
+    {
+      "id": "voc_006",
+      "word": "water",
+      "translation": "ماء",
+      "pattern_id": "pat_003",
+      "phoneme_focus": ["/r/"],
+      "context_examples": ["Can I have some water?", "Would you like water?"],
+      "cefr_level": "A1",
+      "missions": ["mission_02_airplane", "mission_04_restaurant"]
+    },
+    {
+      "id": "voc_007",
+      "word": "juice",
+      "translation": "عصير",
+      "pattern_id": "pat_002",
+      "phoneme_focus": [],
+      "context_examples": ["I would like orange juice", "Apple or orange juice?"],
+      "cefr_level": "A1",
+      "missions": ["mission_02_airplane", "mission_04_restaurant"]
+    },
+    {
+      "id": "voc_008",
+      "word": "chicken",
+      "translation": "دجاج",
+      "pattern_id": "pat_002",
+      "phoneme_focus": [],
+      "context_examples": ["I would like the chicken", "Chicken or beef?"],
+      "cefr_level": "A1",
+      "missions": ["mission_02_airplane", "mission_04_restaurant"]
+    },
+    {
+      "id": "voc_009",
+      "word": "beef",
+      "translation": "لحم بقري",
+      "pattern_id": "pat_002",
+      "phoneme_focus": ["/v/"],
+      "context_examples": ["I would like beef", "Chicken or beef?"],
+      "cefr_level": "A1",
+      "missions": ["mission_02_airplane"]
+    },
+    {
+      "id": "voc_010",
+      "word": "blanket",
+      "translation": "بطانية",
+      "pattern_id": "pat_003",
+      "phoneme_focus": ["/ŋ/"],
+      "context_examples": ["Can I have a blanket?", "Here is your blanket"],
+      "cefr_level": "A1",
+      "missions": ["mission_02_airplane"]
+    },
+    {
+      "id": "voc_011",
+      "word": "room",
+      "translation": "غرفة",
+      "pattern_id": "pat_002",
+      "phoneme_focus": ["/r/"],
+      "context_examples": ["I would like a room", "How many nights?"],
+      "cefr_level": "A1",
+      "missions": ["mission_03_hotel"]
+    },
+    {
+      "id": "voc_012",
+      "word": "key",
+      "translation": "مفتاح",
+      "pattern_id": "pat_003",
+      "phoneme_focus": [],
+      "context_examples": ["Can I have my key?", "Here is your room key"],
+      "cefr_level": "A1",
+      "missions": ["mission_03_hotel"]
+    },
+    {
+      "id": "voc_013",
+      "word": "breakfast",
+      "translation": "فطور",
+      "pattern_id": "pat_005",
+      "phoneme_focus": ["/r/"],
+      "context_examples": ["Where is breakfast?", "Breakfast is from 7 to 10"],
+      "cefr_level": "A1",
+      "missions": ["mission_03_hotel"]
+    },
+    {
+      "id": "voc_014",
+      "word": "wifi",
+      "translation": "واي فاي",
+      "pattern_id": "pat_004",
+      "phoneme_focus": ["/v/"],
+      "context_examples": ["How much is wifi?", "Wifi is free"],
+      "cefr_level": "A1",
+      "missions": ["mission_03_hotel"]
+    },
+    {
+      "id": "voc_015",
+      "word": "menu",
+      "translation": "قائمة الطعام",
+      "pattern_id": "pat_003",
+      "phoneme_focus": [],
+      "context_examples": ["Can I have the menu?", "Here is the menu"],
+      "cefr_level": "A1",
+      "missions": ["mission_04_restaurant"]
+    },
+    {
+      "id": "voc_016",
+      "word": "burger",
+      "translation": "برجر",
+      "pattern_id": "pat_002",
+      "phoneme_focus": ["/r/"],
+      "context_examples": ["I would like a burger", "Would you like a burger?"],
+      "cefr_level": "A1",
+      "missions": ["mission_04_restaurant"]
+    },
+    {
+      "id": "voc_017",
+      "word": "the bill",
+      "translation": "الفاتورة",
+      "pattern_id": "pat_003",
+      "phoneme_focus": ["/θ/"],
+      "context_examples": ["Can I have the bill?", "Here is the bill"],
+      "cefr_level": "A1",
+      "missions": ["mission_04_restaurant"]
+    },
+    {
+      "id": "voc_018",
+      "word": "delicious",
+      "translation": "لذيذ",
+      "pattern_id": null,
+      "phoneme_focus": [],
+      "context_examples": ["This is delicious", "Very delicious"],
+      "cefr_level": "A1+",
+      "missions": ["mission_04_restaurant"]
+    },
+    {
+      "id": "voc_019",
+      "word": "shirt",
+      "translation": "قميص",
+      "pattern_id": "pat_002",
+      "phoneme_focus": ["/r/"],
+      "context_examples": ["I would like this shirt", "What size shirt?"],
+      "cefr_level": "A1",
+      "missions": ["mission_05_shopping"]
+    },
+    {
+      "id": "voc_020",
+      "word": "size",
+      "translation": "مقاس",
+      "pattern_id": "pat_004",
+      "phoneme_focus": [],
+      "context_examples": ["What size?", "Size medium"],
+      "cefr_level": "A1",
+      "missions": ["mission_05_shopping"]
+    },
+    {
+      "id": "voc_021",
+      "word": "price",
+      "translation": "سعر",
+      "pattern_id": "pat_004",
+      "phoneme_focus": ["/p/"],
+      "context_examples": ["What is the price?", "The price is 50 riyals"],
+      "cefr_level": "A1",
+      "missions": ["mission_05_shopping"]
+    },
+    {
+      "id": "voc_022",
+      "word": "fitting room",
+      "translation": "غرفة القياس",
+      "pattern_id": "pat_005",
+      "phoneme_focus": ["/θ/"],
+      "context_examples": ["Where is the fitting room?", "The fitting room is there"],
+      "cefr_level": "A1+",
+      "missions": ["mission_05_shopping"]
+    },
+    {
+      "id": "voc_023",
+      "word": "receipt",
+      "translation": "إيصال",
+      "pattern_id": "pat_003",
+      "phoneme_focus": ["/r/"],
+      "context_examples": ["Can I have a receipt?", "Here is your receipt"],
+      "cefr_level": "A1",
+      "missions": ["mission_05_shopping"]
+    },
+    {
+      "id": "voc_024",
+      "word": "thank you",
+      "translation": "شكراً",
+      "pattern_id": null,
+      "phoneme_focus": ["/θ/"],
+      "context_examples": ["Thank you", "Thank you very much"],
+      "cefr_level": "A1",
+      "missions": ["mission_01_airport", "mission_02_airplane", "mission_03_hotel", "mission_04_restaurant", "mission_05_shopping"]
+    }
+  ]
+}

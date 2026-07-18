@@ -1,0 +1,24 @@
+{"t":"2026-07-16T21:41:35.857Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-16T21:41:36.546Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-16T21:41:36.896Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-16T21:41:37.035Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-16T21:41:37.157Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-16T21:41:37.333Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-16T21:41:37.413Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-16T21:41:37.660Z","type":"ai_transcript","text":" فيصل!"}
+{"t":"2026-07-16T21:41:37.861Z","type":"ai_transcript","text":" المقعد"}
+{"t":"2026-07-16T21:41:38.039Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-16T21:41:38.182Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-16T21:41:38.293Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-16T21:41:38.356Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-16T21:41:38.706Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-16T21:41:38.709Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-16T21:41:38.884Z","type":"ai_transcript","text":" اللي هناك..."}
+{"t":"2026-07-16T21:41:39.266Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-16T21:41:39.268Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-16T21:41:39.279Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-16T21:41:47.231Z","type":"turn_complete"}
+{"t":"2026-07-16T21:41:50.865Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-16T21:42:15.925Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-16T21:43:16.015Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-16T21:43:16.018Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}

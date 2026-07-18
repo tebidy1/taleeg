@@ -1,0 +1,44 @@
+{"t":"2026-07-15T18:36:28.890Z","type":"session_start","studentId":"student_123","missionId":"mission_00_first_words"}
+{"t":"2026-07-15T18:36:29.747Z","type":"ai_transcript","text":"أهلاً يابطل!"}
+{"t":"2026-07-15T18:36:30.106Z","type":"ai_transcript","text":" أنا"}
+{"t":"2026-07-15T18:36:30.333Z","type":"ai_transcript","text":" الكابتن."}
+{"t":"2026-07-15T18:36:30.383Z","type":"ai_transcript","text":" اليوم"}
+{"t":"2026-07-15T18:36:30.674Z","type":"ai_transcript","text":" نتعلم"}
+{"t":"2026-07-15T18:36:30.873Z","type":"ai_transcript","text":" أول"}
+{"t":"2026-07-15T18:36:30.905Z","type":"ai_transcript","text":" جملة"}
+{"t":"2026-07-15T18:36:31.043Z","type":"ai_transcript","text":" إنجليزية"}
+{"t":"2026-07-15T18:36:31.110Z","type":"ai_transcript","text":" في حياتك."}
+{"t":"2026-07-15T18:36:31.319Z","type":"ai_transcript","text":" مستعد؟"}
+{"t":"2026-07-15T18:36:31.597Z","type":"ai_transcript","text":" يالا!"}
+{"t":"2026-07-15T18:36:31.736Z","type":"ai_transcript","text":" اليوم"}
+{"t":"2026-07-15T18:36:31.948Z","type":"ai_transcript","text":" 3"}
+{"t":"2026-07-15T18:36:32.145Z","type":"ai_transcript","text":" كلمات"}
+{"t":"2026-07-15T18:36:32.177Z","type":"ai_transcript","text":" +"}
+{"t":"2026-07-15T18:36:32.312Z","type":"ai_transcript","text":" جملة"}
+{"t":"2026-07-15T18:36:32.429Z","type":"ai_transcript","text":" واحدة."}
+{"t":"2026-07-15T18:36:32.541Z","type":"ai_transcript","text":" اسمعهم"}
+{"t":"2026-07-15T18:36:32.660Z","type":"ai_transcript","text":" كلهم:"}
+{"t":"2026-07-15T18:36:32.818Z","type":"ai_transcript","text":" Hello..."}
+{"t":"2026-07-15T18:36:33.127Z","type":"ai_transcript","text":" Hi..."}
+{"t":"2026-07-15T18:36:33.305Z","type":"ai_transcript","text":" Bye..."}
+{"t":"2026-07-15T18:36:33.560Z","type":"ai_transcript","text":" وجملتنا:"}
+{"t":"2026-07-15T18:36:34.077Z","type":"ai_transcript","text":" Hello,"}
+{"t":"2026-07-15T18:36:34.315Z","type":"ai_transcript","text":" I am"}
+{"t":"2026-07-15T18:36:34.376Z","type":"ai_transcript","text":" Khalid."}
+{"t":"2026-07-15T18:36:34.390Z","type":"ai_transcript","text":" يالا —"}
+{"t":"2026-07-15T18:36:34.645Z","type":"ai_transcript","text":" نتعلمهم"}
+{"t":"2026-07-15T18:36:34.852Z","type":"ai_transcript","text":" وحدة"}
+{"t":"2026-07-15T18:36:34.888Z","type":"ai_transcript","text":" وحدة."}
+{"t":"2026-07-15T18:36:35.053Z","type":"ai_transcript","text":" Hello"}
+{"t":"2026-07-15T18:36:35.352Z","type":"ai_transcript","text":" يا بطل"}
+{"t":"2026-07-15T18:36:35.419Z","type":"ai_transcript","text":" — يعني"}
+{"t":"2026-07-15T18:36:35.513Z","type":"ai_transcript","text":" مرحباً."}
+{"t":"2026-07-15T18:36:35.660Z","type":"ai_transcript","text":" كرّر"}
+{"t":"2026-07-15T18:36:35.779Z","type":"ai_transcript","text":" 5"}
+{"t":"2026-07-15T18:36:35.910Z","type":"ai_transcript","text":" مرات:"}
+{"t":"2026-07-15T18:36:36.163Z","type":"ai_transcript","text":" Hello"}
+{"t":"2026-07-15T18:36:43.936Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-15T18:36:53.583Z","type":"turn_complete"}
+{"t":"2026-07-15T18:37:08.976Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-15T18:38:09.055Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-15T18:38:09.061Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}

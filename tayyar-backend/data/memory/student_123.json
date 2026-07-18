@@ -1,0 +1,428 @@
+{
+  "student_id": "student_123",
+  "personal_facts": [
+    "الاسم: فيصل",
+    "Name: Faisal",
+    "From: Riyadh",
+    "Favorite thing to take on a trip: My bag",
+    "Faisal",
+    "فيصل",
+    "Lives in: Riyadh",
+    "name: Faisal",
+    "location: Riyadh",
+    "favorite item: my bag",
+    "اسمه فيصل",
+    "من الرياض",
+    "لديه أخت اسمها مايا",
+    "Location: Riyadh",
+    "Name: فيصل",
+    "favorite thing: sandwich",
+    "Favorite thing to bring on a trip: Sandwich",
+    "من مدينة: الرياض",
+    "يحب الساندوتش",
+    "اسم الطفل فيصل",
+    "Favorite thing: Mobile",
+    "City: Riyadh"
+  ],
+  "sessions": [
+    {
+      "session_id": "sess_rvhuh40oa",
+      "date": "2026-07-18T12:40:19.533Z",
+      "duration_seconds": 433,
+      "summary": "بدأت الجلسة بمهمة تفاعلية حيث تقمص الطفل فيصل دور طيار في رحلة إلى دبي، وبدأ بالتدرب على كيفية التعريف بنفسه باللغة الإنجليزية لتجاوز بوابة الصعود. تم تحفيز الطفل عبر قصة خيالية لتعزيز مهارات التحدث بطلاقة.",
+      "personal_facts": [
+        "فيصل"
+      ],
+      "words_practiced": [
+        "Hi",
+        "I'm",
+        "Faisal"
+      ],
+      "words_struggled": [],
+      "best_moment": "كانت أجمل لحظة عندما تقمص فيصل شخصية الطيار وبدأ في التفاعل بحماس مع سيناريو الرحلة الجوية.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على بناء جمل تعريفية أطول مثل العمر والهوايات لزيادة ثقته في التحدث.",
+      "cliffhanger_seed": "يا كابتن فيصل، هل جهزت جواز سفرك الذهبي لرحلتنا غداً؟ لدينا مغامرة جديدة بانتظارك داخل الطائرة."
+    },
+    {
+      "session_id": "sess_1s196if5z",
+      "date": "2026-07-18T12:38:16.155Z",
+      "duration_seconds": 124,
+      "summary": "بدأت الجلسة بترحيب حماسي من الكابتن فيصل كطيار للرحلة ٠٠١ المتجهة إلى دبي. تم تسليم فيصل رسالة اختيار رسمية ومغلف ذهبي غامض لفتحها عند الوصول، مما أضاف طابعاً تشويقياً للمحادثة.",
+      "personal_facts": [
+        "اسمه فيصل"
+      ],
+      "words_practiced": [],
+      "words_struggled": [],
+      "best_moment": "لحظة تسليم فيصل المغلف الذهبي كانت الأكثر إثارة وتفاعلاً مع سيناريو الرحلة.",
+      "engagement": "high",
+      "recommended_next_focus": "تشجيع فيصل على استخدام جمل إنجليزية بسيطة لوصف ما يتخيل وجوده داخل المغلف الذهبي.",
+      "cliffhanger_seed": "يا كابتن فيصل، هل جهزت نفسك لفتح المغلف الذهبي بمجرد وصولنا إلى دبي؟"
+    },
+    {
+      "session_id": "sess_a6fjnkkm3",
+      "date": "2026-07-18T11:50:33.873Z",
+      "duration_seconds": 150,
+      "summary": "بدأ كابتن إنجليزي الجلسة مع فيصل برحلة خيالية إلى دبي، حيث كان على فيصل اجتياز بوابة صعود صوتية. تدرب فيصل على التعريف بنفسه باللغة الإنجليزية وتدرج في الجمل حتى نجح في نطقها بثقة وطلاقة.",
+      "personal_facts": [
+        "Name: Faisal",
+        "Location: Riyadh"
+      ],
+      "words_practiced": [
+        "Hi",
+        "I'm Faisal",
+        "I'm from Riyadh",
+        "Nice to meet you"
+      ],
+      "words_struggled": [
+        "Connecting sentences fluently without pauses"
+      ],
+      "best_moment": "كانت اللحظة الأجمل عندما نجح فيصل في دمج الجمل الثلاث معاً في نفس واحد بثقة وطلاقة.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على مهارة التحدث بجمل أطول قليلاً مع الحفاظ على نبرة الصوت الواثقة.",
+      "cliffhanger_seed": "يا بطل، هل جهزت حقائبك؟ دبي بانتظارنا ومعنا المغلف الذهبي الذي لا يفتح إلا هناك، هل أنت مستعد لمعرفة ما بداخلها؟"
+    },
+    {
+      "session_id": "sess_gwhytccg5",
+      "date": "2026-07-18T11:34:22.281Z",
+      "duration_seconds": 37,
+      "summary": "بدأت رحلة تعليمية مشوقة حيث تقمص المدرب دور طيار وطلب من الطفل فيصل الاستعداد للإقلاع إلى دبي. خاض فيصل مغامرة خيالية تتطلب منه إثبات جدارته عبر التحدث باللغة الإنجليزية لفتح بوابة الصعود.",
+      "personal_facts": [
+        "فيصل"
+      ],
+      "words_practiced": [],
+      "words_struggled": [
+        "تعريف النفس بالإنجليزية"
+      ],
+      "best_moment": "كانت لحظة قبول فيصل للتحدي والاندماج في قصة الطيار والمغلف الذهبي هي الأجمل.",
+      "engagement": "medium",
+      "recommended_next_focus": "التركيز على جمل تعريف النفس البسيطة مثل الاسم والعمر والهواية لبدء المحادثة.",
+      "cliffhanger_seed": "يا فيصل، المغلف الذهبي لا يزال في يدي وينتظر بطلاً شجاعاً مثلك ليفتح بوابات دبي، هل أنت مستعد لنبدأ؟"
+    },
+    {
+      "session_id": "sess_pl4pa63vw",
+      "date": "2026-07-18T11:31:28.040Z",
+      "duration_seconds": 83,
+      "summary": "بدأت الجلسة كرحلة طيران خيالية حيث لعب الكابتن دور القائد وفيصل دور المسافر. تم التركيز على ممارسة التعريف بالنفس باللغة الإنجليزية من خلال ربط جمل بسيطة لكسر حاجز الخوف من التحدث.",
+      "personal_facts": [
+        "Name: Faisal",
+        "City: Riyadh"
+      ],
+      "words_practiced": [
+        "Hi, I'm Faisal",
+        "I'm from Riyadh",
+        "Nice to meet you"
+      ],
+      "words_struggled": [
+        "Nice to meet you"
+      ],
+      "best_moment": "كانت اللحظة الأجمل عندما بدأ فيصل بدمج الجمل بطلاقة دون توقف بعد تحفيزه بقصة المغلف الذهبي.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على نطق حرف الـ T في جملة Nice to meet you لضمان وضوح مخارج الحروف.",
+      "cliffhanger_seed": "يا كابتن فيصل، هل جهزت المغلف الذهبي الذي وعدتني بفتحه عند وصولنا إلى دبي؟"
+    },
+    {
+      "session_id": "sess_2c1zs60hj",
+      "date": "2026-07-18T11:25:58.860Z",
+      "duration_seconds": 78,
+      "summary": "بدأت الرحلة التعليمية مع فيصل حيث تقمص دور مسافر إلى دبي، وقام فيصل بممارسة جمل التعريف بالنفس الأساسية باللغة الإنجليزية. نجح الطالب في ترديد الجمل وتجاوز تحدي بوابة الصعود الصوتي بنجاح.",
+      "personal_facts": [
+        "Name: Faisal",
+        "Location: Riyadh"
+      ],
+      "words_practiced": [
+        "Hi",
+        "I'm Faisal",
+        "I'm from Riyadh",
+        "Nice to meet you"
+      ],
+      "words_struggled": [
+        "I'm from Riyadh"
+      ],
+      "best_moment": "كانت أجمل لحظة عندما أتقن فيصل نطق جملة I'm from Riyadh بعد توجيه المدرب.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على ربط الجمل الثلاث بطلاقة دون توقف في النطق.",
+      "cliffhanger_seed": "هل أنت مستعد يا فيصل لفتح المغلف الذهبي الذي ينتظرك في دبي بعد أن أتقنت اليوم تعريف نفسك بطلاقة؟"
+    },
+    {
+      "session_id": "sess_w0bjiyqic",
+      "date": "2026-07-18T11:19:43.823Z",
+      "duration_seconds": 6,
+      "summary": "بدأت الجلسة بترحيب حماسي من الكابتن فيصل، حيث تم تهيئة الأجواء لرحلة خيالية إلى دبي. استجاب الطالب فيصل بحماس للمشاركة في المحاكاة.",
+      "personal_facts": [
+        "فيصل"
+      ],
+      "words_practiced": [
+        "Captain",
+        "Dubai",
+        "Flight"
+      ],
+      "words_struggled": [],
+      "best_moment": "كانت لحظة استجابة فيصل للنداء وتفاعله مع دور الطيار هي الأفضل والأكثر حماساً.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على نطق جمل كاملة تتعلق بإقلاع الطائرة والاتجاهات.",
+      "cliffhanger_seed": "يا كابتن فيصل، هل جهزت خريطة رحلتنا ليوم غدٍ لنكمل مغامرتنا نحو دبي؟"
+    },
+    {
+      "session_id": "sess_os13qsc74",
+      "date": "2026-07-18T05:54:54.222Z",
+      "duration_seconds": 50,
+      "summary": "بدأت الجلسة بترحيب حماسي من الكابتن فيصل حيث تم تعيينه طياراً في رحلة خاصة إلى دبي. تم تسليمه رسالة اختيار ومغلفاً ذهبياً غامضاً لزيادة التفاعل وبدء المغامرة التعليمية.",
+      "personal_facts": [
+        "فيصل"
+      ],
+      "words_practiced": [],
+      "words_struggled": [],
+      "best_moment": "تفاعل فيصل بحماس مع فكرة كونه بطلاً وطياراً لرحلة خاصة إلى دبي.",
+      "engagement": "high",
+      "recommended_next_focus": "تشجيع فيصل على نطق جمل كاملة باللغة الإنجليزية لوصف محتويات المغلف الذهبي.",
+      "cliffhanger_seed": "يا كابتن فيصل، هل أنت مستعد لفتح المغلف الذهبي واكتشاف المهمة السرية التي تنتظرنا في دبي؟"
+    },
+    {
+      "session_id": "sess_aflq03tel",
+      "date": "2026-07-18T05:51:12.189Z",
+      "duration_seconds": 12,
+      "summary": "بدأ فيصل رحلته التعليمية مع الكابتن بتعلم كيفية التعريف بنفسه باللغة الإنجليزية في سيناريو تفاعلي مشوق. نجح فيصل في ربط جمل التعريف بطلاقة ليفتح بوابة الصعود إلى دبي، ثم شارك اهتمامه بجهازه المحمول.",
+      "personal_facts": [
+        "Name: Faisal",
+        "Favorite thing: Mobile"
+      ],
+      "words_practiced": [
+        "Hi, I'm Faisal",
+        "I'm from Riyadh",
+        "Nice to meet you",
+        "Mobile"
+      ],
+      "words_struggled": [
+        "I'm from Riyadh (needed repeated practice for flow)"
+      ],
+      "best_moment": "كانت اللحظة الأجمل عندما نجح فيصل في قول جمل التعريف الثلاث في نفس واحد وتم قبول دخوله عبر البوابة الصوتية.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على ربط الجمل بطلاقة أكثر والتدريب على نطق حرف الـ R في كلمة Riyadh بشكل أوضح.",
+      "cliffhanger_seed": "يا فيصل، هل جهزت الموبايل في حقيبتك؟ نحن على وشك الوصول إلى دبي ولدينا مفاجأة بانتظارنا داخل المغلف الذهبي!"
+    },
+    {
+      "session_id": "sess_w2r1yn5zt",
+      "date": "2026-07-18T05:51:15.023Z",
+      "duration_seconds": 9,
+      "summary": "بدأ كابتن إنجليزي الجلسة مع الطالب فيصل بأسلوب تشويقي حول رحلة طيران خاصة إلى دبي. حاول الكابتن تحفيز فيصل للبدء في ممارسة اللغة الإنجليزية لفتح رسالة غامضة ومغلف ذهبي.",
+      "personal_facts": [
+        "اسمه فيصل"
+      ],
+      "words_practiced": [],
+      "words_struggled": [],
+      "best_moment": "كانت استجابة فيصل للحماس وبدء التفاعل مع سيناريو الرحلة الجوية.",
+      "engagement": "low",
+      "recommended_next_focus": "التركيز على بناء جمل تعريفية بسيطة مثل (My name is Faisal) لتجاوز بوابة الصعود.",
+      "cliffhanger_seed": "هل أنت مستعد لفتح المغلف الذهبي في دبي يا فيصل، أم نحتاج أولاً للتعريف بنفسك لنقلع بالطائرة؟"
+    },
+    {
+      "session_id": "sess_w2r1yn5zt",
+      "date": "2026-07-18T05:50:57.546Z",
+      "duration_seconds": 17,
+      "summary": "بدأت الجلسة بتهيئة فيصل لرحلة خيالية إلى دبي، حيث تم استخدام قصة المغلف الذهبي لتحفيزه على التحدث بالإنجليزية. لم يظهر في النص المرفق تفاعل لفظي واضح من الطالب، مما جعل الجلسة في إطار التحضير النفسي.",
+      "personal_facts": [
+        "الاسم: فيصل"
+      ],
+      "words_practiced": [],
+      "words_struggled": [],
+      "best_moment": "كانت لحظة إدخال اسم فيصل في سياق الرحلة الخيالية هي اللحظة الأكثر إثارة لاهتمامه.",
+      "engagement": "low",
+      "recommended_next_focus": "التركيز على تشجيع فيصل لنطق جملة تعريفية بسيطة مثل 'My name is Faisal' لفتح البوابة.",
+      "cliffhanger_seed": "يا فيصل، هل لا زلت تحتفظ بالمغلف الذهبي الذي ينتظرنا في دبي؟"
+    },
+    {
+      "session_id": "sess_aflq03tel",
+      "date": "2026-07-18T05:50:55.587Z",
+      "duration_seconds": 17,
+      "summary": "بدأ فيصل رحلته التعليمية كطيار متدرب، حيث تدرب على تقديم نفسه باللغة الإنجليزية بثقة وطلاقة. استطاع فيصل تجاوز بوابة الصعود الصوتية بعد إتقان الجمل الأساسية وانتهى الدرس بتجهيز رحلته إلى دبي.",
+      "personal_facts": [
+        "Name: Faisal",
+        "City: Riyadh",
+        "Favorite thing: Mobile"
+      ],
+      "words_practiced": [
+        "Hi",
+        "I'm Faisal",
+        "I'm from Riyadh",
+        "Nice to meet you",
+        "Mobile"
+      ],
+      "words_struggled": [
+        "I'm from Riyadh",
+        "Connecting full sentences without pauses"
+      ],
+      "best_moment": "كانت لحظة النجاح الأروع عندما تمكن فيصل من دمج الجمل الثلاث في نفس واحد وفتح بوابة الصعود بنجاح.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على نطق حرف الـ R في كلمة Riyadh وتطوير مهارة التحدث بجملة أطول حول سبب اختيار الموبايل.",
+      "cliffhanger_seed": "فيصل، هل أنت مستعد لفتح المغلف الذهبي الذي ينتظرنا فور هبوط الطائرة في دبي؟"
+    },
+    {
+      "session_id": "sess_aflq03tel",
+      "date": "2026-07-18T05:42:01.277Z",
+      "duration_seconds": 220,
+      "summary": "خاض فيصل رحلة محاكاة شيقة مع الكابتن إنجليش للتدرب على التعريف بالنفس باللغة الإنجليزية. نجح فيصل في عبور بوابة الصعود الصوتية بعد تكرار الجمل الأساسية بطلاقة، واختتم الجلسة بمناقشة الشيء الذي يود اصطحابه معه في الرحلة.",
+      "personal_facts": [
+        "Name: Faisal",
+        "Favorite thing: Mobile"
+      ],
+      "words_practiced": [
+        "Hi",
+        "I'm Faisal",
+        "I'm from Riyadh",
+        "Nice to meet you",
+        "Mobile"
+      ],
+      "words_struggled": [
+        "Hi, I'm Faisal. I'm from Riyadh. Nice to meet you (بشكل متصل)"
+      ],
+      "best_moment": "كانت لحظة تمكن فيصل من قول التعريف الكامل بنفسه دون تقطيع، مما تسبب في فتح بوابة الصعود الصوتية بنجاح.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على إطالة الجمل وربطها بسلاسة أكبر عند الحديث عن تفضيلاته الشخصية.",
+      "cliffhanger_seed": "فيصل، هل أنت مستعد لإكمال رحلتنا إلى دبي وهل شحنت جوالك الذي سنحتاجه في مغامرتنا القادمة؟"
+    },
+    {
+      "session_id": "sess_w2r1yn5zt",
+      "date": "2026-07-18T05:34:08.021Z",
+      "duration_seconds": 25,
+      "summary": "بدأت الجلسة بترحيب كابتن إنجلش بالطفل فيصل في رحلته إلى دبي، حيث تم إشراكه في قصة خيالية حول رسالة سرية ومغلف ذهبي. تفاعل فيصل مع السيناريو وبدأ في تقمص دور المسافر في هذه الرحلة التفاعلية.",
+      "personal_facts": [
+        "اسم الطفل فيصل"
+      ],
+      "words_practiced": [],
+      "words_struggled": [],
+      "best_moment": "كانت أجمل لحظة عندما تفاعل فيصل بحماس مع فكرة المغلف الذهبي والرحلة إلى دبي.",
+      "engagement": "high",
+      "recommended_next_focus": "البدء بتعلم مفردات إنجليزية بسيطة متعلقة بالسفر مثل (Flight, Ticket, Travel) لتعزيز انخراطه في القصة.",
+      "cliffhanger_seed": "أهلاً يا فيصل، هل أنت مستعد لفتح المغلف الذهبي الذي وصل إلينا ومعرفة ما بداخله قبل هبوط الطائرة في دبي؟"
+    },
+    {
+      "session_id": "sess_1wu6d663i",
+      "date": "2026-07-17T21:49:10.903Z",
+      "duration_seconds": 147,
+      "summary": "بدأ كابتن إنجليش حصة محاكاة في المطار مع فيصل، حيث تدرب الطفل على طلب مقعد بجانب النافذة. استمع فيصل للنطق الصحيح وحاول تكرار الجملة كاملة بعد توجيه المدرب.",
+      "personal_facts": [
+        "فيصل"
+      ],
+      "words_practiced": [
+        "Can I have a window seat, please"
+      ],
+      "words_struggled": [
+        "Can I have a window seat, please"
+      ],
+      "best_moment": "كانت أفضل لحظة عندما استجاب فيصل لتوجيهات المدرب وكرر الجملة بوضوح بعد أن شجعه الكابتن.",
+      "engagement": "medium",
+      "recommended_next_focus": "التركيز على نطق كلمة window وتكرار الجملة بسرعة طبيعية دون تقطيع.",
+      "cliffhanger_seed": "يا فيصل، هل تذكر كيف طلبنا مقعد النافذة في المطار؟ اليوم سنرى إن كان بإمكاننا طلب وجبة خفيفة أثناء الطيران!"
+    },
+    {
+      "session_id": "sess_pqoti4jf2",
+      "date": "2026-07-17T21:42:54.645Z",
+      "duration_seconds": 490,
+      "summary": "بدأت الرحلة التعليمية مع فيصل بأسلوب تشويقي حيث تم تنصيبه كبطل لرحلة طيران خاصة إلى دبي. تم تقديم لغز المغلف الذهبي لتحفيز الطفل على المشاركة في الدرس القادم.",
+      "personal_facts": [
+        "فيصل"
+      ],
+      "words_practiced": [],
+      "words_struggled": [],
+      "best_moment": "تفاعل فيصل بشكل إيجابي مع سيناريو الرحلة الجوية الذي أضفى جواً من الحماس والمغامرة.",
+      "engagement": "medium",
+      "recommended_next_focus": "البدء بتعليم فيصل كلمات إنجليزية بسيطة تتعلق بالسفر والمطار لتعزيز طابع الرحلة.",
+      "cliffhanger_seed": "هل أنت مستعد لنكتشف سوياً ما بداخل المغلف الذهبي الذي ينتظرنا في دبي يا فيصل؟"
+    },
+    {
+      "session_id": "sess_3k2qk6htr",
+      "date": "2026-07-17T21:04:28.506Z",
+      "duration_seconds": 488,
+      "summary": "بدأ كابتن إنجليش رحلة خيالية مع الطالب فيصل المتجه إلى دبي، حيث كان عليه تعريف نفسه باللغة الإنجليزية لفتح بوابة الصعود. واجه فيصل صعوبة في نطق الجمل الأساسية وحاول تكرارها بكلمات مختلفة، لكنه نجح في النهاية في قول عبارة I am from.",
+      "personal_facts": [
+        "Faisal"
+      ],
+      "words_practiced": [
+        "Hi, I'm Faisal",
+        "I'm from Riyadh",
+        "Nice to meet you"
+      ],
+      "words_struggled": [
+        "Hi, I'm Faisal",
+        "I'm from Riyadh",
+        "Nice to meet you"
+      ],
+      "best_moment": "كانت اللحظة الأجمل عندما نجح فيصل أخيراً في نطق عبارة I am from بشكل صحيح واحتفل الكابتن معه.",
+      "engagement": "medium",
+      "recommended_next_focus": "التركيز على نطق الجمل القصيرة بوضوح وتجنب استبدال الكلمات بكلمات أخرى مشابهة في النطق.",
+      "cliffhanger_seed": "فيصل، هل أنت مستعد لإكمال الجملة الأخيرة وفتح المغلف الذهبي الذي ينتظرك في دبي؟"
+    },
+    {
+      "session_id": "sess_6x0lv7nth",
+      "date": "2026-07-17T18:05:53.583Z",
+      "duration_seconds": 39,
+      "summary": "بدأ الكابتن إنجليش رحلة تفاعلية مع فيصل حول مواقف المطار، حيث قام بتدريبه على كيفية طلب مقعد بجانب النافذة باستخدام الصيغة المهذبة. تفاعل فيصل مع الموقف وبدأ في ممارسة النطق الصحيح للعبارة المطلوبة.",
+      "personal_facts": [
+        "فيصل"
+      ],
+      "words_practiced": [
+        "Can I have a window seat please"
+      ],
+      "words_struggled": [
+        "window seat"
+      ],
+      "best_moment": "كانت أفضل لحظة عندما استجاب فيصل لمحاكاة الكابتن وبدأ في ترديد جملة الطلب بتركيز ومحاولة لمحاكاة النطق الصحيح.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على نطق كلمة window وتدريبه على استخدام جملة الطلب في سياق محادثة كاملة مع موظف الطيران.",
+      "cliffhanger_seed": "يا فيصل، هل تذكر كيف طلبت المقعد الخاص بك بالأمس؟ اليوم سنرى إن كان موظف المطار سيوافق على طلبك أم لا!"
+    },
+    {
+      "session_id": "sess_1wurwzvu3",
+      "date": "2026-07-17T18:01:51.478Z",
+      "duration_seconds": 222,
+      "summary": "تعلم الطفل كيفية استخدام عبارات طلب التكرار عند عدم فهم المعلم، مما ساعده على التفاعل مع المضيفة الافتراضية دون تجمد. نجح الطالب في ممارسة جمل مثل 'Can you say that again' واستخدمها فعلياً أثناء محاكاة الموقف في الطائرة.",
+      "personal_facts": [
+        "Faisal",
+        "يحب الساندوتش"
+      ],
+      "words_practiced": [
+        "Sorry",
+        "Can you say that again, please",
+        "Chicken",
+        "Pasta",
+        "Yes",
+        "Can you speak slowly"
+      ],
+      "words_struggled": [
+        "Faisal (نطقها كـ fashion)",
+        "Can you say that again (نطقها كـ Can you say shut again)",
+        "Can you hear that again"
+      ],
+      "best_moment": "لحظة تمكن فيصل من استخدام سلاحه السري 'Can you say that again' عندما سألته المضيفة عن الطعام، مما جعلها تعيد الكلام ببطء ويفهمها بنجاح.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على نطق جملة 'Can you say that again' بشكل صحيح ومخارج الحروف في الأسماء.",
+      "cliffhanger_seed": "يا فيصل، هل تعتقد أن الساندوتش الذي كنت تأكله سيساعدنا في مغامرتنا غداً على الجزيرة الغامضة؟"
+    },
+    {
+      "session_id": "sess_qomjca0tn",
+      "date": "2026-07-17T17:56:16.733Z",
+      "duration_seconds": 305,
+      "summary": "انطلق فيصل في رحلة افتراضية بدبي حيث لعب دور الدليل السياحي وساعد 'كابتن إنجليش' في الوصول للفندق. تدرب فيصل على استخدام عبارات الاستفسار الأساسية مثل طلب التاكسي والسؤال عن السعر والسرعة بذكاء وثقة.",
+      "personal_facts": [
+        "Name: Faisal"
+      ],
+      "words_practiced": [
+        "Excuse me",
+        "where is the taxi",
+        "How much is it",
+        "Hotel, please",
+        "Can you speak slowly please",
+        "Can you help me"
+      ],
+      "words_struggled": [
+        "fifty dirhams",
+        "Can you speak slowly, please"
+      ],
+      "best_moment": "كانت اللحظة الأفضل عندما تمكن فيصل من استخدام جملة 'Can you speak slowly please' بطلاقة لفهم السائق في التاكسي.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على فهم الأرقام باللغة الإنجليزية وتطبيقها في مواقف الشراء والتعامل اليومي.",
+      "cliffhanger_seed": "يا فيصل، هل أنت مستعد لمقابلة الشخصية الغامضة التي تنتظرنا عند البحيرة غداً؟"
+    }
+  ]
+}

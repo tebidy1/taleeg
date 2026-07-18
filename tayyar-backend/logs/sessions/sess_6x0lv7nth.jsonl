@@ -1,0 +1,55 @@
+{"t":"2026-07-17T18:05:53.583Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-17T18:05:54.344Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-17T18:05:54.670Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-17T18:05:54.813Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-17T18:05:54.921Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-17T18:05:55.129Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-17T18:05:55.268Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-17T18:05:55.473Z","type":"ai_transcript","text":"\n\nفيصل! المقعد"}
+{"t":"2026-07-17T18:05:55.785Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-17T18:05:55.939Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-17T18:05:56.064Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-17T18:05:56.117Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-17T18:05:56.240Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-17T18:05:56.349Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-17T18:05:56.374Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-17T18:05:56.528Z","type":"ai_transcript","text":" اللي"}
+{"t":"2026-07-17T18:05:56.695Z","type":"ai_transcript","text":" هناك..."}
+{"t":"2026-07-17T18:05:56.811Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-17T18:05:56.869Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-17T18:05:56.982Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-17T18:06:04.301Z","type":"turn_complete"}
+{"t":"2026-07-17T18:06:08.597Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-17T18:06:10.323Z","type":"user_transcript","text":"المطارات في الكافيهات في الهوتيل في التاكسي في كده يعني بيحفظ"}
+{"t":"2026-07-17T18:06:10.983Z","type":"ai_transcript","text":"قبل نوصل"}
+{"t":"2026-07-17T18:06:11.242Z","type":"ai_transcript","text":" الكاونتر"}
+{"t":"2026-07-17T18:06:11.410Z","type":"ai_transcript","text":" — اسمع"}
+{"t":"2026-07-17T18:06:11.550Z","type":"ai_transcript","text":" سر"}
+{"t":"2026-07-17T18:06:11.604Z","type":"ai_transcript","text":" موظفي"}
+{"t":"2026-07-17T18:06:11.801Z","type":"ai_transcript","text":" المطارات"}
+{"t":"2026-07-17T18:06:11.965Z","type":"ai_transcript","text":" بالعالم"}
+{"t":"2026-07-17T18:06:12.094Z","type":"ai_transcript","text":" كله:"}
+{"t":"2026-07-17T18:06:12.266Z","type":"ai_transcript","text":" سامي"}
+{"t":"2026-07-17T18:06:12.349Z","type":"ai_transcript","text":" ما"}
+{"t":"2026-07-17T18:06:12.458Z","type":"ai_transcript","text":" يسمع"}
+{"t":"2026-07-17T18:06:12.522Z","type":"ai_transcript","text":" للي"}
+{"t":"2026-07-17T18:06:12.631Z","type":"ai_transcript","text":" يقول"}
+{"t":"2026-07-17T18:06:12.759Z","type":"ai_transcript","text":" (أبي"}
+{"t":"2026-07-17T18:06:12.855Z","type":"ai_transcript","text":" أبي)..."}
+{"t":"2026-07-17T18:06:12.984Z","type":"ai_transcript","text":" يسمع"}
+{"t":"2026-07-17T18:06:13.111Z","type":"ai_transcript","text":" بس"}
+{"t":"2026-07-17T18:06:13.165Z","type":"ai_transcript","text":" للي"}
+{"t":"2026-07-17T18:06:13.242Z","type":"ai_transcript","text":" يطلب"}
+{"t":"2026-07-17T18:06:13.335Z","type":"ai_transcript","text":" بالصيغة"}
+{"t":"2026-07-17T18:06:13.460Z","type":"ai_transcript","text":" الذهبية."}
+{"t":"2026-07-17T18:06:13.646Z","type":"ai_transcript","text":"\n\nاسمع ببطء:"}
+{"t":"2026-07-17T18:06:13.975Z","type":"ai_transcript","text":" Can..."}
+{"t":"2026-07-17T18:06:14.212Z","type":"ai_transcript","text":" I..."}
+{"t":"2026-07-17T18:06:14.520Z","type":"ai_transcript","text":" have..."}
+{"t":"2026-07-17T18:06:14.522Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-17T18:06:14.759Z","type":"ai_transcript","text":" a window"}
+{"t":"2026-07-17T18:06:14.902Z","type":"ai_transcript","text":" seat..."}
+{"t":"2026-07-17T18:06:15.062Z","type":"ai_transcript","text":" please?"}
+{"t":"2026-07-17T18:06:15.299Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-17T18:06:23.765Z","type":"interrupted"}
+{"t":"2026-07-17T18:06:23.767Z","type":"turn_complete"}

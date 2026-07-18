@@ -1,0 +1,48 @@
+{"t":"2026-07-17T17:44:02.816Z","type":"session_start","studentId":"student_123","missionId":"mission_04_alone_in_dubai"}
+{"t":"2026-07-17T17:44:03.633Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-17T17:44:03.957Z","type":"ai_transcript","text":" — وصلنا"}
+{"t":"2026-07-17T17:44:04.126Z","type":"ai_transcript","text":" دبي"}
+{"t":"2026-07-17T17:44:04.160Z","type":"ai_transcript","text":" يا بطل!"}
+{"t":"2026-07-17T17:44:04.398Z","type":"ai_transcript","text":" خرجنا"}
+{"t":"2026-07-17T17:44:04.575Z","type":"ai_transcript","text":" من المطار."}
+{"t":"2026-07-17T17:44:04.798Z","type":"ai_transcript","text":"\n\nبس اليوم..."}
+{"t":"2026-07-17T17:44:05.148Z","type":"ai_transcript","text":" تغيّرت"}
+{"t":"2026-07-17T17:44:05.360Z","type":"ai_transcript","text":" الأدوار."}
+{"t":"2026-07-17T17:44:05.432Z","type":"ai_transcript","text":" أنا"}
+{"t":"2026-07-17T17:44:05.568Z","type":"ai_transcript","text":" نسيت"}
+{"t":"2026-07-17T17:44:05.853Z","type":"ai_transcript","text":" نظارتي"}
+{"t":"2026-07-17T17:44:05.870Z","type":"ai_transcript","text":" — ما"}
+{"t":"2026-07-17T17:44:05.945Z","type":"ai_transcript","text":" أشوف"}
+{"t":"2026-07-17T17:44:06.054Z","type":"ai_transcript","text":" اللافتات!"}
+{"t":"2026-07-17T17:44:06.331Z","type":"ai_transcript","text":" اليوم"}
+{"t":"2026-07-17T17:44:06.655Z","type":"ai_transcript","text":" أنت"}
+{"t":"2026-07-17T17:44:06.698Z","type":"ai_transcript","text":" الدليل،"}
+{"t":"2026-07-17T17:44:06.715Z","type":"ai_transcript","text":" وأنا"}
+{"t":"2026-07-17T17:44:06.767Z","type":"ai_transcript","text":" أمشي"}
+{"t":"2026-07-17T17:44:06.924Z","type":"ai_transcript","text":" وراك."}
+{"t":"2026-07-17T17:44:07.019Z","type":"ai_transcript","text":" توصلنا"}
+{"t":"2026-07-17T17:44:07.249Z","type":"ai_transcript","text":" الفندق؟"}
+{"t":"2026-07-17T17:44:17.003Z","type":"turn_complete"}
+{"t":"2026-07-17T17:44:17.833Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-17T17:44:42.858Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-17T17:44:58.943Z","type":"help_press","pressCount":1}
+{"t":"2026-07-17T17:44:59.759Z","type":"ai_transcript","text":"تحب أساعدك؟"}
+{"t":"2026-07-17T17:45:00.043Z","type":"help_press","pressCount":2}
+{"t":"2026-07-17T17:45:00.116Z","type":"ai_transcript","text":" جرّب:"}
+{"t":"2026-07-17T17:45:00.345Z","type":"interrupted"}
+{"t":"2026-07-17T17:45:00.347Z","type":"turn_complete"}
+{"t":"2026-07-17T17:45:00.914Z","type":"ai_transcript","text":"الجواب: Excuse"}
+{"t":"2026-07-17T17:45:01.442Z","type":"ai_transcript","text":" me,"}
+{"t":"2026-07-17T17:45:01.582Z","type":"ai_transcript","text":" where"}
+{"t":"2026-07-17T17:45:01.652Z","type":"ai_transcript","text":" is"}
+{"t":"2026-07-17T17:45:01.751Z","type":"ai_transcript","text":" the taxi?"}
+{"t":"2026-07-17T17:45:02.006Z","type":"ai_transcript","text":" كرّر"}
+{"t":"2026-07-17T17:45:02.156Z","type":"ai_transcript","text":" معي:"}
+{"t":"2026-07-17T17:45:03.035Z","type":"interrupted"}
+{"t":"2026-07-17T17:45:03.042Z","type":"turn_complete"}
+{"t":"2026-07-17T17:45:42.940Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-17T17:45:42.944Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}
+{"t":"2026-07-17T17:49:18.218Z","type":"phase_change","phase":"multi_context"}
+{"t":"2026-07-17T17:49:18.222Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (multi_context). Finish your current step first, then transiti"}
+{"t":"2026-07-17T17:50:03.282Z","type":"phase_change","phase":"victory_close"}
+{"t":"2026-07-17T17:50:03.286Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (victory_close). Finish your current step first, then transiti"}

@@ -1,0 +1,33 @@
+{"t":"2026-07-16T14:26:17.510Z","type":"session_start","studentId":"student_123","missionId":"mission_01_voice_gate"}
+{"t":"2026-07-16T14:26:18.266Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-16T14:26:18.844Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-16T14:26:18.944Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-16T14:26:18.986Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-16T14:26:19.058Z","type":"ai_transcript","text":" — الرحلة"}
+{"t":"2026-07-16T14:26:19.255Z","type":"ai_transcript","text":" ٠٠١"}
+{"t":"2026-07-16T14:26:19.801Z","type":"ai_transcript","text":" إلى"}
+{"t":"2026-07-16T14:26:19.813Z","type":"ai_transcript","text":" دبي"}
+{"t":"2026-07-16T14:26:19.824Z","type":"ai_transcript","text":" جاهزة"}
+{"t":"2026-07-16T14:26:19.869Z","type":"ai_transcript","text":" للإقلاع!"}
+{"t":"2026-07-16T14:26:19.914Z","type":"ai_transcript","text":"\n\n*(بصوت هامس مثير)*\nفيصل... وصلك"}
+{"t":"2026-07-16T14:26:20.365Z","type":"ai_transcript","text":" شي"}
+{"t":"2026-07-16T14:26:20.474Z","type":"ai_transcript","text":" ما يوصل"}
+{"t":"2026-07-16T14:26:20.615Z","type":"ai_transcript","text":" إلا لواحد"}
+{"t":"2026-07-16T14:26:20.856Z","type":"ai_transcript","text":" بالمليون."}
+{"t":"2026-07-16T14:26:20.979Z","type":"ai_transcript","text":" رسالة"}
+{"t":"2026-07-16T14:26:21.159Z","type":"ai_transcript","text":" اختيار"}
+{"t":"2026-07-16T14:26:21.276Z","type":"ai_transcript","text":" رسمية"}
+{"t":"2026-07-16T14:26:21.458Z","type":"ai_transcript","text":" —\nومعها"}
+{"t":"2026-07-16T14:26:21.689Z","type":"ai_transcript","text":" مغلف"}
+{"t":"2026-07-16T14:26:21.741Z","type":"ai_transcript","text":" ذهبي"}
+{"t":"2026-07-16T14:26:21.857Z","type":"ai_transcript","text":" مقفل،"}
+{"t":"2026-07-16T14:26:21.861Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-16T14:26:21.962Z","type":"ai_transcript","text":" مكتوب"}
+{"t":"2026-07-16T14:26:22.126Z","type":"ai_transcript","text":" عليه:"}
+{"t":"2026-07-16T14:26:22.319Z","type":"ai_transcript","text":" لا"}
+{"t":"2026-07-16T14:26:22.387Z","type":"ai_transcript","text":" يُفتح"}
+{"t":"2026-07-16T14:26:22.467Z","type":"ai_transcript","text":" إلا"}
+{"t":"2026-07-16T14:26:22.649Z","type":"ai_transcript","text":" في دبي."}
+{"t":"2026-07-16T14:26:32.542Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-16T14:26:34.313Z","type":"turn_complete"}
+{"t":"2026-07-16T14:26:57.568Z","type":"phase_change","phase":"warmup"}

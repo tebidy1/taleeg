@@ -1,0 +1,26 @@
+{"t":"2026-07-16T21:12:46.074Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-16T21:12:46.769Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-16T21:12:47.361Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-16T21:12:47.429Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-16T21:12:47.475Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-16T21:12:47.627Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-16T21:12:47.846Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-16T21:12:48.054Z","type":"ai_transcript","text":"\n\nفيصل! المقعد"}
+{"t":"2026-07-16T21:12:48.461Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-16T21:12:48.584Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-16T21:12:48.743Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-16T21:12:48.785Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-16T21:12:48.923Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-16T21:12:48.951Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-16T21:12:49.086Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-16T21:12:49.323Z","type":"ai_transcript","text":" اللي هناك..."}
+{"t":"2026-07-16T21:12:49.476Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-16T21:12:49.610Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-16T21:12:49.786Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-16T21:12:58.106Z","type":"turn_complete"}
+{"t":"2026-07-16T21:13:01.093Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-16T21:13:26.120Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-16T21:14:26.231Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-16T21:14:26.234Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}
+{"t":"2026-07-16T21:18:01.593Z","type":"phase_change","phase":"multi_context"}
+{"t":"2026-07-16T21:18:01.596Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (multi_context). Finish your current step first, then transiti"}

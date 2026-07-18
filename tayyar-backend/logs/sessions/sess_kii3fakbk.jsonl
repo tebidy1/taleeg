@@ -1,0 +1,62 @@
+{"t":"2026-07-15T19:51:07.861Z","type":"session_start","studentId":"student_123","missionId":"mission_00_first_words"}
+{"t":"2026-07-15T19:51:08.677Z","type":"ai_transcript","text":"أهلاً يابطل!"}
+{"t":"2026-07-15T19:51:09.718Z","type":"ai_transcript","text":" أنا"}
+{"t":"2026-07-15T19:51:09.733Z","type":"ai_transcript","text":" الكابتن."}
+{"t":"2026-07-15T19:51:10.609Z","type":"ai_transcript","text":" اليوم"}
+{"t":"2026-07-15T19:51:11.407Z","type":"ai_transcript","text":" نتعلم"}
+{"t":"2026-07-15T19:51:11.481Z","type":"ai_transcript","text":" أول"}
+{"t":"2026-07-15T19:51:11.742Z","type":"ai_transcript","text":" جملة"}
+{"t":"2026-07-15T19:51:12.024Z","type":"ai_transcript","text":" إنجليزية"}
+{"t":"2026-07-15T19:51:12.078Z","type":"ai_transcript","text":" في حياتك."}
+{"t":"2026-07-15T19:51:12.600Z","type":"ai_transcript","text":" مستعد؟"}
+{"t":"2026-07-15T19:51:12.930Z","type":"ai_transcript","text":" يالا!"}
+{"t":"2026-07-15T19:51:13.120Z","type":"ai_transcript","text":"أهلاً يابطل!"}
+{"t":"2026-07-15T19:51:13.566Z","type":"ai_transcript","text":" أنا"}
+{"t":"2026-07-15T19:51:13.724Z","type":"ai_transcript","text":" الكابتن."}
+{"t":"2026-07-15T19:51:13.831Z","type":"ai_transcript","text":" اليوم"}
+{"t":"2026-07-15T19:51:14.355Z","type":"ai_transcript","text":" نتعلم"}
+{"t":"2026-07-15T19:51:14.462Z","type":"ai_transcript","text":" أول"}
+{"t":"2026-07-15T19:51:14.722Z","type":"ai_transcript","text":" جملة"}
+{"t":"2026-07-15T19:51:14.911Z","type":"ai_transcript","text":" إنجليزية"}
+{"t":"2026-07-15T19:51:15.035Z","type":"ai_transcript","text":" في حياتك."}
+{"t":"2026-07-15T19:51:15.280Z","type":"ai_transcript","text":" مستعد؟"}
+{"t":"2026-07-15T19:51:15.398Z","type":"ai_transcript","text":" يالا!"}
+{"t":"2026-07-15T19:51:15.614Z","type":"ai_transcript","text":"\n\nاليوم 3"}
+{"t":"2026-07-15T19:51:15.806Z","type":"ai_transcript","text":" كلمات"}
+{"t":"2026-07-15T19:51:15.900Z","type":"ai_transcript","text":" +"}
+{"t":"2026-07-15T19:51:15.902Z","type":"ai_transcript","text":" جملة"}
+{"t":"2026-07-15T19:51:16.145Z","type":"ai_transcript","text":" واحدة."}
+{"t":"2026-07-15T19:51:16.284Z","type":"ai_transcript","text":" اسمعهم"}
+{"t":"2026-07-15T19:51:16.408Z","type":"ai_transcript","text":" كلهم:"}
+{"t":"2026-07-15T19:51:16.571Z","type":"ai_transcript","text":" Hello..."}
+{"t":"2026-07-15T19:51:16.868Z","type":"ai_transcript","text":" Hi..."}
+{"t":"2026-07-15T19:51:17.078Z","type":"ai_transcript","text":" Bye..."}
+{"t":"2026-07-15T19:51:17.531Z","type":"ai_transcript","text":"\nوجملتنا:"}
+{"t":"2026-07-15T19:51:17.825Z","type":"ai_transcript","text":" Hello,"}
+{"t":"2026-07-15T19:51:17.931Z","type":"ai_transcript","text":" I"}
+{"t":"2026-07-15T19:51:18.125Z","type":"ai_transcript","text":" am"}
+{"t":"2026-07-15T19:51:18.135Z","type":"ai_transcript","text":" [name]"}
+{"t":"2026-07-15T19:51:18.231Z","type":"ai_transcript","text":"\nيالا —"}
+{"t":"2026-07-15T19:51:18.311Z","type":"ai_transcript","text":" نتعلمهم"}
+{"t":"2026-07-15T19:51:18.410Z","type":"ai_transcript","text":" وحدة"}
+{"t":"2026-07-15T19:51:18.413Z","type":"ai_transcript","text":" وحدة."}
+{"t":"2026-07-15T19:51:18.517Z","type":"ai_transcript","text":"\n\nHello يا"}
+{"t":"2026-07-15T19:51:18.718Z","type":"ai_transcript","text":" بطل —"}
+{"t":"2026-07-15T19:51:18.722Z","type":"ai_transcript","text":" يعني"}
+{"t":"2026-07-15T19:51:18.830Z","type":"ai_transcript","text":" مرحباً."}
+{"t":"2026-07-15T19:51:18.947Z","type":"ai_transcript","text":" كرّر"}
+{"t":"2026-07-15T19:51:18.948Z","type":"ai_transcript","text":" 5"}
+{"t":"2026-07-15T19:51:19.043Z","type":"ai_transcript","text":" مرات:"}
+{"t":"2026-07-15T19:51:19.154Z","type":"ai_transcript","text":" Hello"}
+{"t":"2026-07-15T19:51:22.884Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-15T19:51:47.925Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-15T19:51:53.105Z","type":"turn_complete"}
+{"t":"2026-07-15T19:52:48.013Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-15T19:52:48.018Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}
+{"t":"2026-07-15T19:56:23.342Z","type":"phase_change","phase":"multi_context"}
+{"t":"2026-07-15T19:56:23.347Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (multi_context). Finish your current step first, then transiti"}
+{"t":"2026-07-15T19:57:08.425Z","type":"phase_change","phase":"victory_close"}
+{"t":"2026-07-15T19:57:08.428Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (victory_close). Finish your current step first, then transiti"}
+{"t":"2026-07-15T19:57:38.471Z","type":"directive","active":true,"preview":"TIME IS UP. Move to Victory Close NOW: ask for the hero word, one-sentence celeb"}
+{"t":"2026-07-15T19:58:08.520Z","type":"phase_change","phase":"end"}
+{"t":"2026-07-15T19:59:08.608Z","type":"session_end","reason":"time_limit","elapsed":480}

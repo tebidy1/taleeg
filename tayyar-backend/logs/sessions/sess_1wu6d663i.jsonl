@@ -1,0 +1,59 @@
+{"t":"2026-07-17T21:49:10.904Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-17T21:49:11.540Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-17T21:49:11.814Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-17T21:49:11.949Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-17T21:49:12.012Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-17T21:49:12.296Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-17T21:49:12.363Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-17T21:49:12.495Z","type":"ai_transcript","text":" فيصل!"}
+{"t":"2026-07-17T21:49:12.731Z","type":"ai_transcript","text":" المقعد"}
+{"t":"2026-07-17T21:49:12.873Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-17T21:49:12.980Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-17T21:49:13.036Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-17T21:49:13.078Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-17T21:49:13.298Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-17T21:49:13.375Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-17T21:49:13.598Z","type":"ai_transcript","text":" اللي هناك..."}
+{"t":"2026-07-17T21:49:13.727Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-17T21:49:13.782Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-17T21:49:14.020Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-17T21:49:14.097Z","type":"ai_transcript","text":" [WAIT]"}
+{"t":"2026-07-17T21:49:20.899Z","type":"turn_complete"}
+{"t":"2026-07-17T21:49:25.930Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-17T21:49:50.962Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-17T21:50:01.421Z","type":"help_press","pressCount":1}
+{"t":"2026-07-17T21:50:02.107Z","type":"ai_transcript","text":"تحب أساعدك؟"}
+{"t":"2026-07-17T21:50:02.521Z","type":"ai_transcript","text":" جرّب:"}
+{"t":"2026-07-17T21:50:02.656Z","type":"ai_transcript","text":" Can"}
+{"t":"2026-07-17T21:50:02.825Z","type":"ai_transcript","text":" I..."}
+{"t":"2026-07-17T21:50:03.076Z","type":"ai_transcript","text":" [WAIT]"}
+{"t":"2026-07-17T21:50:06.605Z","type":"turn_complete"}
+{"t":"2026-07-17T21:50:19.924Z","type":"user_turn_end"}
+{"t":"2026-07-17T21:50:21.010Z","type":"ai_transcript","text":"لا بأس،"}
+{"t":"2026-07-17T21:50:21.181Z","type":"ai_transcript","text":" اسمع"}
+{"t":"2026-07-17T21:50:21.334Z","type":"ai_transcript","text":" وكرّر"}
+{"t":"2026-07-17T21:50:21.453Z","type":"ai_transcript","text":" معي:"}
+{"t":"2026-07-17T21:50:21.626Z","type":"ai_transcript","text":" Can..."}
+{"t":"2026-07-17T21:50:22.056Z","type":"ai_transcript","text":" I..."}
+{"t":"2026-07-17T21:50:22.163Z","type":"ai_transcript","text":" have..."}
+{"t":"2026-07-17T21:50:22.391Z","type":"ai_transcript","text":" a window"}
+{"t":"2026-07-17T21:50:22.727Z","type":"ai_transcript","text":" seat..."}
+{"t":"2026-07-17T21:50:22.818Z","type":"ai_transcript","text":" please?"}
+{"t":"2026-07-17T21:50:23.052Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-17T21:50:29.706Z","type":"turn_complete"}
+{"t":"2026-07-17T21:50:37.494Z","type":"user_turn_end"}
+{"t":"2026-07-17T21:50:38.455Z","type":"ai_transcript","text":"صوتك واضح!"}
+{"t":"2026-07-17T21:50:38.768Z","type":"ai_transcript","text":" والحين"}
+{"t":"2026-07-17T21:50:38.957Z","type":"ai_transcript","text":" بشكل"}
+{"t":"2026-07-17T21:50:39.085Z","type":"ai_transcript","text":" طبيعي:"}
+{"t":"2026-07-17T21:50:39.445Z","type":"ai_transcript","text":" Can"}
+{"t":"2026-07-17T21:50:39.451Z","type":"ai_transcript","text":" I"}
+{"t":"2026-07-17T21:50:39.461Z","type":"ai_transcript","text":" have"}
+{"t":"2026-07-17T21:50:39.605Z","type":"ai_transcript","text":" a window"}
+{"t":"2026-07-17T21:50:39.698Z","type":"ai_transcript","text":" seat,"}
+{"t":"2026-07-17T21:50:39.917Z","type":"ai_transcript","text":" please?"}
+{"t":"2026-07-17T21:50:39.989Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-17T21:50:41.158Z","type":"interrupted"}
+{"t":"2026-07-17T21:50:41.162Z","type":"turn_complete"}
+{"t":"2026-07-17T21:50:51.059Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-17T21:50:51.067Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}

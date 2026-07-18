@@ -1,0 +1,44 @@
+{
+  "level_1_phonemes": [
+    {
+      "phoneme": "/p/",
+      "examples": ["pen", "apple", "please", "passport", "seat"],
+      "arabic_confusion": "يخلط مع /b/ لأن العربية لا تميز بينهما",
+      "hint": "ضع ورقة أمام فمك — يجب أن تتحرك الورقة عند نطق /p/",
+      "minimal_pair": "pen vs ben",
+      "priority": 1
+    },
+    {
+      "phoneme": "/v/",
+      "examples": ["very", "have", "five", "visa", "arrival"],
+      "arabic_confusion": "يخلط مع /f/ — العرب يستبدلونها بـ /f/",
+      "hint": "ضع أسنانك على شفتك السفلى واهمس — ستحس باهتزاز",
+      "minimal_pair": "very vs ferry",
+      "priority": 2
+    },
+    {
+      "phoneme": "/θ/",
+      "examples": ["think", "the", "thank", "bathroom", "nothing"],
+      "arabic_confusion": "يستبدلها بـ /z/ أو /s/",
+      "hint": "ضع لسانك بين أسنانك الأمامية وأخرج الهواء بسلاسة",
+      "minimal_pair": "think vs sink",
+      "priority": 3
+    },
+    {
+      "phoneme": "/r/",
+      "examples": ["red", "arrive", "restaurant", "gate", "very"],
+      "arabic_confusion": "الراء الإنجليزية مختلفة عن العربية — لا تُلفظ من الحلق",
+      "hint": "لون لسانك لأعلى دون لمس سقف الفم — الراء الإنجليزية ناعمة",
+      "minimal_pair": "red vs led (for confusion with /l/)",
+      "priority": 4
+    },
+    {
+      "phoneme": "/ŋ/",
+      "examples": ["sing", "morning", "checking", "boarding", "anything"],
+      "arabic_confusion": "لا يوجد مقابل في العربية — يستبدلها بـ /n/",
+      "hint": "اجعل الصوت يخرج من الأنف — مثل رنين خفيف",
+      "minimal_pair": "sing vs sin",
+      "priority": 5
+    }
+  ]
+}

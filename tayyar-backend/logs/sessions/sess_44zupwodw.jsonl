@@ -1,0 +1,28 @@
+{"t":"2026-07-16T16:55:11.954Z","type":"session_start","studentId":"student_123","missionId":"mission_03_secret_weapon"}
+{"t":"2026-07-16T16:55:17.720Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-16T16:55:26.962Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-16T16:55:31.405Z","type":"ai_transcript","text":" — نكمل"}
+{"t":"2026-07-16T16:55:31.591Z","type":"ai_transcript","text":" الرحلة"}
+{"t":"2026-07-16T16:55:31.707Z","type":"ai_transcript","text":" يا بطل!"}
+{"t":"2026-07-16T16:55:31.752Z","type":"ai_transcript","text":" إحنا"}
+{"t":"2026-07-16T16:55:31.774Z","type":"ai_transcript","text":" فوق"}
+{"t":"2026-07-16T16:55:31.776Z","type":"ai_transcript","text":" الغيم"}
+{"t":"2026-07-16T16:55:31.785Z","type":"ai_transcript","text":" الحين."}
+{"t":"2026-07-16T16:55:31.803Z","type":"ai_transcript","text":"\n\nوعدتك أمس"}
+{"t":"2026-07-16T16:55:31.834Z","type":"ai_transcript","text":" بسلاح"}
+{"t":"2026-07-16T16:55:31.849Z","type":"ai_transcript","text":" سريع..."}
+{"t":"2026-07-16T16:55:31.861Z","type":"ai_transcript","text":" هذا"}
+{"t":"2026-07-16T16:55:31.871Z","type":"ai_transcript","text":" وقته."}
+{"t":"2026-07-16T16:55:31.881Z","type":"ai_transcript","text":" بس"}
+{"t":"2026-07-16T16:55:31.894Z","type":"ai_transcript","text":" أول،"}
+{"t":"2026-07-16T16:55:31.903Z","type":"ai_transcript","text":" خلني"}
+{"t":"2026-07-16T16:55:31.913Z","type":"ai_transcript","text":" أقول"}
+{"t":"2026-07-16T16:55:31.915Z","type":"ai_transcript","text":"\n\n"}
+{"t":"2026-07-16T16:55:31.928Z","type":"ai_transcript","text":" لك الحقيقة"}
+{"t":"2026-07-16T16:55:31.938Z","type":"ai_transcript","text":" اللي ما"}
+{"t":"2026-07-16T16:55:31.944Z","type":"ai_transcript","text":" يقولها"}
+{"t":"2026-07-16T16:55:31.953Z","type":"ai_transcript","text":" المعلمين:"}
+{"t":"2026-07-16T16:55:32.003Z","type":"turn_complete"}
+{"t":"2026-07-16T16:55:51.983Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-16T16:56:52.052Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-16T16:56:52.058Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}

@@ -1,0 +1,244 @@
+.home-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+}
+
+.home-content {
+  flex: 1;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Welcome --- */
+.welcome-section {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.greeting {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: 16px;
+}
+
+/* --- Mission Card --- */
+.mission-section {
+  animation-delay: 100ms;
+}
+
+.mission-card {
+  background: linear-gradient(145deg, #ffffff, #f0f6ff);
+  border: 2px solid rgba(30, 91, 168, 0.12);
+  border-radius: var(--radius-xl);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mission-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #1E5BA8, #2E86DE);
+  color: white;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 700;
+  align-self: center;
+  box-shadow: 0 4px 10px rgba(30, 91, 168, 0.3);
+}
+
+.mission-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-text);
+  text-align: center;
+  margin-top: 4px;
+}
+
+.mission-desc {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.mission-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: rgba(30, 91, 168, 0.05);
+  border-radius: var(--radius-md);
+  padding: 14px 8px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(30, 91, 168, 0.15);
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.stat-value {
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--color-primary);
+  font-family: var(--font-arabic);
+}
+
+/* --- Mission list (all 5 lessons, pick any) --- */
+.mission-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.mission-list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: right;
+  font-family: var(--font-arabic);
+}
+
+.mission-list-item:hover {
+  border-color: rgba(30, 91, 168, 0.25);
+  box-shadow: var(--shadow-card);
+}
+
+.mission-list-order {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F1F3F5;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.mission-list-item.done .mission-list-order {
+  background: var(--color-success);
+  color: white;
+}
+
+.mission-list-item.next {
+  border-color: var(--color-primary);
+  background: rgba(30, 91, 168, 0.04);
+}
+
+.mission-list-item.next .mission-list-order {
+  background: var(--color-primary);
+  color: white;
+}
+
+.mission-list-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.mission-list-item.done .mission-list-title {
+  color: var(--color-text-muted);
+}
+
+/* --- Progress Section --- */
+.progress-section {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(0,0,0,0.04);
+  animation-delay: 200ms;
+}
+
+.progress-section h3 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.days-track {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.day-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.day-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #F1F3F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.day-name {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.day-item.completed .day-circle {
+  background: var(--color-success);
+  color: white;
+  border-color: #27AE60;
+  box-shadow: 0 3px 8px rgba(46, 204, 113, 0.3);
+}
+
+.day-item.today .day-circle {
+  border: 2px solid var(--color-primary);
+  background: white;
+  color: var(--color-primary);
+  font-size: 20px;
+  box-shadow: 0 3px 8px rgba(30, 91, 168, 0.2);
+}

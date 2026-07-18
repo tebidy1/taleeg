@@ -1,0 +1,30 @@
+{"t":"2026-07-16T17:22:51.847Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-16T17:22:52.540Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-16T17:22:52.874Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-16T17:22:52.963Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-16T17:22:53.057Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-16T17:22:53.222Z","type":"ai_transcript","text":" —"}
+{"t":"2026-07-16T17:22:53.259Z","type":"ai_transcript","text":" يوم"}
+{"t":"2026-07-16T17:22:53.409Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-16T17:22:53.549Z","type":"ai_transcript","text":" English"}
+{"t":"2026-07-16T17:22:53.818Z","type":"ai_transcript","text":" time!"}
+{"t":"2026-07-16T17:22:53.934Z","type":"ai_transcript","text":"\n\nفيصل! المقعد"}
+{"t":"2026-07-16T17:22:54.322Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-16T17:22:54.414Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-16T17:22:54.600Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-16T17:22:54.640Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-16T17:22:54.815Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-16T17:22:54.933Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-16T17:22:55.208Z","type":"ai_transcript","text":" اللي هناك..."}
+{"t":"2026-07-16T17:22:55.292Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-16T17:22:55.371Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-16T17:22:55.516Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-16T17:23:03.830Z","type":"turn_complete"}
+{"t":"2026-07-16T17:23:06.872Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-16T17:23:31.881Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-16T17:24:31.952Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-16T17:24:31.955Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}
+{"t":"2026-07-16T17:28:07.217Z","type":"phase_change","phase":"multi_context"}
+{"t":"2026-07-16T17:28:07.220Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (multi_context). Finish your current step first, then transiti"}
+{"t":"2026-07-16T17:28:52.228Z","type":"phase_change","phase":"victory_close"}
+{"t":"2026-07-16T17:28:52.230Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (victory_close). Finish your current step first, then transiti"}

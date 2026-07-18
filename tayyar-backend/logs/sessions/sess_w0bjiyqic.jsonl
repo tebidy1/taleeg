@@ -1,0 +1,15 @@
+{"t":"2026-07-18T11:19:43.828Z","type":"session_start","studentId":"student_123","missionId":"mission_01_voice_gate"}
+{"t":"2026-07-18T11:19:44.560Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-18T11:19:44.929Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-18T11:19:44.973Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-18T11:19:45.211Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-18T11:19:45.436Z","type":"ai_transcript","text":" — الرحلة"}
+{"t":"2026-07-18T11:19:45.541Z","type":"ai_transcript","text":" ٠٠١"}
+{"t":"2026-07-18T11:19:45.743Z","type":"ai_transcript","text":" إلى"}
+{"t":"2026-07-18T11:19:45.940Z","type":"ai_transcript","text":" دبي"}
+{"t":"2026-07-18T11:19:45.985Z","type":"ai_transcript","text":" جاهزة"}
+{"t":"2026-07-18T11:19:46.192Z","type":"ai_transcript","text":" للإقلاع!"}
+{"t":"2026-07-18T11:19:46.295Z","type":"ai_transcript","text":"\n\nفيصل... وصلك"}
+{"t":"2026-07-18T11:19:46.613Z","type":"user_turn_end"}
+{"t":"2026-07-18T11:19:46.689Z","type":"interrupted"}
+{"t":"2026-07-18T11:19:46.728Z","type":"turn_complete"}

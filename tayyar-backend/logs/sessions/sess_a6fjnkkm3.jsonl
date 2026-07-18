@@ -1,0 +1,144 @@
+{"t":"2026-07-18T11:50:33.876Z","type":"session_start","studentId":"student_123","missionId":"mission_01_voice_gate"}
+{"t":"2026-07-18T11:50:34.748Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-18T11:50:34.757Z","type":"user_turn_end"}
+{"t":"2026-07-18T11:50:34.983Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-18T11:50:35.064Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-18T11:50:35.318Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-18T11:50:35.410Z","type":"ai_transcript","text":" — الرحلة"}
+{"t":"2026-07-18T11:50:35.711Z","type":"ai_transcript","text":" ٠٠١"}
+{"t":"2026-07-18T11:50:35.820Z","type":"ai_transcript","text":" إلى"}
+{"t":"2026-07-18T11:50:35.914Z","type":"ai_transcript","text":" دبي"}
+{"t":"2026-07-18T11:50:36.138Z","type":"ai_transcript","text":" جاهزة"}
+{"t":"2026-07-18T11:50:36.342Z","type":"ai_transcript","text":" للإقلاع!"}
+{"t":"2026-07-18T11:50:36.373Z","type":"ai_transcript","text":"\n\nفيصل... وصلك"}
+{"t":"2026-07-18T11:50:36.737Z","type":"ai_transcript","text":" شي"}
+{"t":"2026-07-18T11:50:36.822Z","type":"ai_transcript","text":" ما"}
+{"t":"2026-07-18T11:50:36.906Z","type":"ai_transcript","text":" يوصل"}
+{"t":"2026-07-18T11:50:37.161Z","type":"ai_transcript","text":" إلا لواحد"}
+{"t":"2026-07-18T11:50:37.458Z","type":"ai_transcript","text":" بالمليون."}
+{"t":"2026-07-18T11:50:37.546Z","type":"ai_transcript","text":" رسالة"}
+{"t":"2026-07-18T11:50:37.575Z","type":"ai_transcript","text":" اختيار"}
+{"t":"2026-07-18T11:50:37.684Z","type":"ai_transcript","text":" رسمية —"}
+{"t":"2026-07-18T11:50:37.909Z","type":"ai_transcript","text":" ومعها"}
+{"t":"2026-07-18T11:50:38.038Z","type":"ai_transcript","text":" مغلف"}
+{"t":"2026-07-18T11:50:38.117Z","type":"ai_transcript","text":" ذهبي"}
+{"t":"2026-07-18T11:50:38.368Z","type":"ai_transcript","text":" مقفل،"}
+{"t":"2026-07-18T11:50:38.377Z","type":"ai_transcript","text":" مكتوب"}
+{"t":"2026-07-18T11:50:38.403Z","type":"ai_transcript","text":"\n\n"}
+{"t":"2026-07-18T11:50:38.489Z","type":"ai_transcript","text":" عليه:"}
+{"t":"2026-07-18T11:50:38.582Z","type":"ai_transcript","text":" لا"}
+{"t":"2026-07-18T11:50:38.844Z","type":"ai_transcript","text":" يُفتح"}
+{"t":"2026-07-18T11:50:38.861Z","type":"ai_transcript","text":" إلا"}
+{"t":"2026-07-18T11:50:38.928Z","type":"ai_transcript","text":" في دبي."}
+{"t":"2026-07-18T11:50:48.902Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-18T11:50:50.780Z","type":"turn_complete"}
+{"t":"2026-07-18T11:50:53.637Z","type":"user_turn_end"}
+{"t":"2026-07-18T11:50:54.605Z","type":"ai_transcript","text":"بس فيه"}
+{"t":"2026-07-18T11:50:54.690Z","type":"ai_transcript","text":" عقبة"}
+{"t":"2026-07-18T11:50:54.762Z","type":"ai_transcript","text":" أولى:"}
+{"t":"2026-07-18T11:50:54.898Z","type":"ai_transcript","text":" بوابة"}
+{"t":"2026-07-18T11:50:55.060Z","type":"ai_transcript","text":" الصعود"}
+{"t":"2026-07-18T11:50:55.189Z","type":"ai_transcript","text":" عندنا"}
+{"t":"2026-07-18T11:50:55.286Z","type":"ai_transcript","text":" صوتية."}
+{"t":"2026-07-18T11:50:55.608Z","type":"ai_transcript","text":" ما تفتح"}
+{"t":"2026-07-18T11:50:55.826Z","type":"ai_transcript","text":" إلا لمن"}
+{"t":"2026-07-18T11:50:56.092Z","type":"ai_transcript","text":" يعرّف"}
+{"t":"2026-07-18T11:50:56.104Z","type":"ai_transcript","text":" بنفسه"}
+{"t":"2026-07-18T11:50:56.411Z","type":"ai_transcript","text":"\n\n"}
+{"t":"2026-07-18T11:50:56.552Z","type":"ai_transcript","text":" بالإنجليزي —"}
+{"t":"2026-07-18T11:50:56.683Z","type":"ai_transcript","text":" بطلاقة،"}
+{"t":"2026-07-18T11:50:57.164Z","type":"ai_transcript","text":" بدون"}
+{"t":"2026-07-18T11:50:57.480Z","type":"ai_transcript","text":" توقف."}
+{"t":"2026-07-18T11:50:57.758Z","type":"ai_transcript","text":" مستعد؟"}
+{"t":"2026-07-18T11:51:03.255Z","type":"turn_complete"}
+{"t":"2026-07-18T11:51:08.140Z","type":"user_turn_end"}
+{"t":"2026-07-18T11:51:09.504Z","type":"ai_transcript","text":"أنت درست"}
+{"t":"2026-07-18T11:51:09.764Z","type":"ai_transcript","text":" هذا"}
+{"t":"2026-07-18T11:51:09.812Z","type":"ai_transcript","text":" كله"}
+{"t":"2026-07-18T11:51:09.877Z","type":"ai_transcript","text":" بالمدرسة!"}
+{"t":"2026-07-18T11:51:10.107Z","type":"ai_transcript","text":" اليوم"}
+{"t":"2026-07-18T11:51:10.339Z","type":"ai_transcript","text":" نحوله"}
+{"t":"2026-07-18T11:51:10.345Z","type":"ai_transcript","text":" من"}
+{"t":"2026-07-18T11:51:10.547Z","type":"ai_transcript","text":" (أعرفه)"}
+{"t":"2026-07-18T11:51:10.560Z","type":"ai_transcript","text":" إلى"}
+{"t":"2026-07-18T11:51:10.874Z","type":"ai_transcript","text":" (أقوله)."}
+{"t":"2026-07-18T11:51:10.893Z","type":"ai_transcript","text":" الأولى"}
+{"t":"2026-07-18T11:51:11.023Z","type":"ai_transcript","text":" تعرفها:"}
+{"t":"2026-07-18T11:51:11.221Z","type":"ai_transcript","text":" Hi, I'm"}
+{"t":"2026-07-18T11:51:11.365Z","type":"ai_transcript","text":" Faisal."}
+{"t":"2026-07-18T11:51:11.518Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-18T11:51:13.942Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-18T11:51:17.619Z","type":"turn_complete"}
+{"t":"2026-07-18T11:51:21.094Z","type":"user_turn_end"}
+{"t":"2026-07-18T11:51:22.309Z","type":"ai_transcript","text":"شفت؟ عندك"}
+{"t":"2026-07-18T11:51:22.614Z","type":"ai_transcript","text":" أصلاً!"}
+{"t":"2026-07-18T11:51:23.147Z","type":"ai_transcript","text":" الثانية"}
+{"t":"2026-07-18T11:51:23.162Z","type":"ai_transcript","text":" — من"}
+{"t":"2026-07-18T11:51:23.168Z","type":"ai_transcript","text":" وين"}
+{"t":"2026-07-18T11:51:23.179Z","type":"ai_transcript","text":" أنت:"}
+{"t":"2026-07-18T11:51:23.363Z","type":"ai_transcript","text":" I'm from"}
+{"t":"2026-07-18T11:51:23.423Z","type":"ai_transcript","text":" Riyadh."}
+{"t":"2026-07-18T11:51:23.652Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-18T11:51:27.393Z","type":"turn_complete"}
+{"t":"2026-07-18T11:51:57.338Z","type":"user_turn_end"}
+{"t":"2026-07-18T11:51:58.363Z","type":"ai_transcript","text":"والثالثة تختم"}
+{"t":"2026-07-18T11:51:58.620Z","type":"ai_transcript","text":" فيها"}
+{"t":"2026-07-18T11:51:58.705Z","type":"ai_transcript","text":" بابتسامة:"}
+{"t":"2026-07-18T11:51:58.875Z","type":"ai_transcript","text":" Nice"}
+{"t":"2026-07-18T11:51:59.106Z","type":"ai_transcript","text":" to meet"}
+{"t":"2026-07-18T11:51:59.345Z","type":"ai_transcript","text":" you."}
+{"t":"2026-07-18T11:51:59.350Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-18T11:52:02.498Z","type":"turn_complete"}
+{"t":"2026-07-18T11:52:04.273Z","type":"user_turn_end"}
+{"t":"2026-07-18T11:52:05.432Z","type":"ai_transcript","text":"الحين السحر"}
+{"t":"2026-07-18T11:52:05.741Z","type":"ai_transcript","text":" — الأولى"}
+{"t":"2026-07-18T11:52:05.960Z","type":"ai_transcript","text":" والثانية"}
+{"t":"2026-07-18T11:52:06.074Z","type":"ai_transcript","text":" بدون"}
+{"t":"2026-07-18T11:52:06.341Z","type":"ai_transcript","text":" وقفة."}
+{"t":"2026-07-18T11:52:06.373Z","type":"ai_transcript","text":" اسمع"}
+{"t":"2026-07-18T11:52:06.475Z","type":"ai_transcript","text":" ببطء:"}
+{"t":"2026-07-18T11:52:06.620Z","type":"ai_transcript","text":" Hi..."}
+{"t":"2026-07-18T11:52:06.823Z","type":"ai_transcript","text":" I'm..."}
+{"t":"2026-07-18T11:52:07.091Z","type":"ai_transcript","text":" Faisal..."}
+{"t":"2026-07-18T11:52:07.175Z","type":"ai_transcript","text":" I'm..."}
+{"t":"2026-07-18T11:52:07.591Z","type":"ai_transcript","text":" from..."}
+{"t":"2026-07-18T11:52:07.595Z","type":"ai_transcript","text":" Riyadh."}
+{"t":"2026-07-18T11:52:07.661Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-18T11:52:14.031Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-18T11:52:14.060Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}
+{"t":"2026-07-18T11:52:14.252Z","type":"interrupted"}
+{"t":"2026-07-18T11:52:14.255Z","type":"turn_complete"}
+{"t":"2026-07-18T11:52:17.409Z","type":"user_turn_end"}
+{"t":"2026-07-18T11:52:18.904Z","type":"ai_transcript","text":"والحين بشكل"}
+{"t":"2026-07-18T11:52:19.156Z","type":"ai_transcript","text":" طبيعي:"}
+{"t":"2026-07-18T11:52:19.316Z","type":"ai_transcript","text":" Hi,"}
+{"t":"2026-07-18T11:52:19.593Z","type":"ai_transcript","text":" I'm"}
+{"t":"2026-07-18T11:52:19.703Z","type":"ai_transcript","text":" Faisal."}
+{"t":"2026-07-18T11:52:19.879Z","type":"ai_transcript","text":" I'm"}
+{"t":"2026-07-18T11:52:19.940Z","type":"ai_transcript","text":" from"}
+{"t":"2026-07-18T11:52:20.179Z","type":"ai_transcript","text":" Riyadh."}
+{"t":"2026-07-18T11:52:20.288Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-18T11:52:24.477Z","type":"turn_complete"}
+{"t":"2026-07-18T11:52:46.967Z","type":"user_turn_end"}
+{"t":"2026-07-18T11:52:48.325Z","type":"ai_transcript","text":"ممتاز! الحين"}
+{"t":"2026-07-18T11:52:48.715Z","type":"ai_transcript","text":" الثلاث"}
+{"t":"2026-07-18T11:52:48.796Z","type":"ai_transcript","text":" كلها،"}
+{"t":"2026-07-18T11:52:48.910Z","type":"ai_transcript","text":" نفَس"}
+{"t":"2026-07-18T11:52:49.259Z","type":"ai_transcript","text":" واحد:"}
+{"t":"2026-07-18T11:52:49.263Z","type":"ai_transcript","text":" Hi,"}
+{"t":"2026-07-18T11:52:49.464Z","type":"ai_transcript","text":" I'm"}
+{"t":"2026-07-18T11:52:49.668Z","type":"ai_transcript","text":" Faisal."}
+{"t":"2026-07-18T11:52:49.733Z","type":"ai_transcript","text":" I'm"}
+{"t":"2026-07-18T11:52:49.804Z","type":"ai_transcript","text":" from"}
+{"t":"2026-07-18T11:52:49.976Z","type":"ai_transcript","text":" Riyadh."}
+{"t":"2026-07-18T11:52:50.152Z","type":"ai_transcript","text":" Nice"}
+{"t":"2026-07-18T11:52:50.199Z","type":"ai_transcript","text":" to meet"}
+{"t":"2026-07-18T11:52:50.363Z","type":"ai_transcript","text":" you!"}
+{"t":"2026-07-18T11:52:50.429Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-18T11:52:56.523Z","type":"turn_complete"}
+{"t":"2026-07-18T11:53:03.738Z","type":"user_turn_end"}
+{"t":"2026-07-18T11:53:03.961Z","type":"pause"}
+{"t":"2026-07-18T11:53:04.931Z","type":"ai_transcript","text":"بثقة —"}
+{"t":"2026-07-18T11:53:05.111Z","type":"ai_transcript","text":" آخر"}
+{"t":"2026-07-18T11:53:05.291Z","type":"ai_transcript","text":" مرة:"}
+{"t":"2026-07-18T11:53:06.975Z","type":"turn_complete"}

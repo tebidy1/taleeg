@@ -1,0 +1,133 @@
+{"t":"2026-07-19T03:48:55.873Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-19T03:48:56.573Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-19T03:48:56.892Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-19T03:48:57.028Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-19T03:48:57.122Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-19T03:48:57.315Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-19T03:48:57.427Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-19T03:48:57.631Z","type":"ai_transcript","text":"\nفيصل! المقعد"}
+{"t":"2026-07-19T03:48:57.970Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-19T03:48:58.069Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-19T03:48:58.131Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-19T03:48:58.183Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-19T03:48:58.289Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-19T03:48:58.321Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-19T03:48:58.612Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-19T03:48:58.698Z","type":"ai_transcript","text":" اللي هناك..."}
+{"t":"2026-07-19T03:48:58.813Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-19T03:48:58.863Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-19T03:48:59.008Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-19T03:49:05.743Z","type":"turn_complete"}
+{"t":"2026-07-19T03:49:05.764Z","type":"turn_complete_expect","expects":false}
+{"t":"2026-07-19T03:49:10.888Z","type":"narration_beat"}
+{"t":"2026-07-19T03:49:10.894Z","type":"directive","active":true,"preview":"That pause was a dramatic beat, not a student cue — nothing was asked of the chi"}
+{"t":"2026-07-19T03:49:11.039Z","type":"gemini_close","code":1007,"reason":"Precondition check failed."}
+{"t":"2026-07-19T03:49:12.451Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-19T03:49:13.136Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-19T03:49:13.511Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-19T03:49:13.536Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-19T03:49:13.661Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-19T03:49:13.896Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-19T03:49:14.068Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-19T03:49:14.275Z","type":"ai_transcript","text":"\n\nفيصل!"}
+{"t":"2026-07-19T03:49:14.442Z","type":"ai_transcript","text":" المقعد"}
+{"t":"2026-07-19T03:49:14.666Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-19T03:49:14.745Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-19T03:49:14.901Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-19T03:49:14.968Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-19T03:49:15.205Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-19T03:49:15.210Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-19T03:49:15.288Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-19T03:49:15.415Z","type":"ai_transcript","text":" اللي"}
+{"t":"2026-07-19T03:49:15.609Z","type":"ai_transcript","text":" هناك..."}
+{"t":"2026-07-19T03:49:15.666Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-19T03:49:15.781Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-19T03:49:15.967Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-19T03:49:23.594Z","type":"turn_complete"}
+{"t":"2026-07-19T03:49:23.597Z","type":"turn_complete_expect","expects":false}
+{"t":"2026-07-19T03:49:27.477Z","type":"narration_beat"}
+{"t":"2026-07-19T03:49:27.481Z","type":"directive","active":true,"preview":"That pause was a dramatic beat, not a student cue — nothing was asked of the chi"}
+{"t":"2026-07-19T03:49:28.252Z","type":"ai_transcript","text":"قبل نوصل"}
+{"t":"2026-07-19T03:49:28.454Z","type":"ai_transcript","text":" الكاونتر"}
+{"t":"2026-07-19T03:49:28.668Z","type":"ai_transcript","text":" — اسمع"}
+{"t":"2026-07-19T03:49:28.835Z","type":"ai_transcript","text":" سر"}
+{"t":"2026-07-19T03:49:28.878Z","type":"ai_transcript","text":" موظفي"}
+{"t":"2026-07-19T03:49:29.129Z","type":"ai_transcript","text":" المطارات"}
+{"t":"2026-07-19T03:49:29.225Z","type":"ai_transcript","text":" بالعالم"}
+{"t":"2026-07-19T03:49:29.310Z","type":"ai_transcript","text":" كله:"}
+{"t":"2026-07-19T03:49:29.468Z","type":"ai_transcript","text":" سامي"}
+{"t":"2026-07-19T03:49:29.717Z","type":"ai_transcript","text":" ما يسمع"}
+{"t":"2026-07-19T03:49:29.719Z","type":"ai_transcript","text":" للي"}
+{"t":"2026-07-19T03:49:29.783Z","type":"ai_transcript","text":" يقول"}
+{"t":"2026-07-19T03:49:29.849Z","type":"ai_transcript","text":" (أبي"}
+{"t":"2026-07-19T03:49:29.962Z","type":"ai_transcript","text":" أبي)..."}
+{"t":"2026-07-19T03:49:30.042Z","type":"ai_transcript","text":" يسمع"}
+{"t":"2026-07-19T03:49:30.196Z","type":"ai_transcript","text":" بس"}
+{"t":"2026-07-19T03:49:30.247Z","type":"ai_transcript","text":" للي"}
+{"t":"2026-07-19T03:49:30.397Z","type":"gemini_close","code":1000,"reason":""}
+{"t":"2026-07-19T03:49:31.683Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-19T03:49:32.364Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-19T03:49:32.691Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-19T03:49:32.776Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-19T03:49:32.874Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-19T03:49:33.056Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-19T03:49:33.189Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-19T03:49:33.402Z","type":"ai_transcript","text":"\n\nفيصل! المقعد"}
+{"t":"2026-07-19T03:49:33.662Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-19T03:49:33.786Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-19T03:49:33.847Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-19T03:49:33.905Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-19T03:49:34.028Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-19T03:49:34.058Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-19T03:49:34.268Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-19T03:49:34.382Z","type":"ai_transcript","text":" اللي هناك..."}
+{"t":"2026-07-19T03:49:34.511Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-19T03:49:34.606Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-19T03:49:34.724Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-19T03:49:41.251Z","type":"turn_complete"}
+{"t":"2026-07-19T03:49:41.252Z","type":"turn_complete_expect","expects":false}
+{"t":"2026-07-19T03:49:41.555Z","type":"gemini_close","code":1000,"reason":""}
+{"t":"2026-07-19T03:49:42.848Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-19T03:49:43.537Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-19T03:49:43.890Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-19T03:49:43.945Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-19T03:49:44.064Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-19T03:49:44.309Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-19T03:49:44.387Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-19T03:49:44.608Z","type":"ai_transcript","text":"\n\nفيصل! المقعد"}
+{"t":"2026-07-19T03:49:45.020Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-19T03:49:45.180Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-19T03:49:45.304Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-19T03:49:45.318Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-19T03:49:45.510Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-19T03:49:45.515Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-19T03:49:45.634Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-19T03:49:45.961Z","type":"ai_transcript","text":" اللي هناك..."}
+{"t":"2026-07-19T03:49:46.204Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-19T03:49:46.217Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-19T03:49:46.282Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-19T03:49:49.484Z","type":"gemini_close","code":1000,"reason":""}
+{"t":"2026-07-19T03:49:50.560Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-19T03:49:51.253Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-19T03:49:51.552Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-19T03:49:51.683Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-19T03:49:51.769Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-19T03:49:51.947Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-19T03:49:52.174Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-19T03:49:52.264Z","type":"ai_transcript","text":"\n\nفيصل! المقعد"}
+{"t":"2026-07-19T03:49:52.561Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-19T03:49:52.666Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-19T03:49:52.762Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-19T03:49:52.808Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-19T03:49:52.909Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-19T03:49:52.983Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-19T03:49:53.077Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-19T03:49:53.203Z","type":"ai_transcript","text":" اللي"}
+{"t":"2026-07-19T03:49:53.394Z","type":"ai_transcript","text":" هناك..."}
+{"t":"2026-07-19T03:49:53.440Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-19T03:49:53.518Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-19T03:49:53.643Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-19T03:50:00.151Z","type":"turn_complete"}
+{"t":"2026-07-19T03:50:00.154Z","type":"turn_complete_expect","expects":false}
+{"t":"2026-07-19T03:50:05.587Z","type":"narration_beat"}
+{"t":"2026-07-19T03:50:05.589Z","type":"directive","active":true,"preview":"That pause was a dramatic beat, not a student cue — nothing was asked of the chi"}

@@ -32,7 +32,12 @@ export async function createGeminiSession(systemPrompt: string, callbacks: Gemin
                     prebuiltVoiceConfig: { voiceName: 'Charon' }
                 }
             },
-            temperature: 0.8,
+            // 0.6, down from 0.8: the captain also acts as a pronunciation
+            // JUDGE, and high temperature made that judgment inconsistent —
+            // the model would wave through a clearly wrong word. Still warm
+            // enough for theatrical delivery, but far steadier at catching
+            // errors it should catch.
+            temperature: 0.6,
             tools: [{
                 functionDeclarations: [{
                     name: 'yield_turn',
@@ -53,6 +58,12 @@ export async function createGeminiSession(systemPrompt: string, callbacks: Gemin
                 // by tapping the mic (client-side VAD via analyser).
                 automaticActivityDetection: { disabled: true },
             },
+            // An 8-minute session with a system directive injected every ~30s
+            // steadily grows the context. Without compression, long sessions can
+            // hit the window limit and Gemini drops the connection mid-lesson
+            // (a periodic "silent disconnect"). A sliding window keeps the live
+            // context bounded so the session survives its full duration.
+            contextWindowCompression: { slidingWindow: {} },
         },
         callbacks: {
             onopen:    callbacks.onOpen,

@@ -6,7 +6,7 @@
 ## MISSION OVERVIEW
 - Title: "Hungry — Ordering at a Restaurant"
 - Title (AR): "جوعان — الطلب في المطعم"
-- Context: Hotel restaurant in Dubai
+- Context: Hotel restaurant in Salalah
 - Reviews all 5 patterns in a rich context
 
 ## NARRATIVE SETUP
@@ -138,7 +138,7 @@ you like to pay?"
 ## CLIFFHANGER
 
 "🎬 غداً:
-قبل العودة إلى الرياض، تريد شراء هدية لعائلتك.
+قبل العودة إلى مسقط، تريد شراء هدية لعائلتك.
 متجر الملابس في الطابق الأرضي. البائع 'James' سيساعدك.
 هل تعرف كيف تختار المقاس المناسب وتسأل عن السعر؟"
 

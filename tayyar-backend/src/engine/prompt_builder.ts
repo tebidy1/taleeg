@@ -41,12 +41,19 @@ export interface RealTimeState {
 }
 
 export function detectCurrentPhase(timeElapsedSecs: number): string {
-  if (timeElapsedSecs < 15)  return 'flash_open';     // 15s  — 2 sentences max
-  if (timeElapsedSecs < 40)  return 'quick_review';   // 25s  — spaced retrieval from last session
-  if (timeElapsedSecs < 100) return 'warmup';         // 60s  — vocabulary flash + 3-step shadowing
-  if (timeElapsedSecs < 315) return 'mission';        // 215s — dialogue exchanges (STT ≥ 70%)
-  if (timeElapsedSecs < 360) return 'multi_context';  // 45s  — 3-scenario sprint
-  if (timeElapsedSecs < 420) return 'victory_close';  // 60s  — hero word + teaser + final say
+  // Windows widened so the AUTHORED content actually fits its phase. The old
+  // warmup window was 60s, but every mission that teaches new language needs
+  // real shadowing (2 models + a 3-5 rep loop per new pattern, often TWO new
+  // patterns) which measures ~120-150s. At 60s the mission-phase script was
+  // injected on top of an unfinished drill, so the captain raced through the
+  // repetitions — the "phrases used before they were drilled" symptom. Mission
+  // was over-long (215s) to compensate; that budget now moves into warmup.
+  if (timeElapsedSecs < 30)  return 'flash_open';     // 30s  — hook + stakes, no rush
+  if (timeElapsedSecs < 60)  return 'quick_review';   // 30s  — spaced retrieval from last session
+  if (timeElapsedSecs < 210) return 'warmup';         // 150s — vocabulary flash + full shadowing loop
+  if (timeElapsedSecs < 360) return 'mission';        // 150s — dialogue exchanges (STT ≥ 70%)
+  if (timeElapsedSecs < 405) return 'multi_context';  // 45s  — 3-scenario sprint
+  if (timeElapsedSecs < 465) return 'victory_close';  // 60s  — hero word + teaser + final say
   return 'end';
 }
 

@@ -16,7 +16,6 @@ exports.shouldOfferReviewSession = shouldOfferReviewSession;
 exports.checkLevel2Readiness = checkLevel2Readiness;
 exports.planNextSession = planNextSession;
 exports.getMissionDifficulty = getMissionDifficulty;
-const types_1 = require("../schema/types");
 // ============================================================
 // LEVEL 1 PROGRESSION MAP
 // ============================================================

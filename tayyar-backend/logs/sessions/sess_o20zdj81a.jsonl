@@ -1,0 +1,40 @@
+{"t":"2026-07-19T04:34:25.557Z","type":"session_start","studentId":"student_123","missionId":"mission_01_voice_gate"}
+{"t":"2026-07-19T04:34:26.240Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-19T04:34:26.457Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-19T04:34:26.704Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-19T04:34:26.745Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-19T04:34:26.877Z","type":"ai_transcript","text":" — الرحلة"}
+{"t":"2026-07-19T04:34:27.141Z","type":"ai_transcript","text":" ٠٠١"}
+{"t":"2026-07-19T04:34:27.336Z","type":"ai_transcript","text":" إلى"}
+{"t":"2026-07-19T04:34:27.421Z","type":"ai_transcript","text":" دبي"}
+{"t":"2026-07-19T04:34:27.507Z","type":"ai_transcript","text":" جاهزة"}
+{"t":"2026-07-19T04:34:27.631Z","type":"ai_transcript","text":" للإقلاع!"}
+{"t":"2026-07-19T04:34:27.876Z","type":"ai_transcript","text":" فيصل..."}
+{"t":"2026-07-19T04:34:28.080Z","type":"ai_transcript","text":" وصلك"}
+{"t":"2026-07-19T04:34:28.253Z","type":"ai_transcript","text":" شي"}
+{"t":"2026-07-19T04:34:28.301Z","type":"ai_transcript","text":" ما يوصل"}
+{"t":"2026-07-19T04:34:28.451Z","type":"ai_transcript","text":" إلا لواحد"}
+{"t":"2026-07-19T04:34:28.558Z","type":"ai_transcript","text":" بالمليون."}
+{"t":"2026-07-19T04:34:28.699Z","type":"ai_transcript","text":" رسالة"}
+{"t":"2026-07-19T04:34:28.914Z","type":"ai_transcript","text":" اختيار"}
+{"t":"2026-07-19T04:34:28.999Z","type":"ai_transcript","text":" رسمية —"}
+{"t":"2026-07-19T04:34:29.297Z","type":"ai_transcript","text":" ومعها"}
+{"t":"2026-07-19T04:34:29.357Z","type":"ai_transcript","text":" مغلف"}
+{"t":"2026-07-19T04:34:29.451Z","type":"ai_transcript","text":" ذهبي"}
+{"t":"2026-07-19T04:34:29.562Z","type":"ai_transcript","text":" مقفل،"}
+{"t":"2026-07-19T04:34:29.715Z","type":"ai_transcript","text":" مكتوب"}
+{"t":"2026-07-19T04:34:29.839Z","type":"ai_transcript","text":" عليه:"}
+{"t":"2026-07-19T04:34:29.952Z","type":"ai_transcript","text":" لا يُفتح"}
+{"t":"2026-07-19T04:34:30.130Z","type":"ai_transcript","text":" إلا في"}
+{"t":"2026-07-19T04:34:30.242Z","type":"ai_transcript","text":" دبي."}
+{"t":"2026-07-19T04:34:30.417Z","type":"ai_transcript","text":" هل أنت"}
+{"t":"2026-07-19T04:34:30.549Z","type":"ai_transcript","text":" مستعد"}
+{"t":"2026-07-19T04:34:30.642Z","type":"ai_transcript","text":" لفتحه"}
+{"t":"2026-07-19T04:34:30.772Z","type":"ai_transcript","text":" هناك؟"}
+{"t":"2026-07-19T04:34:43.274Z","type":"turn_complete"}
+{"t":"2026-07-19T04:34:43.277Z","type":"turn_complete_expect","expects":true}
+{"t":"2026-07-19T04:34:55.610Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-19T04:34:55.612Z","type":"stuck_nudge"}
+{"t":"2026-07-19T04:34:55.614Z","type":"directive","active":true,"preview":"You asked the student to speak but they've gone quiet. Gently encourage them or "}
+{"t":"2026-07-19T04:35:25.666Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-19T04:35:31.107Z","type":"gemini_close","code":1000,"reason":""}

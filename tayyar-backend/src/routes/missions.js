@@ -34,7 +34,6 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const router = (0, express_1.Router)();
 router.get('/current/:studentId', async (req, res) => {

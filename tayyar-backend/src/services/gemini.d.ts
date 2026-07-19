@@ -5,4 +5,5 @@ export interface GeminiCallbacks {
     onClose: (event: any) => void;
 }
 export declare function createGeminiSession(systemPrompt: string, callbacks: GeminiCallbacks): Promise<import("@google/genai", { with: { "resolution-mode": "import" } }).Session>;
+export declare function summarizeSessionTranscript(transcriptText: string): Promise<any | null>;
 //# sourceMappingURL=gemini.d.ts.map

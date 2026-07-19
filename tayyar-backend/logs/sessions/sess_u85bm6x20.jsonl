@@ -1,0 +1,14 @@
+{"t":"2026-07-19T06:18:17.321Z","type":"session_start","studentId":"student_123","missionId":"mission_01_voice_gate"}
+{"t":"2026-07-19T06:18:18.003Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-19T06:18:18.271Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-19T06:18:18.510Z","type":"ai_transcript","text":" بالبطلة"}
+{"t":"2026-07-19T06:18:18.644Z","type":"ai_transcript","text":" لولو"}
+{"t":"2026-07-19T06:18:18.771Z","type":"ai_transcript","text":" —"}
+{"t":"2026-07-19T06:18:18.890Z","type":"ai_transcript","text":" الرحلة"}
+{"t":"2026-07-19T06:18:19.015Z","type":"ai_transcript","text":" ٠٠١"}
+{"t":"2026-07-19T06:18:19.118Z","type":"ai_transcript","text":" إلى"}
+{"t":"2026-07-19T06:18:19.272Z","type":"ai_transcript","text":" دبي"}
+{"t":"2026-07-19T06:18:19.409Z","type":"ai_transcript","text":" جاهزة"}
+{"t":"2026-07-19T06:18:19.568Z","type":"ai_transcript","text":" للإقلاع!"}
+{"t":"2026-07-19T06:18:19.794Z","type":"ai_transcript","text":" هل أنتِ"}
+{"t":"2026-07-19T06:18:20.004Z","type":"gemini_close","code":1000,"reason":""}

@@ -24,7 +24,7 @@ Only ONE new pattern. Two patterns reviewed naturally.
 
 "🎯 مهمتك الثانية!
 
-أنت الآن في الطائرة، في طريقك إلى دبي! ☁️
+أنت الآن في الطائرة، في طريقك إلى صلالة! ☁️
 المضيفة 'Emma' تقترب منك.
 
 اليوم تتعلم جملة جديدة:
@@ -52,7 +52,7 @@ AI: "Hi there! I'm Emma, your flight attendant.
 (Student: "Hello, I am [name]")
 
 AI: "Nice to meet you, [name]!
-     بساطة رحلتك من الرياض لدبي ساعتين.
+     بساطة رحلتك من مسقط لصلالة ساعتين.
      أنا هنا أساعدك. ما تخاف."
 ```
 
@@ -322,7 +322,7 @@ Anything else?
 **If correct**:
 AI: "You're welcome! 
      Enjoy the rest of your flight.
-     We'll land in Dubai soon! 🛬"
+     We'll land in Salalah soon! 🛬"
 
 **Target**: Polite decline + thanks
 **Success criteria**: Student politely declines/thanks
@@ -440,7 +440,7 @@ AI: "[response]
 ━━━━━━━━━━━━━━━━━━━━
 
 🎬 غداً:
-وصلت دبي! 🛬
+وصلت صلالة! 🛬
 الفندق ينتظرك.
 موظف الاستقبال 'Omar' بيساعدك.
 
@@ -507,7 +507,7 @@ If NOT met → student repeats Mission 2 next day
 
 ## 🔗 NEXT MISSION TEASER
 
-"بكرة: وصلت دبي! 🛬
+"بكرة: وصلت صلالة! 🛬
 الفندق ينتظرك. 'Omar' بيساعدك.
 
 ستتعلم:

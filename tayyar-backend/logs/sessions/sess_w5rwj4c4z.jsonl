@@ -1,0 +1,131 @@
+{"t":"2026-07-19T03:54:37.327Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-19T03:54:38.047Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-19T03:54:38.379Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-19T03:54:38.484Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-19T03:54:38.602Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-19T03:54:38.843Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-19T03:54:38.961Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-19T03:54:39.163Z","type":"ai_transcript","text":"\n\nفيصل!"}
+{"t":"2026-07-19T03:54:39.568Z","type":"ai_transcript","text":" المقعد"}
+{"t":"2026-07-19T03:54:39.604Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-19T03:54:39.705Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-19T03:54:39.852Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-19T03:54:39.911Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-19T03:54:40.070Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-19T03:54:40.152Z","type":"ai_transcript","text":"\n\n"}
+{"t":"2026-07-19T03:54:40.201Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-19T03:54:40.442Z","type":"ai_transcript","text":" اللي هناك..."}
+{"t":"2026-07-19T03:54:40.566Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-19T03:54:40.698Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-19T03:54:40.800Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-19T03:54:48.421Z","type":"turn_complete"}
+{"t":"2026-07-19T03:54:48.422Z","type":"turn_complete_expect","expects":false}
+{"t":"2026-07-19T03:54:52.335Z","type":"narration_beat"}
+{"t":"2026-07-19T03:54:52.337Z","type":"directive","active":true,"preview":"That pause was a dramatic beat, not a student cue — nothing was asked of the chi"}
+{"t":"2026-07-19T03:54:53.112Z","type":"ai_transcript","text":"قبل نوصل"}
+{"t":"2026-07-19T03:54:53.390Z","type":"ai_transcript","text":" الكاونتر"}
+{"t":"2026-07-19T03:54:53.558Z","type":"ai_transcript","text":" — اسمع"}
+{"t":"2026-07-19T03:54:53.733Z","type":"ai_transcript","text":" سر"}
+{"t":"2026-07-19T03:54:53.829Z","type":"ai_transcript","text":" موظفي"}
+{"t":"2026-07-19T03:54:53.965Z","type":"ai_transcript","text":" المطارات"}
+{"t":"2026-07-19T03:54:54.121Z","type":"ai_transcript","text":" بالعالم"}
+{"t":"2026-07-19T03:54:54.273Z","type":"ai_transcript","text":" كله:"}
+{"t":"2026-07-19T03:54:54.394Z","type":"ai_transcript","text":"\n\nسامي ما"}
+{"t":"2026-07-19T03:54:54.631Z","type":"ai_transcript","text":" يسمع"}
+{"t":"2026-07-19T03:54:54.691Z","type":"ai_transcript","text":" للي"}
+{"t":"2026-07-19T03:54:54.776Z","type":"ai_transcript","text":" يقول"}
+{"t":"2026-07-19T03:54:54.963Z","type":"ai_transcript","text":" (أبي"}
+{"t":"2026-07-19T03:54:55.056Z","type":"ai_transcript","text":" أبي)..."}
+{"t":"2026-07-19T03:54:55.154Z","type":"ai_transcript","text":" يسمع"}
+{"t":"2026-07-19T03:54:55.319Z","type":"ai_transcript","text":" بس"}
+{"t":"2026-07-19T03:54:55.379Z","type":"ai_transcript","text":" للي"}
+{"t":"2026-07-19T03:54:55.460Z","type":"ai_transcript","text":" يطلب"}
+{"t":"2026-07-19T03:54:55.575Z","type":"ai_transcript","text":" بالصيغة"}
+{"t":"2026-07-19T03:54:55.696Z","type":"ai_transcript","text":" الذهبية."}
+{"t":"2026-07-19T03:54:55.902Z","type":"ai_transcript","text":"\n\nاسمع ببطء:"}
+{"t":"2026-07-19T03:54:56.227Z","type":"ai_transcript","text":" Can..."}
+{"t":"2026-07-19T03:54:56.471Z","type":"ai_transcript","text":" I..."}
+{"t":"2026-07-19T03:54:56.824Z","type":"ai_transcript","text":" have..."}
+{"t":"2026-07-19T03:54:57.087Z","type":"ai_transcript","text":" a window"}
+{"t":"2026-07-19T03:54:57.296Z","type":"ai_transcript","text":" seat..."}
+{"t":"2026-07-19T03:54:57.449Z","type":"ai_transcript","text":" please?"}
+{"t":"2026-07-19T03:54:57.775Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-19T03:55:07.352Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-19T03:55:10.825Z","type":"turn_complete"}
+{"t":"2026-07-19T03:55:10.828Z","type":"turn_complete_expect","expects":true}
+{"t":"2026-07-19T03:55:27.380Z","type":"stuck_nudge"}
+{"t":"2026-07-19T03:55:27.383Z","type":"directive","active":true,"preview":"You asked the student to speak but they've gone quiet. Gently encourage them or "}
+{"t":"2026-07-19T03:55:28.092Z","type":"ai_transcript","text":"يالا يا"}
+{"t":"2026-07-19T03:55:28.269Z","type":"ai_transcript","text":" بطل،"}
+{"t":"2026-07-19T03:55:28.397Z","type":"ai_transcript","text":" تقدر"}
+{"t":"2026-07-19T03:55:28.539Z","type":"ai_transcript","text":" تقولها!"}
+{"t":"2026-07-19T03:55:28.664Z","type":"ai_transcript","text":" Can..."}
+{"t":"2026-07-19T03:55:28.997Z","type":"ai_transcript","text":" I..."}
+{"t":"2026-07-19T03:55:29.047Z","type":"ai_transcript","text":"\n\n"}
+{"t":"2026-07-19T03:55:29.323Z","type":"ai_transcript","text":"\n\nكرّر:"}
+{"t":"2026-07-19T03:55:33.359Z","type":"turn_complete"}
+{"t":"2026-07-19T03:55:33.360Z","type":"turn_complete_expect","expects":true}
+{"t":"2026-07-19T03:55:37.393Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-19T03:55:47.416Z","type":"stuck_nudge"}
+{"t":"2026-07-19T03:55:47.421Z","type":"directive","active":true,"preview":"You asked the student to speak but they've gone quiet. Gently encourage them or "}
+{"t":"2026-07-19T03:55:48.119Z","type":"ai_transcript","text":"اسمع وكرّر"}
+{"t":"2026-07-19T03:55:48.397Z","type":"ai_transcript","text":" معي:"}
+{"t":"2026-07-19T03:55:48.492Z","type":"ai_transcript","text":" Can"}
+{"t":"2026-07-19T03:55:48.784Z","type":"ai_transcript","text":" I"}
+{"t":"2026-07-19T03:55:48.959Z","type":"ai_transcript","text":"\n\n"}
+{"t":"2026-07-19T03:55:49.138Z","type":"ai_transcript","text":" have..."}
+{"t":"2026-07-19T03:55:49.442Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-19T03:55:53.605Z","type":"turn_complete"}
+{"t":"2026-07-19T03:55:53.606Z","type":"turn_complete_expect","expects":true}
+{"t":"2026-07-19T03:56:07.441Z","type":"stuck_nudge"}
+{"t":"2026-07-19T03:56:07.444Z","type":"directive","active":true,"preview":"You asked the student to speak but they've gone quiet. Gently encourage them or "}
+{"t":"2026-07-19T03:56:08.127Z","type":"ai_transcript","text":"يالا يا"}
+{"t":"2026-07-19T03:56:08.323Z","type":"ai_transcript","text":" فيصل!"}
+{"t":"2026-07-19T03:56:08.451Z","type":"ai_transcript","text":" \"Can"}
+{"t":"2026-07-19T03:56:08.657Z","type":"ai_transcript","text":" I...\""}
+{"t":"2026-07-19T03:56:08.819Z","type":"ai_transcript","text":" كملها:"}
+{"t":"2026-07-19T03:56:09.131Z","type":"ai_transcript","text":" have"}
+{"t":"2026-07-19T03:56:09.339Z","type":"ai_transcript","text":" a window"}
+{"t":"2026-07-19T03:56:09.500Z","type":"ai_transcript","text":" seat,"}
+{"t":"2026-07-19T03:56:09.612Z","type":"ai_transcript","text":"\n\n"}
+{"t":"2026-07-19T03:56:09.656Z","type":"ai_transcript","text":" please?"}
+{"t":"2026-07-19T03:56:09.834Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-19T03:56:10.099Z","type":"ai_transcript","text":" Can"}
+{"t":"2026-07-19T03:56:10.431Z","type":"ai_transcript","text":" I..."}
+{"t":"2026-07-19T03:56:16.788Z","type":"turn_complete"}
+{"t":"2026-07-19T03:56:16.790Z","type":"turn_complete_expect","expects":true}
+{"t":"2026-07-19T03:56:19.718Z","type":"pause"}
+{"t":"2026-07-19T03:56:23.117Z","type":"resume","paused_ms":3399}
+{"t":"2026-07-19T03:56:37.481Z","type":"stuck_nudge"}
+{"t":"2026-07-19T03:56:37.485Z","type":"directive","active":true,"preview":"You asked the student to speak but they've gone quiet. Gently encourage them or "}
+{"t":"2026-07-19T03:56:38.356Z","type":"ai_transcript","text":"اسمعها مني"}
+{"t":"2026-07-19T03:56:38.576Z","type":"ai_transcript","text":" مرة"}
+{"t":"2026-07-19T03:56:38.641Z","type":"ai_transcript","text":" أخيرة:"}
+{"t":"2026-07-19T03:56:38.791Z","type":"ai_transcript","text":" Can"}
+{"t":"2026-07-19T03:56:39.020Z","type":"ai_transcript","text":" I"}
+{"t":"2026-07-19T03:56:39.392Z","type":"ai_transcript","text":" have"}
+{"t":"2026-07-19T03:56:39.733Z","type":"ai_transcript","text":" a window"}
+{"t":"2026-07-19T03:56:39.970Z","type":"ai_transcript","text":" seat,"}
+{"t":"2026-07-19T03:56:40.107Z","type":"ai_transcript","text":" please?"}
+{"t":"2026-07-19T03:56:40.114Z","type":"ai_transcript","text":"\n\n\n"}
+{"t":"2026-07-19T03:56:40.331Z","type":"ai_transcript","text":"\n\nيالا يا"}
+{"t":"2026-07-19T03:56:40.559Z","type":"ai_transcript","text":" بطل،"}
+{"t":"2026-07-19T03:56:40.684Z","type":"ai_transcript","text":" كرّر"}
+{"t":"2026-07-19T03:56:40.932Z","type":"ai_transcript","text":" \"Can...\""}
+{"t":"2026-07-19T03:56:48.486Z","type":"turn_complete"}
+{"t":"2026-07-19T03:56:48.487Z","type":"turn_complete_expect","expects":true}
+{"t":"2026-07-19T03:57:02.518Z","type":"stuck_nudge"}
+{"t":"2026-07-19T03:57:02.520Z","type":"directive","active":true,"preview":"You asked the student to speak but they've gone quiet. Gently encourage them or "}
+{"t":"2026-07-19T03:57:03.441Z","type":"ai_transcript","text":"تقدر تقول"}
+{"t":"2026-07-19T03:57:03.694Z","type":"ai_transcript","text":" بس"}
+{"t":"2026-07-19T03:57:03.765Z","type":"ai_transcript","text":" أول"}
+{"t":"2026-07-19T03:57:03.828Z","type":"ai_transcript","text":" كلمتين؟"}
+{"t":"2026-07-19T03:57:03.941Z","type":"ai_transcript","text":" \"Can"}
+{"t":"2026-07-19T03:57:04.105Z","type":"ai_transcript","text":" I...\""}
+{"t":"2026-07-19T03:57:04.221Z","type":"ai_transcript","text":" يالا"}
+{"t":"2026-07-19T03:57:04.347Z","type":"ai_transcript","text":" يا فيصل!"}
+{"t":"2026-07-19T03:57:04.689Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-19T03:57:04.964Z","type":"ai_transcript","text":" Can"}
+{"t":"2026-07-19T03:57:05.058Z","type":"ai_transcript","text":" I..."}
+{"t":"2026-07-19T03:57:05.246Z","type":"ai_transcript","text":"\n\n"}
+{"t":"2026-07-19T03:57:06.468Z","type":"gemini_close","code":1000,"reason":""}

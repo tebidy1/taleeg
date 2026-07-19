@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { API_BASE } from '../../config';
 
 interface HelpButtonProps {
   sessionId: string;
@@ -27,7 +28,7 @@ export const HelpButton: React.FC<HelpButtonProps> = ({ sessionId, onPress }) =>
     onPress?.(newCount);
     setIsSending(true);
     try {
-      await fetch(`http://localhost:8080/api/sessions/${sessionId}/help-press`, {
+      await fetch(`${API_BASE}/api/sessions/${sessionId}/help-press`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ pressCount: newCount })

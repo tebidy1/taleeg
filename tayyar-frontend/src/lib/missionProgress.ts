@@ -1,6 +1,7 @@
 // Lightweight client-side progress tracking for the free-trial mission arc.
 // No account system yet — localStorage is the source of truth for "what has
 // this device completed", mirrored against the backend's mission registry.
+import { API_BASE } from '../config';
 
 const STORAGE_KEY   = 'tayyar_completed_missions';
 const POINTS_KEY    = 'tayyar_points';
@@ -20,7 +21,7 @@ export interface DayProgress {
 }
 
 export async function fetchMissions(): Promise<MissionListItem[]> {
-  const res = await fetch('http://localhost:8080/api/sessions/missions');
+  const res = await fetch(`${API_BASE}/api/sessions/missions`);
   if (!res.ok) throw new Error(`missions fetch failed: ${res.status}`);
   const data = await res.json();
   return (data.missions as MissionListItem[]).sort((a, b) => a.order - b.order);

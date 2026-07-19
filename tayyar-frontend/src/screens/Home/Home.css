@@ -293,55 +293,56 @@
 
 .badges-link:hover { background: rgba(30,91,168,.06); }
 
-/* ── Journey map (flight-path visual) ── */
-.journey-map {
-  margin-top: 16px;
-  overflow-x: auto;
-  padding: 4px 0 8px;
-}
-
-.journey-track {
+/* ── Vertical Journey Map (S-Shape visual) ── */
+.journey-map.vertical {
+  margin-top: 24px;
+  overflow-x: hidden;
+  padding: 16px 0 24px;
   display: flex;
-  align-items: flex-start;
-  gap: 0;
-  min-width: max-content;
-  padding: 0 4px;
+  justify-content: center;
 }
 
-.journey-line {
-  height: 3px;
-  width: 40px;
-  background: #D1D5DB;
-  margin-top: 20px;
-  flex-shrink: 0;
-  transition: background .3s;
+.journey-map.vertical .journey-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  width: 100%;
 }
-.journey-line.done { background: var(--color-success); }
+
+.journey-line-svg {
+  margin-top: -8px;
+  margin-bottom: -8px;
+  z-index: 0;
+  pointer-events: none;
+}
 
 .journey-stop {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: none;
   border: none;
-  padding: 0 2px;
+  padding: 0;
   cursor: pointer;
   flex-shrink: 0;
-  width: 68px;
+  width: 80px;
+  z-index: 1;
 }
 
 .journey-dot {
-  width: 40px;
-  height: 40px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background: #F1F3F5;
-  border: 2px solid #D1D5DB;
+  border: 3px solid #D1D5DB;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 13px;
+  font-size: 16px;
   color: var(--color-text-muted);
   transition: all 0.3s;
 }
@@ -350,30 +351,30 @@
   background: var(--color-success);
   border-color: #27AE60;
   color: white;
-  box-shadow: 0 3px 8px rgba(46,204,113,0.35);
+  box-shadow: 0 4px 12px rgba(46,204,113,0.4);
 }
 
 .journey-stop.next .journey-dot {
   background: var(--color-primary);
   border-color: var(--color-primary);
   color: white;
-  font-size: 18px;
-  box-shadow: 0 3px 10px rgba(30,91,168,0.4);
-  animation: journey-pulse 2s ease-in-out infinite;
+  font-size: 22px;
+  box-shadow: 0 4px 16px rgba(30,91,168,0.5);
+  animation: journey-pulse-vertical 2s ease-in-out infinite;
 }
 
-@keyframes journey-pulse {
-  0%, 100% { box-shadow: 0 3px 10px rgba(30,91,168,.4); transform: scale(1); }
-  50% { box-shadow: 0 3px 18px rgba(30,91,168,.65); transform: scale(1.07); }
+@keyframes journey-pulse-vertical {
+  0%, 100% { box-shadow: 0 4px 12px rgba(30,91,168,.4); transform: scale(1); }
+  50% { box-shadow: 0 4px 20px rgba(30,91,168,.7); transform: scale(1.08); }
 }
 
 .journey-label {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--color-text-muted);
   text-align: center;
-  line-height: 1.3;
-  max-width: 64px;
+  line-height: 1.4;
+  max-width: 80px;
   white-space: normal;
 }
 

@@ -66,9 +66,21 @@ export const Home: React.FC = () => {
       )}
 
       <main className="home-content">
-        <section className="welcome-section">
-          <h1 className="greeting">مرحباً، {greetingName} 👋</h1>
-          <p className="subtitle">{rank}</p>
+        <section className="welcome-section" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <h1 className="greeting">مرحباً، {greetingName} 👋</h1>
+            <p className="subtitle">{rank}</p>
+          </div>
+          <Button 
+            variant="secondary" 
+            size="sm"
+            onClick={() => {
+              localStorage.removeItem('onboarding_completed');
+              navigate('/onboarding', { replace: true });
+            }}
+          >
+            👤 تعديل الملف
+          </Button>
         </section>
 
         <section className="mission-section slide-up">
@@ -92,21 +104,35 @@ export const Home: React.FC = () => {
                 </Card>
               ))}
 
-              {/* Flight-path journey map */}
-              <div className="journey-map">
+              {/* Vertical S-Shape Journey Map */}
+              <div className="journey-map vertical">
                 <div className="journey-track">
                   {missions.map((m, i) => {
                     const done  = completedIds.includes(m.id);
                     const isNext = m.id === nextMissionId;
+                    
+                    // S-shape offset using a sine wave
+                    const offset = Math.sin(i * 0.9) * 65; 
+                    const prevOffset = i > 0 ? Math.sin((i - 1) * 0.9) * 65 : 0;
+                    
                     return (
                       <React.Fragment key={m.id}>
                         {i > 0 && (
-                          <div className={`journey-line ${completedIds.includes(missions[i - 1].id) ? 'done' : ''}`} />
+                          <svg className="journey-line-svg" width="180" height="50">
+                            <path 
+                              d={`M ${90 + prevOffset} 0 C ${90 + prevOffset} 25, ${90 + offset} 25, ${90 + offset} 50`} 
+                              stroke={completedIds.includes(missions[i - 1].id) ? '#27AE60' : '#E5E7EB'} 
+                              strokeWidth="8" 
+                              fill="none" 
+                              strokeLinecap="round"
+                            />
+                          </svg>
                         )}
                         <button
                           className={`journey-stop ${done ? 'done' : ''} ${isNext ? 'next' : ''}`}
                           onClick={() => navigate(`/mission?mission=${m.id}`)}
                           title={m.title_ar}
+                          style={{ transform: `translateX(${offset}px)` }}
                         >
                           <span className="journey-dot">{done ? '✓' : isNext ? '✈️' : m.order}</span>
                           <span className="journey-label">{m.title_ar}</span>

@@ -135,6 +135,17 @@ const MISSIONS: Record<string, Mission> = {
         ai_character: CAPTAIN, scenario_flow: [],
         adaptation_rules: DEFAULT_ADAPTATION, base_points: 100, available_badges: ["مسافر دبي"],
     },
+    mission_06_the_grand_finale: {
+        id: "mission_06_the_grand_finale",
+        title: "The Final Call", title_ar: "النداء الأخير",
+        narrative: "التحدي النهائي للفصل الأول. الكابتن يفقد بطاقته، والطالب هو المنقذ الوحيد الذي سيتحدث مع الموظف الأجنبي لإنقاذ الموقف.",
+        context: "airport", cefr_level: "A2", phase: 1, order: 6,
+        target_patterns: ["pat_001_intro_chain", "pat_002_polite_request", "pat_003_repair"],
+        target_vocabulary: ["(مراجعة شاملة)"],
+        target_phonemes: [],
+        ai_character: CAPTAIN, scenario_flow: [],
+        adaptation_rules: DEFAULT_ADAPTATION, base_points: 200, available_badges: ["قائد الرحلة"],
+    },
 };
 
 export const FREE_TRIAL_ORDER = [
@@ -143,6 +154,7 @@ export const FREE_TRIAL_ORDER = [
     "mission_03_secret_weapon",
     "mission_04_alone_in_dubai",
     "mission_05_cafe_beginning",
+    "mission_06_the_grand_finale",
 ];
 
 /** Get a mission by id; falls back to the first free-trial mission. */
@@ -155,7 +167,9 @@ const MISSION_TEASERS: Record<string, string> = {
     mission_01_voice_gate:    "مقعد واحد تبقّى بجانب النافذة... وعائلة تنافسك عليه! من سيصل أولاً للموظف سامي؟",
     mission_02_last_seat:     "الطائرة أقلعت — فجأة المضيفة تنهمر عليك بأسئلة بالإنجليزية ولا تتوقف. هل لديك السلاح السري؟",
     mission_03_secret_weapon: "لأوّل مرة ستكون وحدك في دبي. الكابتن يتوه... وأنت الدليل. الجميع ينتظرك.",
-    mission_04_alone_in_dubai:"المهمة الأخيرة — مقهى دبي، أم فهد، ومحادثة كاملة وحدك من أوّلها لآخرها. هل صرت مسافراً حقيقياً؟",
+    mission_04_alone_in_dubai:"المهمة قبل الأخيرة — مقهى دبي، أم فهد، ومحادثة كاملة وحدك من أوّلها لآخرها. هل صرت مسافراً حقيقياً؟",
+    mission_05_cafe_beginning:"المهمة قبل الأخيرة — مقهى دبي، أم فهد، ومحادثة كاملة وحدك من أوّلها لآخرها. هل صرت مسافراً حقيقياً؟",
+    mission_06_the_grand_finale: "التحدي النهائي! الكابتن في ورطة وأنت أمله الوحيد. هل ستتمكن من التحدث مع الموظف الأجنبي لإنقاذ الرحلة؟",
 };
 
 export function listMissions(): { id: string; title_ar: string; order: number; teaser_ar?: string }[] {

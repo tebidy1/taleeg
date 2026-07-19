@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import captainImg from '../../assets/captain.png';
 import { getPilotRank } from '../../lib/missionProgress';
+import { API_BASE, WS_BASE } from '../../config';
 import './MissionActive.css';
 
 type SessionStatus = 'connecting' | 'listening' | 'speaking' | 'error';
@@ -360,7 +361,7 @@ export const MissionActive: React.FC = () => {
     if (missionParam) params.mission = missionParam;
     if (name)         params.name     = name;
     if (motivation)   params.motivation = motivation;
-    const wsUrl = `ws://localhost:8080/ws/sessions/${sessionIdRef.current}/live`
+    const wsUrl = `${WS_BASE}/ws/sessions/${sessionIdRef.current}/live`
       + `?${new URLSearchParams(params).toString()}`;
 
     let ws: WebSocket;              // closed in THIS run's cleanup (StrictMode-safe)
@@ -628,7 +629,7 @@ export const MissionActive: React.FC = () => {
     if (helpCountRef.current >= 3) return;
     helpCountRef.current += 1;
     try {
-      await fetch(`http://localhost:8080/api/sessions/${sessionIdRef.current}/help-press`, {
+      await fetch(`${API_BASE}/api/sessions/${sessionIdRef.current}/help-press`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ pressCount: helpCountRef.current }),
       });

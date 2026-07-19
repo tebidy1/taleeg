@@ -90,6 +90,16 @@ export function setupSessionsWebSocket(wss: WebSocketServer) {
 
         const builder = new PromptBuilder();
         const student = getMockStudent();
+        
+        // Override mock values with actual student profile data from the frontend
+        if (studentName) {
+            student.name = studentName;
+            // Generate a safe, unique ID based on the name so we don't load Faisal's memory
+            const safeName = studentName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_');
+            student.id = `student_${safeName}`;
+        }
+        if (motivation) student.engagement_profile.motivation_type = motivation as any;
+
         const mission = getMockMission(missionId);
         console.log(`🎯 Mission: ${mission.id} (${mission.title_ar})`);
         const context = { student, mission, sessionStartTime: new Date() };

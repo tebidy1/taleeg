@@ -1,0 +1,59 @@
+{"t":"2026-07-19T03:50:53.623Z","type":"session_start","studentId":"student_123","missionId":"mission_02_last_seat"}
+{"t":"2026-07-19T03:50:54.349Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-19T03:50:54.594Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-19T03:50:54.794Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-19T03:50:54.875Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-19T03:50:55.087Z","type":"ai_transcript","text":" — يوم"}
+{"t":"2026-07-19T03:50:55.165Z","type":"ai_transcript","text":" المطار!"}
+{"t":"2026-07-19T03:50:55.460Z","type":"ai_transcript","text":"\n\nفيصل! المقعد"}
+{"t":"2026-07-19T03:50:55.786Z","type":"ai_transcript","text":" لسا"}
+{"t":"2026-07-19T03:50:55.973Z","type":"ai_transcript","text":" موجود"}
+{"t":"2026-07-19T03:50:56.032Z","type":"ai_transcript","text":" — بس"}
+{"t":"2026-07-19T03:50:56.060Z","type":"ai_transcript","text":" شف"}
+{"t":"2026-07-19T03:50:56.097Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-19T03:50:56.211Z","type":"ai_transcript","text":" الطابور!"}
+{"t":"2026-07-19T03:50:56.478Z","type":"ai_transcript","text":" العائلة"}
+{"t":"2026-07-19T03:50:56.494Z","type":"ai_transcript","text":" اللي"}
+{"t":"2026-07-19T03:50:56.612Z","type":"ai_transcript","text":" هناك..."}
+{"t":"2026-07-19T03:50:56.795Z","type":"ai_transcript","text":" ودهم"}
+{"t":"2026-07-19T03:50:56.798Z","type":"ai_transcript","text":" نفس"}
+{"t":"2026-07-19T03:50:56.889Z","type":"ai_transcript","text":" مقعدك!"}
+{"t":"2026-07-19T03:51:03.947Z","type":"turn_complete"}
+{"t":"2026-07-19T03:51:03.949Z","type":"turn_complete_expect","expects":false}
+{"t":"2026-07-19T03:51:08.638Z","type":"narration_beat"}
+{"t":"2026-07-19T03:51:08.640Z","type":"directive","active":true,"preview":"That pause was a dramatic beat, not a student cue — nothing was asked of the chi"}
+{"t":"2026-07-19T03:51:09.639Z","type":"ai_transcript","text":"قبل نوصل"}
+{"t":"2026-07-19T03:51:09.887Z","type":"ai_transcript","text":" الكاونتر"}
+{"t":"2026-07-19T03:51:10.065Z","type":"ai_transcript","text":" — اسمع"}
+{"t":"2026-07-19T03:51:10.200Z","type":"ai_transcript","text":" سر"}
+{"t":"2026-07-19T03:51:10.400Z","type":"ai_transcript","text":" موظفي"}
+{"t":"2026-07-19T03:51:10.443Z","type":"ai_transcript","text":" المطارات"}
+{"t":"2026-07-19T03:51:10.666Z","type":"ai_transcript","text":" بالعالم"}
+{"t":"2026-07-19T03:51:10.724Z","type":"ai_transcript","text":" كله:"}
+{"t":"2026-07-19T03:51:10.794Z","type":"ai_transcript","text":" سامي"}
+{"t":"2026-07-19T03:51:11.064Z","type":"ai_transcript","text":" ما يسمع"}
+{"t":"2026-07-19T03:51:11.109Z","type":"ai_transcript","text":" للي"}
+{"t":"2026-07-19T03:51:11.324Z","type":"ai_transcript","text":" يقول"}
+{"t":"2026-07-19T03:51:11.326Z","type":"ai_transcript","text":" (أبي"}
+{"t":"2026-07-19T03:51:11.362Z","type":"ai_transcript","text":" أبي)..."}
+{"t":"2026-07-19T03:51:11.531Z","type":"ai_transcript","text":" يسمع"}
+{"t":"2026-07-19T03:51:11.649Z","type":"ai_transcript","text":" بس"}
+{"t":"2026-07-19T03:51:11.700Z","type":"ai_transcript","text":" للي"}
+{"t":"2026-07-19T03:51:11.793Z","type":"ai_transcript","text":" يطلب"}
+{"t":"2026-07-19T03:51:11.875Z","type":"ai_transcript","text":" بالصيغة"}
+{"t":"2026-07-19T03:51:12.004Z","type":"ai_transcript","text":" الذهبية."}
+{"t":"2026-07-19T03:51:12.211Z","type":"ai_transcript","text":"\n\nاسمع ببطء:"}
+{"t":"2026-07-19T03:51:12.535Z","type":"ai_transcript","text":" Can..."}
+{"t":"2026-07-19T03:51:12.927Z","type":"ai_transcript","text":" I..."}
+{"t":"2026-07-19T03:51:13.061Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-19T03:51:13.113Z","type":"ai_transcript","text":" have..."}
+{"t":"2026-07-19T03:51:13.446Z","type":"ai_transcript","text":" a window"}
+{"t":"2026-07-19T03:51:13.709Z","type":"ai_transcript","text":" seat..."}
+{"t":"2026-07-19T03:51:13.883Z","type":"ai_transcript","text":" please?"}
+{"t":"2026-07-19T03:51:14.036Z","type":"ai_transcript","text":" كرّر:"}
+{"t":"2026-07-19T03:51:23.675Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-19T03:51:26.731Z","type":"turn_complete"}
+{"t":"2026-07-19T03:51:26.733Z","type":"turn_complete_expect","expects":true}
+{"t":"2026-07-19T03:51:43.703Z","type":"stuck_nudge"}
+{"t":"2026-07-19T03:51:43.708Z","type":"directive","active":true,"preview":"You asked the student to speak but they've gone quiet. Gently encourage them or "}
+{"t":"2026-07-19T03:51:43.870Z","type":"gemini_close","code":1007,"reason":"Precondition check failed."}

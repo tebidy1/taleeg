@@ -151,8 +151,16 @@ export function getMockMission(missionId?: string): Mission {
     return MISSIONS[FREE_TRIAL_ORDER[0]];
 }
 
-export function listMissions(): { id: string; title_ar: string; order: number }[] {
+const MISSION_TEASERS: Record<string, string> = {
+    mission_01_voice_gate:    "مقعد واحد تبقّى بجانب النافذة... وعائلة تنافسك عليه! من سيصل أولاً للموظف سامي؟",
+    mission_02_last_seat:     "الطائرة أقلعت — فجأة المضيفة تنهمر عليك بأسئلة بالإنجليزية ولا تتوقف. هل لديك السلاح السري؟",
+    mission_03_secret_weapon: "لأوّل مرة ستكون وحدك في دبي. الكابتن يتوه... وأنت الدليل. الجميع ينتظرك.",
+    mission_04_alone_in_dubai:"المهمة الأخيرة — مقهى دبي، أم فهد، ومحادثة كاملة وحدك من أوّلها لآخرها. هل صرت مسافراً حقيقياً؟",
+};
+
+export function listMissions(): { id: string; title_ar: string; order: number; teaser_ar?: string }[] {
     return FREE_TRIAL_ORDER.map(id => ({
         id, title_ar: MISSIONS[id].title_ar, order: MISSIONS[id].order,
+        teaser_ar: MISSION_TEASERS[id],
     }));
 }

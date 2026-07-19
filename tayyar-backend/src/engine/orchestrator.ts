@@ -28,7 +28,13 @@ const HARD_CAP_S = 480;   // 8:00 — force close (cost guard + peak-end rule)
 const WRAP_NUDGE_S = 435; // 7:15 — actively nudge toward victory close (30s into
                           //        the widened victory_close window @ 405s, so the
                           //        natural phase injection gets to run first)
-const STUCK_AFTER_MS = 12000; // silence both sides for 12s after a turn → nudge
+// A captain turn that genuinely asks for a student response (contains a repeat
+// cue / question): if the child stays silent this long, gently nudge.
+const STUCK_AFTER_MS = 12000;
+// A captain turn that was pure narration ending in a dramatic pause (no cue for
+// the child): resume the story after just a short beat, so the intro doesn't
+// dead-air for 12s waiting for a "turn" the child was never asked to take.
+const NARRATION_BEAT_MS = 2500;
 
 type Mood = "confident" | "happy" | "neutral" | "anxious" | "frustrated";
 
@@ -60,6 +66,12 @@ interface OrchestratorOpts {
     mission: Mission;
     promptBuilder: PromptBuilder;
     onForceEnd: (reason: string) => void;
+    // Cleanly close the child's open realtime-input activity on the wire
+    // (forward activityEnd to Gemini + tell the client to drop its mic) BEFORE
+    // the orchestrator takes the floor with an active directive. sessions.ts
+    // owns the actual `micOpen` wire state; this is how the maestro asks it to
+    // close so a directive is never spliced into an open audio turn.
+    closeMicActivity: () => void;
 }
 
 export class SessionOrchestrator {
@@ -94,6 +106,18 @@ export class SessionOrchestrator {
     // turnComplete:false during this window puts Gemini into "user is still
     // talking" mode and the model never responds — the session freezes.
     private userTurnPending = false;
+    // Mirror of the wire's realtime-input activity: true from `activity_start`
+    // (mic opened, child may be streaming audio) to `activity_end`. While this
+    // is open, ANY sendClientContent — turnComplete false OR true — is spliced
+    // into an open audio turn and drops the Live connection (the reported
+    // "انقطع الاتصال" mid-intro). canInject() gates silent injections on it;
+    // active directives close the activity first (closeMicActivity).
+    private micOpen = false;
+    // Whether the captain's last completed turn actually expects a student turn
+    // (it contained a repeat cue / question). Drives BOTH the mic gate on the
+    // client (expect_input) and the resume threshold: a real cue waits
+    // STUCK_AFTER_MS for the child; a dramatic beat resumes after NARRATION_BEAT_MS.
+    private awaitingStudent = false;
 
     // Phase-change script that couldn't be sent because canInject() was false
     // (model mid-utterance, or a student turn is awaiting model response).
@@ -140,6 +164,9 @@ export class SessionOrchestrator {
         this.startTime += pausedFor;
         this.paused = false;
         this.pausedAt = 0;
+        // The resume watch uses wall-clock; without this it would read the whole
+        // paused span as "silence" and fire the instant we come back. Restart it.
+        if (this.lastTurnCompleteAt > 0) this.lastTurnCompleteAt = Date.now();
         this.log({ type: "resume", paused_ms: pausedFor });
         console.log(`▶️  Session resumed (was paused ${Math.round(pausedFor/1000)}s)`);
     }
@@ -150,6 +177,11 @@ export class SessionOrchestrator {
 
     noteAudioChunk() { this.modelSpeaking = true; }
 
+    // The child's mic opened/closed on the wire (activity_start / activity_end).
+    // Keeps canInject() honest: a silent, open mic is NOT a safe moment to inject.
+    noteMicOpen()   { this.micOpen = true; }
+    noteMicClosed() { this.micOpen = false; }
+
     noteAiTranscript(text: string) {
         this.log({ type: "ai_transcript", text });
         // Server-authoritative target phrase for the card: accumulate the
@@ -157,7 +189,12 @@ export class SessionOrchestrator {
         // English run. Phase-gating keeps incidental opening English off the card.
         this.aiTurnText += text;
         if (this.isTeachingPhase()) {
-            const phrase = extractEnglishPhrase(this.aiTurnText);
+            // Strip any bracketed tokens ([WAIT], [HERO MOMENT], ...) before
+            // extraction — the audio model sometimes voices them, and their
+            // Latin letters would otherwise surface as a bogus target phrase
+            // ("WAIT") on the card.
+            const clean = this.aiTurnText.replace(/\[[^\]]*\]/g, " ");
+            const phrase = extractEnglishPhrase(clean);
             if (phrase && phrase !== this.lastEmittedPhrase) {
                 this.lastEmittedPhrase = phrase;
                 this.sendToClient({ type: "target_phrase", phrase, stress: stressSpan(phrase) });
@@ -199,10 +236,27 @@ export class SessionOrchestrator {
             ? "retry" : "correct";
     }
 
+    // Does this captain turn actually hand the floor to the child? A repeat
+    // request ("كرّر"), an explicit "say/repeat", or a question mark means yes.
+    // Pure scene-setting (the FLASH OPEN hook, a "شف الطابور!" beat) means no —
+    // the [WAIT] there is a dramatic pause, not a cue. We bias toward "expects":
+    // a false positive only makes the beat a little slower; a false negative
+    // would skip a real student turn, which is far worse.
+    private static readonly INPUT_CUES = [
+        "كرّر", "كرر", "ردّد", "ردد", "قول", "أعد",
+        "repeat", "say it", "your turn", "can you say", "now you",
+    ];
+    private turnExpectsStudentInput(text: string): boolean {
+        if (text.includes("?") || text.includes("؟")) return true;
+        const t = text.toLowerCase();
+        return SessionOrchestrator.INPUT_CUES.some(c => t.includes(c.toLowerCase()));
+    }
+
     noteTurnComplete() {
         this.modelSpeaking = false;
         this.userTurnPending = false;
         this.log({ type: "turn_complete" });
+
         if (this.userSpokeSinceTurnComplete) {
             this.completedExchanges++;
             this.userSpokeSinceTurnComplete = false;
@@ -216,14 +270,22 @@ export class SessionOrchestrator {
             const feedback = this.detectTurnFeedback(this.aiTurnText);
             this.sendToClient({ type: "turn_feedback", result: feedback });
             this.log({ type: "turn_feedback", result: feedback });
-            this.lastTurnCompleteAt = 0;   // real exchange completed, not stuck
-            this.stuckNudgeSent = false;
-        } else {
-            // Captain finished a turn but the student has not spoken since —
-            // start the "stuck" watch. If nothing happens in 12s, tick() nudges.
-            this.lastTurnCompleteAt = Date.now();
-            this.stuckNudgeSent = false;
         }
+
+        // Decide — from the captain's OWN just-finished words — whether the next
+        // beat belongs to the child. This drives the client's mic gate
+        // (expect_input) so the mic never opens during narration, and sets the
+        // resume threshold below. Content-driven, so it stays correct even when
+        // the wall-clock phase and the actual dialogue drift apart.
+        const expects = this.turnExpectsStudentInput(this.aiTurnText);
+        this.awaitingStudent = expects;
+        this.sendToClient({ type: "expect_input", value: expects });
+        this.log({ type: "turn_complete_expect", expects });
+        this.lastTurnCompleteAt = Date.now();
+        this.stuckNudgeSent = false;
+
+        // Fresh slate for the next captain turn's phrase + cue detection.
+        this.aiTurnText = "";
     }
 
     noteInterrupted() {
@@ -235,6 +297,16 @@ export class SessionOrchestrator {
     noteHelpPress(pressCount: number) {
         this.hintsUsed = Math.max(this.hintsUsed, pressCount);
         this.log({ type: "help_press", pressCount });
+    }
+
+    /**
+     * HELP button pressed (arrives over HTTP, out of band). Route it through
+     * the maestro's injection path so it closes any open mic activity first —
+     * the raw sendClientContent it used to do bypassed that gate and could drop
+     * the connection exactly when the child (mic open) asked for help.
+     */
+    injectHelp(instruction: string) {
+        this.injectDirective(instruction, true);
     }
 
     /**
@@ -293,22 +365,34 @@ export class SessionOrchestrator {
             );
         }
 
-        // 3b) stuck-turn nudge — the captain finished but nobody spoke, and
-        //     it's been 12s. Almost certainly a mid-narration yield. Push it
-        //     to resume the story instead of leaving the child confused.
+        // 3b) resume watch. Two very different silences after a captain turn:
+        //     • narration beat (no student cue) → resume the story after a short
+        //       dramatic pause, so the intro never dead-airs.
+        //     • real cue, child silent → wait longer, then gently encourage —
+        //       never skip a turn the child was actually asked to take.
+        const resumeThreshold = this.awaitingStudent ? STUCK_AFTER_MS : NARRATION_BEAT_MS;
         if (
             this.lastTurnCompleteAt > 0 &&
             !this.stuckNudgeSent &&
             !this.modelSpeaking &&
-            Date.now() - this.lastTurnCompleteAt >= STUCK_AFTER_MS
+            Date.now() - this.lastTurnCompleteAt >= resumeThreshold
         ) {
             this.stuckNudgeSent = true;
-            this.log({ type: "stuck_nudge" });
-            console.log(`👋 Stuck-turn nudge (silent for ${STUCK_AFTER_MS/1000}s)`);
-            this.injectDirective(
-                "You yielded but nothing was expected from the student here — this looks like a mid-narration pause. Continue the story/explanation from where you stopped. Do NOT ask the student to repeat what they said, do NOT re-greet, just resume the script naturally.",
-                true
-            );
+            if (this.awaitingStudent) {
+                this.log({ type: "stuck_nudge" });
+                console.log(`👋 Student silent for ${STUCK_AFTER_MS/1000}s — encourage`);
+                this.injectDirective(
+                    "You asked the student to speak but they've gone quiet. Gently encourage them or offer a tiny hint (the first word or two), then wait again. Do NOT skip ahead or answer for them.",
+                    true
+                );
+            } else {
+                this.log({ type: "narration_beat" });
+                console.log(`🎬 Narration beat (${NARRATION_BEAT_MS}ms) — resume story`);
+                this.injectDirective(
+                    "That pause was a dramatic beat, not a student cue — nothing was asked of the child. Continue your narration from exactly where you stopped. Do NOT re-greet and do NOT ask the student to repeat anything; just flow into the next line of the script.",
+                    true
+                );
+            }
         }
 
         // 4) periodic real-time state update (silent — context only).
@@ -332,11 +416,24 @@ export class SessionOrchestrator {
 
     /**
      * True when it is safe to sendClientContent(turnComplete:false) — i.e.
-     * the model isn't mid-utterance AND no student turn is awaiting response.
-     * Violating either half hangs the session.
+     * the model isn't mid-utterance, no student turn is awaiting response, AND
+     * the child's mic activity isn't open on the wire. Violating any of the
+     * three hangs or drops the session (see the micOpen field note).
      */
     private canInject(): boolean {
-        return !this.modelSpeaking && !this.userTurnPending;
+        return !this.modelSpeaking && !this.userTurnPending && !this.micOpen;
+    }
+
+    /**
+     * Close the child's dangling realtime-input activity (if open) before an
+     * active directive takes the floor. Without this, sendClientContent
+     * (turnComplete:true) is spliced into an open audio turn and Gemini drops
+     * the connection. Idempotent: sessions.ts guards its own wire state too.
+     */
+    private closeMicActivity() {
+        if (!this.micOpen) return;
+        this.micOpen = false;
+        this.o.closeMicActivity();
     }
 
     private onPhaseChange(phase: string) {
@@ -445,6 +542,12 @@ export class SessionOrchestrator {
 
     /** Directive; active=true prompts the model to respond immediately. */
     private injectDirective(text: string, active: boolean) {
+        // An active directive takes the floor with turnComplete:true. If the
+        // child's mic activity is still open on the wire, splicing this into it
+        // corrupts the Live stream and drops the connection — so close the
+        // dangling activity first. (Silent, non-active directives are gated by
+        // canInject() at the call sites instead.)
+        if (active && this.micOpen) this.closeMicActivity();
         try {
             this.o.geminiSession.sendClientContent({
                 turns: [{ role: "user", parts: [{ text: `SYSTEM DIRECTIVE: ${text}` }] }],
@@ -478,6 +581,7 @@ export class SessionOrchestrator {
             completedExchanges: this.completedExchanges,
             studentSentences: this.studentSentences,
             durationSeconds: this.elapsedSeconds(),
+            heroWord: this.lastEmittedPhrase || null,
         });
         // Stop ticking immediately, but DEFER the socket teardown. onForceEnd
         // closes the WebSocket, and closing it synchronously right after

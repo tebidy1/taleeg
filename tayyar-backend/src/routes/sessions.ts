@@ -12,6 +12,7 @@ const activeSessions = new Map<string, ActiveSession>();
 import { PromptBuilder } from '../engine/prompt_builder';
 import { SessionOrchestrator } from '../engine/orchestrator';
 import { getMockStudent, getMockMission, listMissions } from '../engine/mockData';
+import { logSessionEvent, buildMemoryRecap } from '../engine/memory';
 
 // List the free-trial missions (for the picker / testing)
 router.get('/missions', async (_req, res) => {
@@ -44,10 +45,10 @@ router.post('/:sessionId/help-press', async (req, res) => {
     }
 
     try {
-        entry.gemini.sendClientContent({
-            turns: [{ role: 'user', parts: [{ text: `SYSTEM DIRECTIVE: ${instruction}` }] }],
-            turnComplete: true
-        });
+        // Route through the maestro (not a raw sendClientContent): it closes any
+        // open mic activity first, so pressing HELP mid-turn can't drop the Live
+        // connection the way a bare content injection would.
+        entry.orchestrator.injectHelp(instruction);
         res.json({ success: true });
     } catch (e: any) {
         res.status(500).json({ error: 'Failed to send instruction to Gemini' });
@@ -82,7 +83,10 @@ export function setupSessionsWebSocket(wss: WebSocketServer) {
         // URL: /ws/sessions/{id}/live?mission={missionId}
         const [pathPart, queryPart] = (req.url || '').split('?');
         const urlSessionId = pathPart.split('/').filter(Boolean)[2] || `sess_${Date.now()}`;
-        const missionId = new URLSearchParams(queryPart || '').get('mission') || undefined;
+        const qp = new URLSearchParams(queryPart || '');
+        const missionId   = qp.get('mission') || undefined;
+        const studentName = qp.get('name') || '';
+        const motivation  = qp.get('motivation') || '';
 
         const builder = new PromptBuilder();
         const student = getMockStudent();
@@ -95,6 +99,37 @@ export function setupSessionsWebSocket(wss: WebSocketServer) {
         let geminiSession: any = null;
         let orchestrator: SessionOrchestrator | null = null;
         let currentSessionId: string = urlSessionId;
+        // Two-level mic state:
+        //   micOpen     — the CLIENT intends a turn (activity_start..activity_end).
+        //   activityLive — an activityStart has actually been forwarded to Gemini,
+        //                  i.e. real audio is flowing. This is the wire-critical
+        //                  state: a client-content injection is only unsafe while
+        //                  THIS is open, and activityEnd is only valid after it.
+        // We defer activityStart to Gemini until the first audio frame, so a turn
+        // where the child never makes a sound (or the pane has no mic) never
+        // creates an empty activityStart/activityEnd pair — that pairing fails
+        // Gemini's precondition check and drops the session (code 1007).
+        let micOpen = false;
+        let activityLive = false;
+        // Forward one audio frame, opening the Gemini activity lazily on the first
+        // frame of a turn.
+        const forwardAudio = (b64: string, mimeType = 'audio/pcm;rate=16000') => {
+            if (!micOpen || !geminiSession) return;
+            if (!activityLive) {
+                activityLive = true;
+                try { geminiSession.sendRealtimeInput({ activityStart: {} }); } catch {}
+                orchestrator?.noteMicOpen();
+            }
+            try { geminiSession.sendRealtimeInput({ audio: { mimeType, data: b64 } }); } catch {}
+        };
+        // Close the Gemini activity if (and only if) one is actually open. Safe to
+        // call redundantly.
+        const endActivity = () => {
+            if (!activityLive) return;
+            activityLive = false;
+            if (geminiSession) { try { geminiSession.sendRealtimeInput({ activityEnd: {} }); } catch {} }
+            orchestrator?.noteMicClosed();
+        };
 
         try {
             const { createGeminiSession } = await import('../services/gemini');
@@ -186,12 +221,17 @@ export function setupSessionsWebSocket(wss: WebSocketServer) {
                 },
                 onError: (e: any) => {
                     console.error("🔴 Gemini error:", e?.message || e);
+                    // Persist to the session log — onError/onClose were console-only,
+                    // so post-mortems couldn't see WHY a session dropped (the logs
+                    // just stopped). Now the jsonl carries the actual cause.
+                    logSessionEvent(currentSessionId, { type: 'gemini_error', message: e?.message || String(e) });
                     if (ws.readyState === WebSocket.OPEN) {
                         ws.send(JSON.stringify({ type: 'error', message: 'Gemini connection error' }));
                     }
                 },
                 onClose: (e: any) => {
                     console.log("🔴 Gemini closed:", e?.code, e?.reason);
+                    logSessionEvent(currentSessionId, { type: 'gemini_close', code: e?.code, reason: e?.reason });
                     if (ws.readyState === WebSocket.OPEN) {
                         ws.close();
                     }
@@ -212,6 +252,17 @@ export function setupSessionsWebSocket(wss: WebSocketServer) {
                     console.log(`⏰ Orchestrator force-ending session (${reason})`);
                     try { geminiSession?.close(); } catch {}
                     try { ws.close(); } catch {}
+                },
+                // Maestro is about to take the floor — close the child's open
+                // audio turn cleanly on the wire first (only if one is actually
+                // live), and tell the client to drop its mic so it stops
+                // streaming into a just-closed turn.
+                closeMicActivity: () => {
+                    micOpen = false;
+                    endActivity();   // no-op unless an activity is actually live
+                    if (ws.readyState === WebSocket.OPEN) {
+                        ws.send(JSON.stringify({ type: 'mic_close' }));
+                    }
                 }
             });
             orchestrator.start();
@@ -219,14 +270,24 @@ export function setupSessionsWebSocket(wss: WebSocketServer) {
 
             // 🔥 START TRIGGER — session is open after await, send immediately
             if (geminiSession && ws.readyState === WebSocket.OPEN) {
+                const motivationHint = motivation === 'gaming'  ? "They love video games and want to talk to international players online."
+                                : motivation === 'travel'  ? "They dream of travelling and talking to people in airports and hotels."
+                                : motivation === 'school'  ? "They want to excel at English in school and impress their teachers."
+                                : '';
+                const memoryRecap = buildMemoryRecap(student.id);
+                const nameLine = studentName ? ` The student's name is ${studentName} — use it naturally when greeting them.` : '';
+                const motivationLine = motivationHint ? ` ${motivationHint} Weave a subtle reference to this into your opening hook to make them feel seen.` : '';
+                const memoryBlock = memoryRecap
+                    ? `\n\n${memoryRecap}\n\nOpen with the hook you planned above — make the student feel remembered and that the story continues.`
+                    : '';
                 geminiSession.sendClientContent({
                     turns: [{
                         role: 'user',
-                        parts: [{ text: "SESSION_START: The student has connected and is ready. Begin the opening NOW. Greet the student warmly — start in Arabic first for safety, then English. Do NOT wait for the student to speak first. You must initiate." }]
+                        parts: [{ text: `SESSION_START: The student has connected and is ready. Begin the opening NOW. Greet the student warmly — start in Arabic first for safety, then English. Do NOT wait for the student to speak first. You must initiate.${nameLine}${motivationLine}${memoryBlock}` }]
                     }],
                     turnComplete: true
                 });
-                console.log("🚀 START trigger sent to Gemini");
+                console.log(`🚀 START trigger sent to Gemini${memoryRecap ? ' (with memory recap)' : ' (first session)'}`);
             }
 
         } catch (e: any) {
@@ -257,25 +318,26 @@ export function setupSessionsWebSocket(wss: WebSocketServer) {
                     return;
                 }
                 
-                if (parsed.type === 'audio' && parsed.data && geminiSession) {
-                    geminiSession.sendRealtimeInput({
-                        audio: {
-                            mimeType: parsed.mimeType || 'audio/pcm;rate=16000',
-                            data: parsed.data  // base64 PCM data
-                        }
-                    });
+                if (parsed.type === 'audio' && parsed.data) {
+                    // Only forward audio while the child's turn is open; the first
+                    // frame lazily opens the Gemini activity (see forwardAudio).
+                    forwardAudio(parsed.data, parsed.mimeType);
                     return;
                 }
 
                 // Manual VAD signals from the client (server-side VAD is disabled
                 // so the captain can't be interrupted). The frontend fires these
                 // when the student taps the mic to start/stop their turn.
-                if (parsed.type === 'activity_start' && geminiSession) {
-                    geminiSession.sendRealtimeInput({ activityStart: {} });
+                if (parsed.type === 'activity_start') {
+                    // Mark intent only. The activityStart is forwarded to Gemini
+                    // lazily on the first audio frame, so a silent turn never
+                    // opens (and then has to close) an empty activity.
+                    micOpen = true;
                     return;
                 }
-                if (parsed.type === 'activity_end' && geminiSession) {
-                    geminiSession.sendRealtimeInput({ activityEnd: {} });
+                if (parsed.type === 'activity_end') {
+                    micOpen = false;
+                    endActivity();   // no-op if nothing was ever streamed
                     // Only a genuine end-of-utterance (client silence-VAD) is a
                     // completed student turn. A 'captain-speaks' close just gates
                     // the mic shut so the captain can't be interrupted; counting
@@ -296,16 +358,9 @@ export function setupSessionsWebSocket(wss: WebSocketServer) {
                     return;
                 }
             } catch {
-                // Not JSON — raw binary audio from frontend
-                if (geminiSession && data.length > 0) {
-                    const base64Audio = data.toString('base64');
-                    geminiSession.sendRealtimeInput({
-                        audio: {
-                            mimeType: 'audio/pcm;rate=16000',
-                            data: base64Audio
-                        }
-                    });
-                }
+                // Not JSON — raw binary audio from frontend. Same lazy-open path
+                // as the JSON audio branch.
+                if (data.length > 0) forwardAudio(data.toString('base64'));
             }
         });
 

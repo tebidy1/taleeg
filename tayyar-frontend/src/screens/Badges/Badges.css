@@ -1,0 +1,166 @@
+.badges-screen {
+  min-height: 100vh;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.badges-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--color-surface);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.badges-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-primary);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  /* RTL: flip arrow to point right (back = left in RTL) */
+  transform: scaleX(-1);
+}
+
+.badges-header-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.badges-content {
+  padding: 20px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Rank card ── */
+.rank-card {
+  background: linear-gradient(135deg, #1A2B4A, #1E5BA8);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+}
+
+.rank-icon {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.rank-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.rank-stats {
+  font-size: 13px;
+  color: rgba(255,255,255,.65);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ── Badge count ── */
+.badges-count {
+  text-align: center;
+}
+
+.badges-count-num {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--color-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.badges-count-of {
+  font-size: 18px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+/* ── Grid ── */
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.badge-item {
+  position: relative;
+  background: var(--color-surface);
+  border: 1.5px solid rgba(0,0,0,0.07);
+  border-radius: 16px;
+  padding: 20px 14px 16px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform .15s;
+}
+
+.badge-item:hover { transform: translateY(-2px); }
+
+.badge-item.earned {
+  border-color: rgba(30,91,168,.2);
+  box-shadow: 0 4px 18px rgba(30,91,168,.08);
+}
+
+.badge-item.locked {
+  opacity: .55;
+  filter: grayscale(.6);
+}
+
+.badge-item-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  display: block;
+  line-height: 1;
+}
+
+.badge-item-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.badge-item-desc {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Glow aura behind earned icon */
+.badge-item-glow {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,166,35,.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Complete banner ── */
+.badges-complete {
+  background: linear-gradient(135deg, #F5A623, #FFD166);
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  color: #7B4A00;
+  box-shadow: 0 6px 20px rgba(245,166,35,.3);
+}

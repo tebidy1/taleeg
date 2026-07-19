@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import captainImg from '../../assets/captain.png';
+import { getPilotRank } from '../../lib/missionProgress';
 import './MissionActive.css';
 
 type SessionStatus = 'connecting' | 'listening' | 'speaking' | 'error';
@@ -71,6 +72,11 @@ export const MissionActive: React.FC = () => {
   const [boardingFading, setBoardingFading] = useState(false);     // starts the boarding fade AFTER the deliberate hold
   const [canReplay, setCanReplay] = useState(false);               // last captain turn buffered
   const [paused, setPaused] = useState(false);                     // ⏸ overlay + freeze everything
+  // Server-authoritative "is it the child's turn?" — the maestro reads the
+  // captain's own words and tells us whether a turn was a real cue (open the
+  // mic) or a dramatic narration beat (keep it closed, the captain resumes).
+  // Starts false so the opening hook never flashes a phantom "your turn".
+  const [expectInput, setExpectInput] = useState(false);
 
   const wsRef            = useRef<WebSocket | null>(null);
   const playbackCtxRef   = useRef<AudioContext | null>(null);
@@ -85,10 +91,16 @@ export const MissionActive: React.FC = () => {
   const rafRef           = useRef<number | null>(null);
   const sessionIdRef     = useRef(`sess_${Math.random().toString(36).substr(2, 9)}`);
   const missionIdRef     = useRef(new URLSearchParams(window.location.search).get('mission'));
-  const sessionStatsRef  = useRef({ completedExchanges: 0, durationSeconds: 0, studentSentences: 0 });
+  const studentProfile   = useRef((() => {
+    try { return JSON.parse(localStorage.getItem('student_profile') || '{}'); }
+    catch { return {}; }
+  })());
+  const studentName      = studentProfile.current?.name || 'البطل';
+  const sessionStatsRef  = useRef({ completedExchanges: 0, durationSeconds: 0, studentSentences: 0, heroWord: null as string | null });
   const helpCountRef     = useRef(0);
   const sentenceCountRef = useRef(0);                 // local student-turn counter (no transcription anymore)
   const micActiveRef     = useRef(false);             // mirror of micActive for the audio processor callback
+  const expectInputRef   = useRef(false);             // mirror of expectInput for the status effect
   const previousPhraseRef = useRef<string | null>(null); // last phrase shown — used to detect ADVANCE (new phrase → fire ✓)
   const verdictTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null); // clears the ✓/retry verdict
   const sessionEndedRef  = useRef(false);            // true once a clean session_end arrived (guards onclose)
@@ -108,6 +120,7 @@ export const MissionActive: React.FC = () => {
   const currentStop = phaseToStop(currentPhase);
 
   useEffect(() => { micActiveRef.current = micActive; }, [micActive]);
+  useEffect(() => { expectInputRef.current = expectInput; }, [expectInput]);
 
   // ── Timer (frozen while paused) ──
   useEffect(() => {
@@ -239,19 +252,21 @@ export const MissionActive: React.FC = () => {
   }, []);
   closeMicRef.current = closeMic;
 
-  // Auto-manage the mic based on captain's speaking state.
+  // Auto-manage the mic based on captain's speaking state AND whether the
+  // maestro says this beat is actually the child's turn.
   //   captain speaking → mic CLOSED (no interruption, no cost)
-  //   captain silent   → mic OPEN (child can speak; silence-VAD closes it)
+  //   captain silent + expectInput → mic OPEN (child can speak; silence-VAD closes it)
+  //   captain silent + narration beat → mic CLOSED (captain will resume; no phantom turn)
   //   paused           → mic CLOSED (nothing streams while user is away)
   useEffect(() => {
-    if (paused || status === 'speaking' || status === 'connecting' || status === 'error') {
+    if (paused || status === 'speaking' || status === 'connecting' || status === 'error' || !expectInput) {
       closeMic('captain-speaks');
       speakStartedAtRef.current = 0;
       lastVoiceAtRef.current = 0;
     } else if (status === 'listening' && !celebrating) {
       openMic();
     }
-  }, [status, celebrating, paused, openMic, closeMic]);
+  }, [status, celebrating, paused, expectInput, openMic, closeMic]);
 
   // Replay the last captain turn (buffered) — "say it again" for shadowing
   const replayLast = useCallback(() => {
@@ -338,9 +353,15 @@ export const MissionActive: React.FC = () => {
   useEffect(() => {
     cleanedUpRef.current = false;
 
-    const missionParam = missionIdRef.current;
+    const missionParam  = missionIdRef.current;
+    const name          = studentProfile.current?.name || '';
+    const motivation    = studentProfile.current?.motivation || '';
+    const params: Record<string, string> = {};
+    if (missionParam) params.mission = missionParam;
+    if (name)         params.name     = name;
+    if (motivation)   params.motivation = motivation;
     const wsUrl = `ws://localhost:8080/ws/sessions/${sessionIdRef.current}/live`
-      + (missionParam ? `?mission=${encodeURIComponent(missionParam)}` : '');
+      + `?${new URLSearchParams(params).toString()}`;
 
     let ws: WebSocket;              // closed in THIS run's cleanup (StrictMode-safe)
     let localCaptureCtx: AudioContext | null = null;
@@ -455,11 +476,24 @@ export const MissionActive: React.FC = () => {
                 completedExchanges: msg.completedExchanges ?? sessionStatsRef.current.completedExchanges,
                 studentSentences: msg.studentSentences ?? sentenceCountRef.current,
                 durationSeconds: msg.durationSeconds ?? 0,
+                heroWord: msg.heroWord ?? null,
               };
               // The stamp fires HERE — at the real end — not on entering
               // victory_close, so it never lingers longer than this handoff.
               if (!celebratedRef.current) { celebratedRef.current = true; setCelebrating(true); playSfx('stamp'); buzz([40, 60, 120]); }
               setTimeout(() => handleEndMissionRef.current(), 2600);
+              break;
+            case 'expect_input':
+              // Maestro's verdict on the captain's last turn: real cue → the
+              // mic may open on the next 'listening'; narration beat → stay
+              // closed (the captain resumes on its own). See the mic effect.
+              setExpectInput(msg.value === true);
+              break;
+            case 'mic_close':
+              // Maestro is taking the floor (hint / narration resume) and has
+              // already closed our turn on the wire. Drop the mic locally so we
+              // stop streaming immediately — don't send another activity_end.
+              closeMicRef.current?.('captain-speaks');
               break;
             case 'interrupted':
               audioQueueRef.current = [];
@@ -561,6 +595,7 @@ export const MissionActive: React.FC = () => {
         duration, points: studentSentences * 10, exchanges, studentSentences,
         badge: exchanges >= 4 ? 'First Flight 🛫' : null,
         missionId: missionIdRef.current,
+        heroWord: sessionStatsRef.current.heroWord,
       },
     });
   };
@@ -601,7 +636,11 @@ export const MissionActive: React.FC = () => {
   };
 
   // ── Derived view state ──
-  const isStudentTurn = status === 'listening' && !celebrating;
+  // A real student turn requires the maestro's cue (expectInput). A 'listening'
+  // status during a narration beat is NOT the child's turn — the captain is
+  // just pausing for effect and will continue.
+  const isStudentTurn = status === 'listening' && !celebrating && expectInput;
+  const narrationBeat = status === 'listening' && !celebrating && !expectInput;
   const captainSpeaking = status === 'speaking';
   const timeWarn = timer >= 330;                 // 5:30 → wrap-up approaching
 
@@ -609,6 +648,7 @@ export const MissionActive: React.FC = () => {
     : status === 'connecting' ? 'الكابتن يشغّل المحركات...'
     : status === 'error' ? 'انقطع الاتصال — حاول مرة أخرى'
     : captainSpeaking ? 'الكابتن يتحدث...'
+    : narrationBeat ? 'الكابتن يروي القصة...'
     : 'دورك — كرّرها 🎤';
 
   return (
@@ -625,7 +665,8 @@ export const MissionActive: React.FC = () => {
               <img src={captainImg} alt="" draggable={false} />
             </div>
             <div className="m-pass-route">RUH <span>✈</span> DXB</div>
-            <div className="m-pass-name">البطل / فيصل</div>
+            <div className="m-pass-name">البطل / {studentName}</div>
+            <div className="m-pass-rank">{getPilotRank()}</div>
             <div className="m-pass-stamp">
               {status === 'connecting' ? 'جاري تشغيل المحركات...' : 'BOARDING ✓'}
             </div>
@@ -728,7 +769,7 @@ export const MissionActive: React.FC = () => {
       {/* ── Control bar (fixed) ── */}
       <footer className="m-controls">
         <div className="m-mic-hint">
-          {paused ? 'اضغط ▶ للمتابعة' : captainSpeaking ? 'الكابتن يتحدث...' : micActive ? 'دورك — تكلّم' : 'استعد'}
+          {paused ? 'اضغط ▶ للمتابعة' : captainSpeaking ? 'الكابتن يتحدث...' : narrationBeat ? '' : micActive ? 'دورك — تكلّم' : 'استعد'}
         </div>
         <div className="m-dock">
           <button className="m-help" onClick={sendHelp} aria-label="مساعدة">

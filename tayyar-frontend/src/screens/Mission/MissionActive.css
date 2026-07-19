@@ -371,6 +371,7 @@
 }
 .m-pass-route span { color: var(--gold); margin: 0 12px; }
 .m-pass-name { text-align: center; color: var(--ink-soft); font-weight: 700; font-size: 14px; }
+.m-pass-rank { text-align: center; color: var(--gold); font-weight: 800; font-size: 13px; margin-top: -2px; }
 .m-pass-stamp {
   align-self: center; border: 2.5px solid var(--green); color: var(--green);
   font-weight: 800; font-size: 13px; padding: 6px 18px; border-radius: 9px;

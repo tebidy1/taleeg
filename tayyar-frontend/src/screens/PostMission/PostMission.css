@@ -189,22 +189,43 @@
 
 /* --- Next Mission Teaser --- */
 .next-mission-teaser {
-  background: rgba(46,204,113,0.15);
-  border: 1px solid rgba(46,204,113,0.3);
-  border-radius: var(--radius-lg);
-  padding: 16px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius-xl);
+  padding: 20px 16px;
   text-align: center;
   animation-delay: 400ms;
 }
 
-.next-mission-teaser p {
-  color: rgba(255,255,255,0.9);
-  font-size: 14px;
-  line-height: 1.6;
+.teaser-badge {
+  color: #FFD166;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  margin-bottom: 6px;
 }
 
-.next-mission-teaser strong {
-  color: #2ECC71;
+.teaser-label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,0.45) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.teaser-title {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  color: #FFD166 !important;
+  margin-bottom: 10px;
+}
+
+.teaser-hook {
+  font-size: 13.5px !important;
+  color: rgba(255,255,255,0.82) !important;
+  line-height: 1.6 !important;
+  font-style: italic;
+  margin: 0 !important;
 }
 
 .teaser-hint {

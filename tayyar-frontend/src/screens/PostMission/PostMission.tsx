@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '../../components/ui/Button';
-import { fetchMissions, markMissionCompleted, getNextMissionId, type MissionListItem } from '../../lib/missionProgress';
+import {
+  fetchMissions, markMissionCompleted, getNextMissionId,
+  addPoints, recordTodaySession, getCurrentStreak,
+  recordBestSessionSentences,
+  type MissionListItem,
+} from '../../lib/missionProgress';
 import './PostMission.css';
 
 interface SessionResult {
@@ -11,6 +16,7 @@ interface SessionResult {
   exchanges?: number;
   studentSentences?: number;
   missionId?: string | null;
+  heroWord?: string | null;
 }
 
 export const PostMission: React.FC = () => {
@@ -26,40 +32,50 @@ export const PostMission: React.FC = () => {
 
   const minutes = Math.floor(result.duration / 60);
   const seconds = result.duration % 60;
-  // honest counter: prefer real English-sentence count, fall back to exchanges
   const sentences = result.studentSentences ?? result.exchanges ?? 0;
 
+  const profile = (() => { try { return JSON.parse(localStorage.getItem('student_profile') || '{}'); } catch { return {}; } })();
+  const studentName = profile?.name || 'الطالب';
+
   useEffect(() => {
-    // Trigger confetti animation after short delay
     const timer = setTimeout(() => setShowConfetti(true), 300);
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     if (result.missionId) markMissionCompleted(result.missionId);
+    addPoints(result.points);
+    recordTodaySession();
+    recordBestSessionSentences(sentences);
     fetchMissions()
       .then(missions => {
         const next = getNextMissionId(missions);
         if (next) setNextMission(missions.find(m => m.id === next) || null);
         else setArcComplete(true);
       })
-      .catch(() => { /* honest silence — no fake fallback list */ });
+      .catch(() => {});
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const handleWhatsAppShare = () => {
+    const streak = getCurrentStreak();
+    const text = `🌟 ${studentName} أتمّ درسًا في تطبيق طيّار!\n🎤 قال ${sentences} جملة إنجليزية\n⭐ +${result.points} نقطة${streak > 0 ? `\n🔥 السلسلة: ${streak} ${streak === 1 ? 'يوم' : 'أيام'} متتالية` : ''}\n\n✈️ طيّار — المحادثة الإنجليزية الحقيقية`;
+    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
+  };
 
   return (
     <div className="post-mission-screen fade-in">
       {showConfetti && <ConfettiOverlay />}
 
       <div className="post-mission-content">
-        {/* Trophy Section */}
+        {/* Trophy */}
         <div className="trophy-section scale-in">
           <div className="trophy-emoji">🏆</div>
-          <h1 className="result-title">أحسنت!</h1>
-          <p className="result-subtitle">أتممت مهمة المطار بنجاح</p>
+          <h1 className="result-title">أحسنت، {studentName}!</h1>
+          <p className="result-subtitle">أتممت مهمتك بنجاح</p>
         </div>
 
-        {/* Stats Section */}
+        {/* Stats */}
         <div className="stats-grid slide-up">
           <div className="stat-card">
             <div className="stat-icon">⏱️</div>
@@ -78,36 +94,41 @@ export const PostMission: React.FC = () => {
           </div>
         </div>
 
-        {/* Badge Section */}
+        {/* Badge */}
         {result.badge && (
           <div className="badge-section slide-up">
             <div className="badge-card">
               <div className="badge-new-label">شارة جديدة!</div>
               <div className="badge-icon">🛫</div>
               <div className="badge-name">{result.badge}</div>
-              <div className="badge-desc">أتممت مهمتك الأولى في المطار</div>
+              <div className="badge-desc">أتممت مهمتك الأولى — طيار مبتدئ!</div>
             </div>
           </div>
         )}
 
         {/* Hero Word */}
-        <div className="hero-word-section slide-up">
-          <h3>كلمة اليوم البطلة 🦸</h3>
-          <div className="hero-word">
-            <span className="word-en">Passport</span>
-            <span className="word-ar">جواز السفر</span>
+        {result.heroWord && (
+          <div className="hero-word-section slide-up">
+            <h3>كلمة اليوم البطلة 🦸</h3>
+            <div className="hero-word">
+              <span className="word-en">{result.heroWord}</span>
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Next mission — the actual navigation mechanism between lessons */}
+        {/* Next mission cliffhanger */}
         {arcComplete ? (
           <div className="next-mission-teaser slide-up">
-            <p>🏆 أكملت الرحلة كاملة!</p>
+            <p className="teaser-badge">🏆 أكملت الرحلة كاملة!</p>
             <p className="teaser-hint">أنت الآن مسافر حقيقي — كل الدروس الخمسة خلفك.</p>
           </div>
         ) : nextMission ? (
           <div className="next-mission-teaser slide-up">
-            <p>🌟 الدرس التالي: <strong>{nextMission.title_ar}</strong></p>
+            <p className="teaser-label">ما الذي ينتظرك غداً؟</p>
+            <p className="teaser-title">{nextMission.title_ar}</p>
+            {nextMission.teaser_ar && (
+              <p className="teaser-hook">"{nextMission.teaser_ar}"</p>
+            )}
           </div>
         ) : null}
 
@@ -121,13 +142,16 @@ export const PostMission: React.FC = () => {
           <Button fullWidth size={nextMission ? 'md' : 'lg'} variant={nextMission ? 'secondary' : 'primary'} onClick={() => navigate('/')}>
             🏠 العودة للرئيسية
           </Button>
+          {/* WhatsApp share — parent accountability loop */}
+          <button className="share-btn" onClick={handleWhatsAppShare}>
+            📲 شارك إنجاز {studentName} مع الأهل
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-// Simple CSS confetti
 const ConfettiOverlay: React.FC = () => (
   <div className="confetti-container" aria-hidden="true">
     {Array.from({ length: 20 }).map((_, i) => (

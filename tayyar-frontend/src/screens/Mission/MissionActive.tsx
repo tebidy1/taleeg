@@ -65,9 +65,10 @@ export const MissionActive: React.FC = () => {
   const [phrase, setPhrase]       = useState<string | null>(null); // target English phrase on the card
   const [stress, setStress]       = useState<string | null>(null); // word to visually stress
   const [micActive, setMicActive] = useState(false);   // push-to-talk: true while student is taking a turn
-  const [heardPulse, setHeardPulse] = useState(0);     // increments each time we confirm a turn (drives animation)
+  const [verdict, setVerdict] = useState<'correct' | 'retry' | null>(null); // captain's actual judgment of the attempt
   const [celebrating, setCelebrating] = useState(false);
   const [showBoarding, setShowBoarding] = useState(true);          // opening ritual overlay
+  const [boardingFading, setBoardingFading] = useState(false);     // starts the boarding fade AFTER the deliberate hold
   const [canReplay, setCanReplay] = useState(false);               // last captain turn buffered
   const [paused, setPaused] = useState(false);                     // ⏸ overlay + freeze everything
 
@@ -88,7 +89,9 @@ export const MissionActive: React.FC = () => {
   const helpCountRef     = useRef(0);
   const sentenceCountRef = useRef(0);                 // local student-turn counter (no transcription anymore)
   const micActiveRef     = useRef(false);             // mirror of micActive for the audio processor callback
-  const heardTimeoutRef  = useRef<ReturnType<typeof setTimeout> | null>(null); // stops the ✓ pulse
+  const previousPhraseRef = useRef<string | null>(null); // last phrase shown — used to detect ADVANCE (new phrase → fire ✓)
+  const verdictTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null); // clears the ✓/retry verdict
+  const sessionEndedRef  = useRef(false);            // true once a clean session_end arrived (guards onclose)
   const curTurnBufsRef   = useRef<AudioBuffer[]>([]); // buffers of the turn currently playing
   const lastTurnBufsRef  = useRef<AudioBuffer[]>([]); // last completed captain turn (for replay)
   const sfxCtxRef        = useRef<AudioContext | null>(null);
@@ -218,14 +221,20 @@ export const MissionActive: React.FC = () => {
     micActiveRef.current = false;
     setMicActive(false);
     if (wsRef.current?.readyState === WebSocket.OPEN) {
-      wsRef.current.send(JSON.stringify({ type: 'activity_end' }));
+      // Send the reason: only a real 'silence' end is a completed student turn.
+      // A 'captain-speaks' close just gates the mic shut (no-interruption) and
+      // must NOT be counted as an attempt — otherwise narration turns inflate
+      // the exchange count and fire a phantom ✓.
+      wsRef.current.send(JSON.stringify({ type: 'activity_end', reason }));
     }
     if (reason === 'silence') {
-      // The child actually finished a turn — reward with a ✓ pulse.
+      // The child finished a turn — count it for stats. NO overlay icon here:
+      // the mic itself grows + glows during the turn (see .m-mic-wrap.active
+      // in the CSS), which is the honest "your turn" affordance. The ✓
+      // verdict is reserved for advancing to a NEW phrase (see the
+      // 'target_phrase' handler), so it doesn't fire on every shadowing
+      // repetition of the same sentence.
       sentenceCountRef.current += 1;
-      setHeardPulse(p => p + 1);
-      if (heardTimeoutRef.current) clearTimeout(heardTimeoutRef.current);
-      heardTimeoutRef.current = setTimeout(() => setHeardPulse(0), 1400);
     }
   }, []);
   closeMicRef.current = closeMic;
@@ -343,7 +352,7 @@ export const MissionActive: React.FC = () => {
       wsRef.current = ws;
 
       demoTimeout = setTimeout(() => {
-        if (ws.readyState !== WebSocket.OPEN && !cleanedUpRef.current) setStatus('error');
+        if (ws.readyState !== WebSocket.OPEN && !cleanedUpRef.current) { setStatus('error'); setShowBoarding(false); }
       }, 4000);
 
       ws.onopen = () => {
@@ -351,9 +360,15 @@ export const MissionActive: React.FC = () => {
         clearTimeout(demoTimeout);
         ws.send(JSON.stringify({ type: 'start_session', studentId: 'student_123', sessionId: sessionIdRef.current }));
         setStatus('listening');
-        // boarding ritual: chime + hold the pass ~1.8s, then reveal the stage
+        // Boarding ritual: chime, then HOLD the pass fully opaque for 1.8s
+        // (the deliberate moment that also masks connection latency), THEN
+        // fade it out over 0.5s and unmount. Previously `.ready` was tied to
+        // status===listening, so on localhost the pass faded the instant the
+        // socket opened (~100ms) and just flashed. The fade is now driven by
+        // an explicit timer, independent of how fast the socket connects.
         playSfx('chime'); buzz(30);
-        setTimeout(() => { if (!cleanedUpRef.current) setShowBoarding(false); }, 1800);
+        setTimeout(() => { if (!cleanedUpRef.current) setBoardingFading(true); }, 1800);
+        setTimeout(() => { if (!cleanedUpRef.current) setShowBoarding(false); }, 2350);
       };
 
       ws.onmessage = (event) => {
@@ -371,11 +386,24 @@ export const MissionActive: React.FC = () => {
             // 'transcript' from the server is no longer used — input
             // transcription is disabled and the ✓ pulse comes from local
             // taps, not from wire messages.
-            case 'target_phrase':
+            case 'target_phrase': {
               // server-authoritative phrase for the card (phase-gated, accurate)
-              setPhrase(msg.phrase ?? null);
+              const newPhrase: string | null = msg.phrase ?? null;
+              setPhrase(newPhrase);
               setStress(msg.stress ?? null);
+              // ✓ fires ONLY on ADVANCE — a new phrase replaces a previous one.
+              // Not on the very first phrase (nothing has been drilled yet),
+              // not on the same phrase repeating (shadowing rounds 2-5), and
+              // not on a clear-to-null. This matches the child's mental model:
+              // "check" = "we finished that sentence, moving on".
+              if (newPhrase && previousPhraseRef.current && newPhrase !== previousPhraseRef.current) {
+                setVerdict('correct');
+                if (verdictTimeoutRef.current) clearTimeout(verdictTimeoutRef.current);
+                verdictTimeoutRef.current = setTimeout(() => setVerdict(null), 1600);
+              }
+              if (newPhrase !== null) previousPhraseRef.current = newPhrase;
               break;
+            }
             case 'turn_complete':
               modelTurnActiveRef.current = false;
               // freeze this turn's audio for the replay button
@@ -395,21 +423,41 @@ export const MissionActive: React.FC = () => {
                 sessionStatsRef.current.completedExchanges = msg.completedExchanges;
               }
               break;
+            case 'turn_feedback':
+              // Server-derived signal from the captain's transcript. We now
+              // ONLY surface 'retry' — a genuine correction the captain made
+              // (تقصد / بنطق / ركّز). We deliberately DROP 'correct' here:
+              // the captain says supportive words on nearly every turn (praise,
+              // acknowledgement, next model) and firing ✓ on each one made it
+              // pop during pure shadowing repetitions and even after coach
+              // narration. The ✓ is now driven by phrase ADVANCE instead
+              // (see 'target_phrase' above) — a much more honest milestone.
+              if (msg.result === 'retry') {
+                setVerdict('retry');
+                if (verdictTimeoutRef.current) clearTimeout(verdictTimeoutRef.current);
+                verdictTimeoutRef.current = setTimeout(() => setVerdict(null), 1600);
+              }
+              break;
             case 'phase':
               if (typeof msg.phase === 'string') {
                 setServerPhase(prev => { if (prev && prev !== msg.phase) playSfx('whoosh'); return msg.phase; });
-                if ((msg.phase === 'victory_close' || msg.phase === 'end') && !celebratedRef.current) {
-                  celebratedRef.current = true;
-                  setCelebrating(true); playSfx('stamp'); buzz([40, 60, 120]);
-                }
+                // Entering victory_close no longer triggers the stamp. The stamp
+                // is a full-screen takeover that hides the captain, and the
+                // session doesn't actually end until conclude_mission / hard cap
+                // — firing it here left the child staring at a frozen stamp for
+                // up to two minutes while the captain was still saying goodbye
+                // behind it. The celebration now fires ONLY on real session_end.
               }
               break;
             case 'session_end':
+              sessionEndedRef.current = true;   // clean end — guards onclose from firing an error
               sessionStatsRef.current = {
                 completedExchanges: msg.completedExchanges ?? sessionStatsRef.current.completedExchanges,
                 studentSentences: msg.studentSentences ?? sentenceCountRef.current,
                 durationSeconds: msg.durationSeconds ?? 0,
               };
+              // The stamp fires HERE — at the real end — not on entering
+              // victory_close, so it never lingers longer than this handoff.
               if (!celebratedRef.current) { celebratedRef.current = true; setCelebrating(true); playSfx('stamp'); buzz([40, 60, 120]); }
               setTimeout(() => handleEndMissionRef.current(), 2600);
               break;
@@ -428,7 +476,21 @@ export const MissionActive: React.FC = () => {
         }
       };
 
-      ws.onerror = () => { if (!cleanedUpRef.current) { clearTimeout(demoTimeout); setStatus('error'); } };
+      ws.onerror = () => { if (!cleanedUpRef.current) { clearTimeout(demoTimeout); setStatus('error'); setShowBoarding(false); } };
+
+      // Backend closed the socket. Without this handler the UI just froze
+      // silently — captain stops, mic keeps streaming into a dead socket, no
+      // error, no exit (the reported "انقطاع غير مفهوم"). Now we react:
+      //   - clean end (session_end already scheduled navigation) → do nothing
+      //   - unexpected drop (Gemini dropped, backend crash, network) → surface
+      //     an honest disconnected state instead of a dead screen.
+      ws.onclose = () => {
+        if (cleanedUpRef.current) return;
+        clearTimeout(demoTimeout);
+        if (sessionEndedRef.current) return;
+        setShowBoarding(false);
+        setStatus('error');
+      };
     } catch (e) {
       console.error('WebSocket creation failed:', e);
       setStatus('error');
@@ -477,7 +539,7 @@ export const MissionActive: React.FC = () => {
       cleanedUpRef.current = true;
       clearTimeout(demoTimeout);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      if (heardTimeoutRef.current) clearTimeout(heardTimeoutRef.current);
+      if (verdictTimeoutRef.current) clearTimeout(verdictTimeoutRef.current);
       processorRef.current?.disconnect();
       localCaptureCtx?.close().catch(() => {});
       localStream?.getTracks().forEach(t => t.stop());
@@ -554,7 +616,7 @@ export const MissionActive: React.FC = () => {
 
       {/* ── Boarding-pass opening ritual (hides connection latency) ── */}
       {showBoarding && (
-        <div className={`m-boarding ${status === 'listening' || status === 'speaking' ? 'ready' : ''}`}>
+        <div className={`m-boarding ${boardingFading ? 'ready' : ''}`}>
           <div className="m-pass">
             <div className="m-pass-head">
               <span>طيران طيّار</span><span>✈️</span>
@@ -641,13 +703,24 @@ export const MissionActive: React.FC = () => {
               status === 'connecting' && <div className="m-spinner" aria-hidden />
             )}
 
-            {heardPulse > 0 && (
-              <div className="m-heard-pulse" key={heardPulse}>
+            {/* Verdict overlay: ✓ only when we ADVANCE to a new phrase, or a
+                retry cue when the captain corrected something. "Heard you"
+                is now expressed by the mic itself growing + glowing — no
+                extra icon needed (which read as a pause/stop symbol). */}
+            {verdict === 'correct' ? (
+              <div className="m-verdict correct" key="ok">
                 <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
-            )}
+            ) : verdict === 'retry' ? (
+              <div className="m-verdict retry" key="retry">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 12a9 9 0 1 0 3-6.7L3 8" /><path d="M3 3v5h5" />
+                </svg>
+                <span className="m-verdict-label">مرة ثانية</span>
+              </div>
+            ) : null}
           </>
         )}
       </main>

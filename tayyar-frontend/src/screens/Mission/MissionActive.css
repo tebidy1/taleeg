@@ -202,21 +202,26 @@
 }
 .m-stress { color: var(--indigo); }
 
-/* Green ✓ pulse — replaces the old wrong-STT text bubble */
-.m-heard-pulse {
-  width: 72px; height: 72px; border-radius: 50%;
-  background: var(--green); color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 8px 24px rgba(16,185,129,.4);
-  animation: heardPulse 1.4s cubic-bezier(.2,1.4,.4,1) forwards;
-}
-@keyframes heardPulse {
+/* Verdict pop-in — used for ✓ (phrase advance) and the retry cue. */
+@keyframes verdictPop {
   0%   { opacity: 0; transform: scale(.3); }
   25%  { opacity: 1; transform: scale(1.15); }
   40%  { transform: scale(1); }
   80%  { opacity: 1; transform: scale(1); }
   100% { opacity: 0; transform: scale(.9); }
 }
+
+/* Captain's actual verdict — the honest signal (server-judged from transcript). */
+.m-verdict {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; animation: verdictPop 1.6s cubic-bezier(.2,1.4,.4,1) forwards;
+}
+.m-verdict > svg {
+  width: 72px; height: 72px; border-radius: 50%; padding: 13px; box-sizing: border-box;
+}
+.m-verdict.correct > svg { background: var(--green); color: #fff; box-shadow: 0 8px 24px rgba(16,185,129,.42); }
+.m-verdict.retry   > svg { background: var(--gold);  color: #fff; box-shadow: 0 8px 24px rgba(217,119,6,.38); }
+.m-verdict-label { font-size: 13px; font-weight: 800; color: #b45309; }
 
 .m-replay {
   margin-top: 16px; border: 1px solid var(--line); cursor: pointer;
@@ -272,26 +277,56 @@
 .m-help:hover { background: #eceef1; color: var(--gold); }
 .m-help-spacer { width: 46px; }
 
-/* Mic with radial ripples */
-.m-mic-wrap { --level: 0; position: relative; width: 72px; height: 72px; justify-self: center;
-  display: flex; align-items: center; justify-content: center; }
+/* Mic with radial ripples. When the student's turn is live the whole wrap
+   scales up (bigger presence, mirrors the way the captain avatar grows when
+   speaking) and the button itself glows with a green halo + breathing
+   animation, so the mic itself IS the "your turn" signal — no separate
+   overlay icon is needed. */
+.m-mic-wrap {
+  --level: 0; position: relative; width: 72px; height: 72px; justify-self: center;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .35s cubic-bezier(.2,1.4,.4,1);
+}
+.m-mic-wrap.active { transform: scale(1.22); }
 .m-mic {
   width: 68px; height: 68px; border-radius: 50%; border: none;
   color: #fff; cursor: pointer; position: relative; z-index: 2;
   display: flex; align-items: center; justify-content: center;
-  transition: transform .12s ease, background .25s ease;
+  transition: transform .12s ease, background .25s ease, box-shadow .3s ease;
 }
 .m-mic.idle  { background: linear-gradient(145deg, #6366f1, #4f46e5); box-shadow: 0 8px 22px rgba(79,70,229,.42); }
-.m-mic.live  { background: linear-gradient(145deg, #10b981, #059669); box-shadow: 0 8px 22px rgba(16,185,129,.5); transform: scale(calc(1 + var(--level) * .12)); }
+.m-mic.live  {
+  background: linear-gradient(145deg, #10b981, #059669); color: #fff;
+  transform: scale(calc(1 + var(--level) * .18));
+  animation: micGlow 1.8s ease-in-out infinite;
+}
 .m-mic.dim   { background: linear-gradient(145deg, #6366f1, #4f46e5); box-shadow: 0 8px 22px rgba(79,70,229,.30); opacity: .82; }
 .m-mic.paused { background: linear-gradient(145deg, #f59e0b, #d97706); box-shadow: 0 8px 22px rgba(217,119,6,.42); }
 .m-mic-wrap.paused .m-mic-ring { animation: none; }
 .m-mic:disabled { cursor: not-allowed; opacity: .5; }
 .m-mic:active { transform: scale(.93); }
 
+/* Breathing green halo — the "you're on" affordance. Layers a tight inner
+   ring on top of two progressively softer outer glows, then pulses their
+   spread so the mic reads as ALIVE. */
+@keyframes micGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 0 3px rgba(16,185,129,.22),
+      0 8px 26px rgba(16,185,129,.55),
+      0 0 34px rgba(16,185,129,.35);
+  }
+  50% {
+    box-shadow:
+      0 0 0 7px rgba(16,185,129,.30),
+      0 10px 34px rgba(16,185,129,.75),
+      0 0 54px rgba(16,185,129,.55);
+  }
+}
+
 .m-mic-ring {
   position: absolute; width: 68px; height: 68px; border-radius: 50%; z-index: 1;
-  border: 2px solid rgba(99,102,241,.5); opacity: 0;
+  border: 2px solid rgba(16,185,129,.55); opacity: 0;
 }
 .m-mic-wrap.active .m-mic-ring { animation: ripple 1.8s ease-out infinite; }
 .m-mic-wrap.active .m-mic-ring:nth-child(2) { animation-delay: .9s; }

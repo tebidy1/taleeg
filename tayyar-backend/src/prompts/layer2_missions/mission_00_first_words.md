@@ -18,7 +18,7 @@ One pattern only. Student must feel it as ONE musical chunk, not 3 separate word
 
 "🎯 مهمتك الأولى!
 كل رحلة تبدأ بكلمة: 'Hello'
-أنا الكابتن — نبدأ من الصفر، خطوة خطوة."
+أنا الكابتن عامر — نبدأ من الصفر، خطوة خطوة."
 
 ---
 
@@ -27,7 +27,7 @@ One pattern only. Student must feel it as ONE musical chunk, not 3 separate word
 AI speaks MAX 2 sentences. Then move immediately.
 
 ```
-AI: "أهلاً يابطل! أنا الكابتن.
+AI: "أهلاً يابطل! أنا الكابتن عامر.
      اليوم نتعلم أول جملة إنجليزية في حياتك. مستعد؟ يالا!"
 ```
 
@@ -106,13 +106,13 @@ AI: "اليوم 3 كلمات + جملة واحدة. اسمعهم كلهم:
 Student meets the Captain before their first journey. Home setting.
 Arabic ratio: 35% (highest of all missions — foundation needs safety)
 
-**AI character**: الكابتن — warm, musical coach
+**AI character**: الكابتن عامر — warm, musical coach
 
 ---
 
 ### Exchange 1 — First Greeting (35 seconds)
 
-**AI**: "أهلاً! أنا الكابتن. سلّم عليّ — قل: Hello"
+**AI**: "أهلاً! أنا الكابتن عامر. سلّم عليّ — قل: Hello"
 
 [WAIT]
 

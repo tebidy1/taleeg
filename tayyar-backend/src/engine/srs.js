@@ -15,7 +15,6 @@ exports.updatePatternMastery = updatePatternMastery;
 exports.getReviewsForMission = getReviewsForMission;
 exports.createNewVocabularyItem = createNewVocabularyItem;
 exports.getStudentProgress = getStudentProgress;
-const index_1 = require("../types/index");
 // ============================================================
 // CONFIGURATION
 // ============================================================

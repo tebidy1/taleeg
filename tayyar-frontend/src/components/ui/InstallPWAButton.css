@@ -1,0 +1,65 @@
+.install-pwa-button {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #1E5BA8, #2a75d3);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-family: 'Almarai', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(30, 91, 168, 0.4);
+  z-index: 9999;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  animation: float-pulse 2s infinite;
+}
+
+.install-pwa-button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(30, 91, 168, 0.6);
+  background: linear-gradient(135deg, #2a75d3, #3c8ef0);
+  animation: none;
+}
+
+.install-pwa-button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.install-icon {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.install-pwa-button:hover .install-icon {
+  transform: translateY(2px);
+}
+
+@keyframes float-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(30, 91, 168, 0.4);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(30, 91, 168, 0);
+    transform: translateY(-3px);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(30, 91, 168, 0);
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .install-pwa-button {
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}

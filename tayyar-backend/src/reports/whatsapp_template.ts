@@ -200,7 +200,7 @@ function formatDuration(seconds: number): string {
 
 function getMissionTitle(missionId: string): string {
   const titles: Record<string, string> = {
-    mission_01_airport: "مطار الرياض — إجراءات السفر",
+    mission_01_airport: "مطار مسقط — إجراءات السفر",
     mission_02_airplane: "في الطائرة — الطعام والشراب",
     mission_03_hotel: "الفندق — استلام الغرفة",
     mission_04_restaurant: "المطعم — طلب الطعام",
@@ -305,11 +305,11 @@ function formatTomorrowPreview(currentMissionId: string): string {
     mission_01_airport:
       "ستكون في الطائرة! المضيفة ستسألك عن مشروبك المفضل 🥤",
     mission_02_airplane:
-      "ستصل إلى دبي! موظف الفندق ينتظرك لاستلام غرفتك 🏨",
+      "ستصل إلى صلالة! موظف الفندق ينتظرك لاستلام غرفتك 🏨",
     mission_03_hotel:
       "جوعان؟ ستطلب طعامك المفضل في مطعم الفندق 🍔",
     mission_04_restaurant:
-      "وقت التسوق! ستختار هدية لأخيك في دبي مول 👕",
+      "وقت التسوق! ستختار هدية لأخيك في أسواق صلالة 👕",
     mission_05_shopping:
       "مراجعة شاملة لكل ما تعلمته! استعد للتحدي النهائي 🎓",
   };

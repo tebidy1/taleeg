@@ -7,14 +7,14 @@
 ## MISSION OVERVIEW
 - Title: "Souvenir — Shopping for Clothes"
 - Title (AR): "هدية — التسوق للملابس"
-- Context: Clothing store in Dubai Mall
+- Context: Clothing store in Salalah
 - Tests all 5 patterns — graduation mission
 
 ## NARRATIVE SETUP
 
 "🎯 مهمتك الأخيرة في المستوى الأول!
 
-أنت في دبي مول، تريد شراء قميص هدية لأخيك.
+أنت في أسواق صلالة، تريد شراء قميص هدية لأخيك.
 البائع 'James' سيساعدك.
 
 عليك أن تستخدم كل ما تعلمته:

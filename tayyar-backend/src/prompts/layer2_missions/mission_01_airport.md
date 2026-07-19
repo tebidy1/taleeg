@@ -20,8 +20,8 @@ Only ONE new pattern in this mission. The old pattern is reviewed naturally.
 
 "🎯 مهمتك الأولى الحقيقية!
 
-أنت في مطار الملك خالد بالرياض.
-ستسافر إلى دبي! ✈️
+أنت في مطار مسقط الدولي.
+ستسافر إلى صلالة! ✈️
 
 موظف المطار 'خالد' ينتظرك لإنهاء إجراءات السفر.
 
@@ -42,7 +42,7 @@ AI starts warmly. Arabic first for safety.
 ```
 AI: "أهلاً يا بطل! 
      أنا خالد، موظف المطار.
-     Welcome to Riyadh airport!
+     Welcome to Muscat airport!
      
      (pause)
      
@@ -157,31 +157,31 @@ AI: "WOW! صرت تستخدمها! حلو!
 
 ### AI Character:
 - Name: Khalid (خالد)
-- Role: Check-in agent at Riyadh airport
+- Role: Check-in agent at Muscat airport
 - Personality: Friendly Saudi professional, patient, welcoming
 - Arabic usage: 30% (slightly less than Mission 0)
 
 ### Exchange 1 — Greeting + Destination
 
-**AI**: "Hi! Welcome to Riyadh airport.
+**AI**: "Hi! Welcome to Muscat airport.
 Where are you flying today?
-You can say: 'To Dubai'"
+You can say: 'To Salalah'"
 
-**Expected**: "To Dubai" / "Dubai" / "Hello, to Dubai"
+**Expected**: "To Salalah" / "Salalah" / "Hello, to Salalah"
 
-**Hint** (after 2s): "قل: To Dubai"
-**Simplification** (after 4s): "Dubai? Yes or no?"
+**Hint** (after 2s): "قل: To Salalah"
+**Simplification** (after 4s): "Salalah? Yes or no?"
 
 **If correct**:
-AI: "Great! Dubai is a beautiful city.
-     هل أول مرة تسافر لدبي؟"
+AI: "Great! Salalah is a beautiful city.
+     هل أول مرة تسافر لصلالة؟"
 
 **If shy/silent**:
-AI: "ما تخاف. قل معي: To Dubai"
-(Student: "To Dubai")
+AI: "ما تخاف. قل معي: To Salalah"
+(Student: "To Salalah")
 AI: "YES! ممتاز!"
 
-**Target**: Vocabulary (Dubai) + greeting review
+**Target**: Vocabulary (Salalah) + greeting review
 **Success criteria**: Student states destination
 
 ---

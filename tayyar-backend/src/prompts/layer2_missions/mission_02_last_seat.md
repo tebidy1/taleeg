@@ -90,7 +90,7 @@ AI: "شفت؟ موجود عندك! وآخر وحدة — لما تسلّم جو�
 AI: "وصلنا — سامي قدامك، والعائلة وراك مباشرة!
      سامي: Next! Where are you flying?"
 ```
-[WAIT — expected: To Dubai]
+[WAIT — expected: To Salalah]
 ```
 AI: "سامي: Passport, please — سلّمه مع الكلمة:"
 ```

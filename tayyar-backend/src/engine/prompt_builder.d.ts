@@ -9,13 +9,13 @@
  *   Layer 4: Real-time Rules (per session moment)
  */
 import { Student, Mission } from "../types/index";
-interface PromptBuildContext {
+export interface PromptBuildContext {
     student: Student;
     mission: Mission;
     sessionStartTime: Date;
     realTimeState?: RealTimeState;
 }
-interface RealTimeState {
+export interface RealTimeState {
     timeElapsed: string;
     currentExchange: number;
     completedExchanges: number;
@@ -31,10 +31,32 @@ interface RealTimeState {
 export declare function detectCurrentPhase(timeElapsedSecs: number): string;
 export declare class PromptBuilder {
     private basePersonaCache;
+    private corePersonaCache;
     /**
-     * Build the complete prompt for a session
+     * Compact system prompt (~4-5K chars instead of ~26K):
+     * core persona + mission overview + student brief + memory recap
+     * + ONLY the opening phases' script (flash_open + warmup).
+     * Later phase scripts are injected live by the SessionOrchestrator,
+     * so the model can never "burn through" the lesson.
+     */
+    buildCorePrompt(context: PromptBuildContext): string;
+    /**
+     * Extract any top-level ## section from the mission file whose header
+     * contains one of the given keywords. Returns null if not found.
+     */
+    getNamedSection(mission: Mission, keywords: string[]): string | null;
+    /**
+     * Extract one phase's script section from the mission markdown file.
+     * Sections are split on "## " headers and matched by keyword.
+     */
+    getPhaseScript(mission: Mission, phase: string): string | null;
+    private loadCorePersona;
+    /**
+     * LEGACY: full 6-layer monolithic prompt (~26K chars). Kept for reference
+     * and A/B comparison; live sessions now use buildCorePrompt().
      */
     buildSessionPrompt(context: PromptBuildContext): string;
+    private generateFinalDirective;
     /**
      * Build a real-time update prompt (sent every 30 seconds)
      */
@@ -57,5 +79,4 @@ export declare class PromptBuilder {
     private formatPhonemeList;
     private daysSince;
 }
-export {};
 //# sourceMappingURL=prompt_builder.d.ts.map

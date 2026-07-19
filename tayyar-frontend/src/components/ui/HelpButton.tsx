@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { API_BASE } from '../../../config';
+import { API_BASE } from '../../config';
 
 interface HelpButtonProps {
   sessionId: string;

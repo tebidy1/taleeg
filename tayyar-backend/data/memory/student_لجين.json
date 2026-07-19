@@ -1,0 +1,33 @@
+{
+  "student_id": "student_لجين",
+  "personal_facts": [
+    "Name: لجين",
+    "City: الرياض"
+  ],
+  "sessions": [
+    {
+      "session_id": "sess_zkimvqwgg",
+      "date": "2026-07-19T07:26:48.128Z",
+      "duration_seconds": 117,
+      "summary": "بدأت رحلة تعليمية مشوقة مع الطالبة لجين بأسلوب لعب الأدوار، حيث تدربت على التعريف بنفسها باللغة الإنجليزية. ركزت الجلسة على ربط جمل التعريف الأساسية ببعضها البعض لتعزيز الطلاقة.",
+      "personal_facts": [
+        "Name: لجين",
+        "City: الرياض"
+      ],
+      "words_practiced": [
+        "Yes",
+        "Hi",
+        "I'm Lujain",
+        "I'm from Riyadh",
+        "Nice to meet you"
+      ],
+      "words_struggled": [
+        "الربط بين الجمل (Hi I'm Lujain I'm from Riyadh)"
+      ],
+      "best_moment": "كانت لحظة حماس لجين وتفاعلها مع قصة المغلف الذهبي في بداية الرحلة هي الأكثر تميزاً.",
+      "engagement": "high",
+      "recommended_next_focus": "التركيز على نطق جملة التعريف كاملة دون انقطاع وتطوير ثقتها في نطق الكلمات.",
+      "cliffhanger_seed": "يا لجين، هل أنتِ مستعدة لفتح المغلف الذهبي الذي ينتظرنا في دبي ومعرفة ما بداخلها؟"
+    }
+  ]
+}

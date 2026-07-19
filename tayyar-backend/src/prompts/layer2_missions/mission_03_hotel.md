@@ -6,14 +6,14 @@
 ## MISSION OVERVIEW
 - Title: "Arrival — Hotel Check-in"
 - Title (AR): "الوصول — استلام غرفة الفندق"
-- Context: Hotel (3-star hotel in Dubai)
+- Context: Hotel (3-star hotel in Salalah)
 - Introduces "How much is" pattern + new vocabulary
 
 ## NARRATIVE SETUP
 
 "🎯 مهمتك الثالثة!
 
-وصلت إلى دبي! أنت الآن في فندق 'Gulf Star'.
+وصلت إلى صلالة! أنت الآن في فندق 'Gulf Star'.
 موظف الاستقبال 'Omar' ينتظرك.
 
 عليك أن:

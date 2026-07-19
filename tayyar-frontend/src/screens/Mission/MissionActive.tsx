@@ -320,7 +320,7 @@ export const MissionActive: React.FC = () => {
           sum += v * v;
         }
         const rms = Math.sqrt(sum / data.length);           // 0..~0.5
-        const level = micActiveRef.current ? Math.min(1, rms * 3.2) : 0;
+        const level = micActiveRef.current ? Math.min(1, rms * 5.5) : 0;
         bars.style.setProperty('--level', level.toFixed(3));
 
         // Client-side end-of-utterance detection — only while the mic is open.
@@ -648,9 +648,9 @@ export const MissionActive: React.FC = () => {
   const stageLabel = celebrating ? ''
     : status === 'connecting' ? 'الكابتن يشغّل المحركات...'
     : status === 'error' ? 'انقطع الاتصال — حاول مرة أخرى'
-    : captainSpeaking ? 'الكابتن يتحدث...'
+    : captainSpeaking ? 'كابتن عامر .. يتكلم'
     : narrationBeat ? 'الكابتن يروي القصة...'
-    : 'دورك — كرّرها 🎤';
+    : `كابتن ${studentName} يتكلم`;
 
   return (
     <div className="mission-screen">
@@ -770,7 +770,7 @@ export const MissionActive: React.FC = () => {
       {/* ── Control bar (fixed) ── */}
       <footer className="m-controls">
         <div className="m-mic-hint">
-          {paused ? 'اضغط ▶ للمتابعة' : captainSpeaking ? 'الكابتن يتحدث...' : narrationBeat ? '' : micActive ? 'دورك — تكلّم' : 'استعد'}
+          {paused ? 'اضغط ▶ للمتابعة' : captainSpeaking ? 'كابتن عامر .. يتكلم' : narrationBeat ? '' : micActive ? `كابتن ${studentName} يتكلم` : 'استعد'}
         </div>
         <div className="m-dock">
           <button className="m-help" onClick={sendHelp} aria-label="مساعدة">

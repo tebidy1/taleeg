@@ -287,7 +287,7 @@
   display: flex; align-items: center; justify-content: center;
   transition: transform .35s cubic-bezier(.2,1.4,.4,1);
 }
-.m-mic-wrap.active { transform: scale(1.22); }
+.m-mic-wrap.active { transform: scale(1.4); }
 .m-mic {
   width: 68px; height: 68px; border-radius: 50%; border: none;
   color: #fff; cursor: pointer; position: relative; z-index: 2;
@@ -297,7 +297,8 @@
 .m-mic.idle  { background: linear-gradient(145deg, #6366f1, #4f46e5); box-shadow: 0 8px 22px rgba(79,70,229,.42); }
 .m-mic.live  {
   background: linear-gradient(145deg, #10b981, #059669); color: #fff;
-  transform: scale(calc(1 + var(--level) * .18));
+  transform: scale(calc(1 + var(--level) * .35));
+  filter: brightness(calc(1 + var(--level) * 0.4));
   animation: micGlow 1.8s ease-in-out infinite;
 }
 .m-mic.dim   { background: linear-gradient(145deg, #6366f1, #4f46e5); box-shadow: 0 8px 22px rgba(79,70,229,.30); opacity: .82; }

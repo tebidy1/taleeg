@@ -65,16 +65,16 @@ export function getMockStudent(): Student {
     };
 }
 
-// ── Free-trial mission registry (الرحلة الأولى: الرياض ← دبي) ─────────────
+// ── Free-trial mission registry (الرحلة الأولى: مسقط ← صلالة) ─────────────
 // The captain persona and teaching protocols live in layer1_core_persona.md;
 // each mission's full script is the matching layer2_missions/*.md file.
 // These objects carry only the overview metadata the core prompt needs.
 
 const CAPTAIN = {
-    name: "الكابتن",
+    name: "الكابتن عامر",
     role: "رفيق الرحلة والطيار",
     personality: "طاقة عالية، رفيق مغامرة لا مُقيّم، عيبه المحبب أنه يتلعثم أحياناً فيصححه الطالب",
-    greeting: "طيران طيّار يرحب بالبطل! الرحلة إلى دبي جاهزة للإقلاع."
+    greeting: "طيران طيّار يرحب بالبطل! الرحلة إلى صلالة جاهزة للإقلاع."
 };
 
 const DEFAULT_ADAPTATION = { hint_threshold_seconds: 2, max_exchanges: 6, simplify_on_failure_count: 2 };
@@ -83,7 +83,7 @@ const MISSIONS: Record<string, Mission> = {
     mission_01_voice_gate: {
         id: "mission_01_voice_gate",
         title: "The Voice Gate", title_ar: "البوابة الصوتية",
-        narrative: "اختير الطالب لمهمة في دبي، ومعه مغلف ذهبي مقفل. عليه عبور بوابة صعود صوتية تفتح فقط لمن يعرّف بنفسه بالإنجليزية بطلاقة بلا توقف.",
+        narrative: "اختير الطالب لمهمة في صلالة، ومعه مغلف ذهبي مقفل. عليه عبور بوابة صعود صوتية تفتح فقط لمن يعرّف بنفسه بالإنجليزية بطلاقة بلا توقف.",
         context: "airport", cefr_level: "A1", phase: 1, order: 1,
         target_patterns: ["pat_001_intro_chain"],
         target_vocabulary: ["Hi I'm [name]", "I'm from [city]", "Nice to meet you"],
@@ -113,10 +113,10 @@ const MISSIONS: Record<string, Mission> = {
         ai_character: CAPTAIN, scenario_flow: [],
         adaptation_rules: DEFAULT_ADAPTATION, base_points: 60, available_badges: ["اللي ما يتجمد"],
     },
-    mission_04_alone_in_dubai: {
-        id: "mission_04_alone_in_dubai",
-        title: "Alone in Dubai", title_ar: "وحدك في دبي",
-        narrative: "أول يوم في دبي. الطالب هو الدليل والكابتن يعتمد عليه. عليه أن يوصلهما للفندق بالسؤال عن الطريق والتعامل مع السائق.",
+    mission_04_alone_in_salalah: {
+        id: "mission_04_alone_in_salalah",
+        title: "Alone in Salalah", title_ar: "وحدك في صلالة",
+        narrative: "أول يوم في صلالة. الطالب هو الدليل والكابتن عامر يعتمد عليه. عليه أن يوصلهما للفندق بالسؤال عن الطريق والتعامل مع السائق.",
         context: "shopping", cefr_level: "A2", phase: 1, order: 4,
         target_patterns: ["pat_004_navigate"],
         target_vocabulary: ["Excuse me, where is the [place]?", "How much is it?", "Thank you so much!"],
@@ -127,18 +127,18 @@ const MISSIONS: Record<string, Mission> = {
     mission_05_cafe_beginning: {
         id: "mission_05_cafe_beginning",
         title: "Café Beginning", title_ar: "مقهى البداية",
-        narrative: "درس الزعيم: محادثة كاملة متصلة مع أم فهد في المقهى تدمج كل ما تعلمه الطالب. الكابتن شبه صامت — الطالب يثبت أنه صار مسافراً.",
+        narrative: "درس الزعيم: محادثة كاملة متصلة مع أم فهد في المقهى تدمج كل ما تعلمه الطالب. الكابتن عامر شبه صامت — الطالب يثبت أنه صار مسافراً.",
         context: "restaurant", cefr_level: "A2", phase: 1, order: 5,
         target_patterns: ["pat_001_intro_chain", "pat_002_polite_request", "pat_003_repair", "pat_004_navigate"],
         target_vocabulary: ["(مراجعة — لا جديد)"],
         target_phonemes: [],
         ai_character: CAPTAIN, scenario_flow: [],
-        adaptation_rules: DEFAULT_ADAPTATION, base_points: 100, available_badges: ["مسافر دبي"],
+        adaptation_rules: DEFAULT_ADAPTATION, base_points: 100, available_badges: ["مسافر صلالة"],
     },
     mission_06_the_grand_finale: {
         id: "mission_06_the_grand_finale",
         title: "The Final Call", title_ar: "النداء الأخير",
-        narrative: "التحدي النهائي للفصل الأول. الكابتن يفقد بطاقته، والطالب هو المنقذ الوحيد الذي سيتحدث مع الموظف الأجنبي لإنقاذ الموقف.",
+        narrative: "التحدي النهائي للفصل الأول. الكابتن عامر يفقد بطاقته، والطالب هو المنقذ الوحيد الذي سيتحدث مع الموظف الأجنبي لإنقاذ الموقف.",
         context: "airport", cefr_level: "A2", phase: 1, order: 6,
         target_patterns: ["pat_001_intro_chain", "pat_002_polite_request", "pat_003_repair"],
         target_vocabulary: ["(مراجعة شاملة)"],
@@ -152,7 +152,7 @@ export const FREE_TRIAL_ORDER = [
     "mission_01_voice_gate",
     "mission_02_last_seat",
     "mission_03_secret_weapon",
-    "mission_04_alone_in_dubai",
+    "mission_04_alone_in_salalah",
     "mission_05_cafe_beginning",
     "mission_06_the_grand_finale",
 ];
@@ -166,9 +166,9 @@ export function getMockMission(missionId?: string): Mission {
 const MISSION_TEASERS: Record<string, string> = {
     mission_01_voice_gate:    "مقعد واحد تبقّى بجانب النافذة... وعائلة تنافسك عليه! من سيصل أولاً للموظف سامي؟",
     mission_02_last_seat:     "الطائرة أقلعت — فجأة المضيفة تنهمر عليك بأسئلة بالإنجليزية ولا تتوقف. هل لديك السلاح السري؟",
-    mission_03_secret_weapon: "لأوّل مرة ستكون وحدك في دبي. الكابتن يتوه... وأنت الدليل. الجميع ينتظرك.",
-    mission_04_alone_in_dubai:"المهمة قبل الأخيرة — مقهى دبي، أم فهد، ومحادثة كاملة وحدك من أوّلها لآخرها. هل صرت مسافراً حقيقياً؟",
-    mission_05_cafe_beginning:"المهمة قبل الأخيرة — مقهى دبي، أم فهد، ومحادثة كاملة وحدك من أوّلها لآخرها. هل صرت مسافراً حقيقياً؟",
+    mission_03_secret_weapon: "لأوّل مرة ستكون وحدك في صلالة. الكابتن يتوه... وأنت الدليل. الجميع ينتظرك.",
+    mission_04_alone_in_salalah:"المهمة قبل الأخيرة — مقهى صلالة، أم فهد، ومحادثة كاملة وحدك من أوّلها لآخرها. هل صرت مسافراً حقيقياً؟",
+    mission_05_cafe_beginning:"المهمة قبل الأخيرة — مقهى صلالة، أم فهد، ومحادثة كاملة وحدك من أوّلها لآخرها. هل صرت مسافراً حقيقياً؟",
     mission_06_the_grand_finale: "التحدي النهائي! الكابتن في ورطة وأنت أمله الوحيد. هل ستتمكن من التحدث مع الموظف الأجنبي لإنقاذ الرحلة؟",
 };
 

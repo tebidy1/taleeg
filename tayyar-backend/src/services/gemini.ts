@@ -32,7 +32,12 @@ export async function createGeminiSession(systemPrompt: string, callbacks: Gemin
                     prebuiltVoiceConfig: { voiceName: 'Charon' }
                 }
             },
-            temperature: 0.8,
+            // 0.6, down from 0.8: the captain also acts as a pronunciation
+            // JUDGE, and high temperature made that judgment inconsistent —
+            // the model would wave through a clearly wrong word. Still warm
+            // enough for theatrical delivery, but far steadier at catching
+            // errors it should catch.
+            temperature: 0.6,
             tools: [{
                 functionDeclarations: [{
                     name: 'yield_turn',

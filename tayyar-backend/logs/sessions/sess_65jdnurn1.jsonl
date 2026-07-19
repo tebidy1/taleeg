@@ -1,0 +1,91 @@
+{"t":"2026-07-18T17:38:28.123Z","type":"session_start","studentId":"student_123","missionId":"mission_01_voice_gate"}
+{"t":"2026-07-18T17:38:28.862Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-18T17:38:28.887Z","type":"user_turn_end"}
+{"t":"2026-07-18T17:38:29.154Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-18T17:38:29.219Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-18T17:38:29.424Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-18T17:38:29.547Z","type":"ai_transcript","text":" — الرحلة"}
+{"t":"2026-07-18T17:38:30.107Z","type":"ai_transcript","text":" ٠٠١"}
+{"t":"2026-07-18T17:38:30.655Z","type":"ai_transcript","text":" إلى"}
+{"t":"2026-07-18T17:38:30.724Z","type":"ai_transcript","text":" دبي"}
+{"t":"2026-07-18T17:38:30.736Z","type":"ai_transcript","text":" جاهزة"}
+{"t":"2026-07-18T17:38:30.980Z","type":"ai_transcript","text":" للإقلاع!"}
+{"t":"2026-07-18T17:38:31.106Z","type":"ai_transcript","text":"\n\nفيصل... وصلك"}
+{"t":"2026-07-18T17:38:31.206Z","type":"ai_transcript","text":" شي"}
+{"t":"2026-07-18T17:38:31.213Z","type":"ai_transcript","text":" ما"}
+{"t":"2026-07-18T17:38:31.219Z","type":"ai_transcript","text":" يوصل"}
+{"t":"2026-07-18T17:38:31.254Z","type":"ai_transcript","text":" إلا لواحد"}
+{"t":"2026-07-18T17:38:31.312Z","type":"ai_transcript","text":" بالمليون."}
+{"t":"2026-07-18T17:38:31.616Z","type":"ai_transcript","text":" رسالة"}
+{"t":"2026-07-18T17:38:31.850Z","type":"ai_transcript","text":" اختيار"}
+{"t":"2026-07-18T17:38:32.017Z","type":"ai_transcript","text":" رسمية"}
+{"t":"2026-07-18T17:38:32.133Z","type":"ai_transcript","text":" — ومعها"}
+{"t":"2026-07-18T17:38:32.286Z","type":"ai_transcript","text":" مغلف"}
+{"t":"2026-07-18T17:38:32.311Z","type":"ai_transcript","text":" ذهبي"}
+{"t":"2026-07-18T17:38:32.314Z","type":"ai_transcript","text":"\n"}
+{"t":"2026-07-18T17:38:32.457Z","type":"ai_transcript","text":" مقفل،"}
+{"t":"2026-07-18T17:38:32.497Z","type":"ai_transcript","text":" مكتوب"}
+{"t":"2026-07-18T17:38:32.519Z","type":"ai_transcript","text":" عليه:"}
+{"t":"2026-07-18T17:38:32.563Z","type":"ai_transcript","text":" لا يُفتح"}
+{"t":"2026-07-18T17:38:32.575Z","type":"ai_transcript","text":" إلا في"}
+{"t":"2026-07-18T17:38:32.601Z","type":"ai_transcript","text":" دبي."}
+{"t":"2026-07-18T17:38:42.628Z","type":"turn_complete"}
+{"t":"2026-07-18T17:38:42.637Z","type":"turn_feedback","result":"correct"}
+{"t":"2026-07-18T17:38:43.141Z","type":"phase_change","phase":"quick_review"}
+{"t":"2026-07-18T17:39:08.190Z","type":"phase_change","phase":"warmup"}
+{"t":"2026-07-18T17:40:08.340Z","type":"phase_change","phase":"mission"}
+{"t":"2026-07-18T17:40:08.349Z","type":"directive","active":false,"preview":"NEXT PHASE SCRIPT (mission). Finish your current step first, then transition smo"}
+{"t":"2026-07-18T17:40:57.279Z","type":"session_start","studentId":"student_123","missionId":"mission_01_voice_gate"}
+{"t":"2026-07-18T17:40:58.002Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-18T17:40:58.013Z","type":"user_turn_end"}
+{"t":"2026-07-18T17:40:58.393Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-18T17:40:58.536Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-18T17:40:58.620Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-18T17:40:58.847Z","type":"ai_transcript","text":" — الرحلة"}
+{"t":"2026-07-18T17:40:59.053Z","type":"ai_transcript","text":" ٠٠١"}
+{"t":"2026-07-18T17:40:59.368Z","type":"ai_transcript","text":" إلى"}
+{"t":"2026-07-18T17:40:59.392Z","type":"ai_transcript","text":" دبي"}
+{"t":"2026-07-18T17:40:59.491Z","type":"ai_transcript","text":" جاهزة"}
+{"t":"2026-07-18T17:40:59.612Z","type":"ai_transcript","text":" للإقلاع!"}
+{"t":"2026-07-18T17:40:59.835Z","type":"ai_transcript","text":"\n\nفيصل... وصلك"}
+{"t":"2026-07-18T17:41:00.441Z","type":"ai_transcript","text":" شي"}
+{"t":"2026-07-18T17:41:00.447Z","type":"ai_transcript","text":" ما"}
+{"t":"2026-07-18T17:41:00.456Z","type":"ai_transcript","text":" يوصل"}
+{"t":"2026-07-18T17:41:00.460Z","type":"ai_transcript","text":" إلا"}
+{"t":"2026-07-18T17:41:00.530Z","type":"ai_transcript","text":" لواحد"}
+{"t":"2026-07-18T17:41:00.663Z","type":"ai_transcript","text":" بالمليون."}
+{"t":"2026-07-18T17:41:01.072Z","type":"ai_transcript","text":" رسالة"}
+{"t":"2026-07-18T17:41:01.113Z","type":"ai_transcript","text":" اختيار"}
+{"t":"2026-07-18T17:41:01.186Z","type":"ai_transcript","text":" رسمية"}
+{"t":"2026-07-18T17:41:01.416Z","type":"ai_transcript","text":" — ومعها"}
+{"t":"2026-07-18T17:41:01.551Z","type":"ai_transcript","text":" مغلف"}
+{"t":"2026-07-18T17:41:01.637Z","type":"ai_transcript","text":" ذهبي"}
+{"t":"2026-07-18T17:41:01.725Z","type":"ai_transcript","text":" مقفل،"}
+{"t":"2026-07-18T17:41:01.867Z","type":"ai_transcript","text":" مكتوب"}
+{"t":"2026-07-18T17:41:02.163Z","type":"ai_transcript","text":" عليه:"}
+{"t":"2026-07-18T17:41:02.170Z","type":"ai_transcript","text":" لا"}
+{"t":"2026-07-18T17:41:02.273Z","type":"ai_transcript","text":" يُفتح"}
+{"t":"2026-07-18T17:41:02.320Z","type":"ai_transcript","text":" إلا"}
+{"t":"2026-07-18T17:41:02.576Z","type":"ai_transcript","text":" في دبي."}
+{"t":"2026-07-18T17:41:02.616Z","type":"ai_transcript","text":"\n\nبوابة الصعود"}
+{"t":"2026-07-18T17:41:03.032Z","type":"ai_transcript","text":" عندنا"}
+{"t":"2026-07-18T17:41:03.123Z","type":"ai_transcript","text":" صوتية."}
+{"t":"2026-07-18T17:41:03.242Z","type":"ai_transcript","text":" ما تفتح"}
+{"t":"2026-07-18T17:41:03.468Z","type":"ai_transcript","text":" إلا لمن"}
+{"t":"2026-07-18T17:41:03.583Z","type":"ai_transcript","text":" يعرّف"}
+{"t":"2026-07-18T17:41:03.689Z","type":"ai_transcript","text":" بنفسه"}
+{"t":"2026-07-18T17:41:03.855Z","type":"ai_transcript","text":" بالإنجليزي"}
+{"t":"2026-07-18T17:41:04.477Z","type":"ai_transcript","text":" — بطلاقة،"}
+{"t":"2026-07-18T17:41:04.490Z","type":"ai_transcript","text":" بدون"}
+{"t":"2026-07-18T17:41:04.494Z","type":"ai_transcript","text":" توقف."}
+{"t":"2026-07-18T17:41:04.604Z","type":"ai_transcript","text":" مستعد؟"}
+{"t":"2026-07-18T17:41:04.737Z","type":"ai_transcript","text":"طيران طيّار"}
+{"t":"2026-07-18T17:41:04.929Z","type":"ai_transcript","text":" يرحب"}
+{"t":"2026-07-18T17:41:05.022Z","type":"ai_transcript","text":" بالبطل"}
+{"t":"2026-07-18T17:41:05.250Z","type":"ai_transcript","text":" فيصل"}
+{"t":"2026-07-18T17:41:05.463Z","type":"ai_transcript","text":" — الرحلة"}
+{"t":"2026-07-18T17:41:05.680Z","type":"ai_transcript","text":" ٠٠١"}
+{"t":"2026-07-18T17:41:05.766Z","type":"ai_transcript","text":" إلى"}
+{"t":"2026-07-18T17:41:05.858Z","type":"ai_transcript","text":" دبي"}
+{"t":"2026-07-18T17:41:06.007Z","type":"ai_transcript","text":" جاهزة"}
+{"t":"2026-07-18T17:41:06.291Z","type":"ai_transcript","text":" للإقلاع!"}

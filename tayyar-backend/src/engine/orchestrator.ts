@@ -25,7 +25,9 @@ import { Student, Mission } from "../types/index";
 const TICK_MS = 5000;
 const REALTIME_UPDATE_EVERY_S = 30;
 const HARD_CAP_S = 480;   // 8:00 — force close (cost guard + peak-end rule)
-const WRAP_NUDGE_S = 390; // 6:30 — actively nudge toward victory close
+const WRAP_NUDGE_S = 435; // 7:15 — actively nudge toward victory close (30s into
+                          //        the widened victory_close window @ 405s, so the
+                          //        natural phase injection gets to run first)
 const STUCK_AFTER_MS = 12000; // silence both sides for 12s after a turn → nudge
 
 type Mood = "confident" | "happy" | "neutral" | "anxious" | "frustrated";
@@ -87,6 +89,16 @@ export class SessionOrchestrator {
     private modelSpeaking = false;
     private userSpokeSinceTurnComplete = false;
     private lastUserTranscriptAt = 0;
+    // True between `activityEnd` (student stopped talking) and the next
+    // serverContent.turnComplete from Gemini. Any sendClientContent with
+    // turnComplete:false during this window puts Gemini into "user is still
+    // talking" mode and the model never responds — the session freezes.
+    private userTurnPending = false;
+
+    // Phase-change script that couldn't be sent because canInject() was false
+    // (model mid-utterance, or a student turn is awaiting model response).
+    // Flushed from tick() the next time the pipeline is idle.
+    private pendingPhaseInjection: { phase: string; text: string } | null = null;
 
     // target-phrase extraction (drives the phrase card)
     private aiTurnText = "";
@@ -161,6 +173,7 @@ export class SessionOrchestrator {
     noteUserTurnEnd() {
         this.log({ type: "user_turn_end" });
         this.userSpokeSinceTurnComplete = true;
+        this.userTurnPending = true;
         this.studentSentences++;
         this.aiTurnText = "";  // next captain turn is a fresh utterance
         this.lastUserTranscriptAt = Date.now();
@@ -173,13 +186,36 @@ export class SessionOrchestrator {
         return this.phase === "warmup" || this.phase === "mission" || this.phase === "multi_context";
     }
 
+    // Correction cues straight from the CORRECTIONS formulas in the core
+    // persona ("تقصد: [correct]", "بس بنطق: ...", "ركّز: [word]"). These are
+    // high-precision — they appear when the captain is fixing a word or sound
+    // and virtually never in praise. We bias toward "correct": only a clear
+    // correction marker downgrades the pulse, so we never demoralize a child
+    // with a false "retry".
+    private static readonly CORRECTION_MARKERS = ["تقصد", "بنطق", "ركّز", "ركز"];
+
+    private detectTurnFeedback(captainText: string): "correct" | "retry" {
+        return SessionOrchestrator.CORRECTION_MARKERS.some(m => captainText.includes(m))
+            ? "retry" : "correct";
+    }
+
     noteTurnComplete() {
         this.modelSpeaking = false;
+        this.userTurnPending = false;
         this.log({ type: "turn_complete" });
         if (this.userSpokeSinceTurnComplete) {
             this.completedExchanges++;
             this.userSpokeSinceTurnComplete = false;
             this.sendToClient({ type: "progress", completedExchanges: this.completedExchanges });
+            // The captain just responded to a student attempt. Read its OWN
+            // transcript (already streaming, zero added cost) for correction
+            // markers and tell the UI whether to resolve the "heard" pulse into
+            // a ✓ (accepted) or a gentle retry cue. The frontend can't judge
+            // pronunciation itself (input transcription is off), so this
+            // server-side signal is the only honest source for the ✓.
+            const feedback = this.detectTurnFeedback(this.aiTurnText);
+            this.sendToClient({ type: "turn_feedback", result: feedback });
+            this.log({ type: "turn_feedback", result: feedback });
             this.lastTurnCompleteAt = 0;   // real exchange completed, not stuck
             this.stuckNudgeSent = false;
         } else {
@@ -192,6 +228,7 @@ export class SessionOrchestrator {
 
     noteInterrupted() {
         this.modelSpeaking = false;
+        this.userTurnPending = false;
         this.log({ type: "interrupted" });
     }
 
@@ -231,6 +268,15 @@ export class SessionOrchestrator {
             return;
         }
 
+        // 1b) flush a deferred phase script if the pipeline is finally idle.
+        //     Injecting turnComplete:false during a pending user turn strands
+        //     Gemini in "user is still talking" mode → hard freeze.
+        if (this.pendingPhaseInjection && this.canInject()) {
+            const { text } = this.pendingPhaseInjection;
+            this.pendingPhaseInjection = null;
+            this.injectDirective(text, false);
+        }
+
         // 2) phase transitions
         const newPhase = detectCurrentPhase(elapsed);
         if (newPhase !== this.phase) {
@@ -266,19 +312,31 @@ export class SessionOrchestrator {
         }
 
         // 4) periodic real-time state update (silent — context only).
-        //    NEVER inject while the captain is mid-utterance. Even a
-        //    turnComplete:false context push can make the Live model abandon
-        //    its current narration (the reported "captain stops mid-sentence"
-        //    bug). We defer rather than drop: lastRealtimeUpdateS is only
-        //    advanced when we actually inject, so the moment the model goes
-        //    idle the next tick fires the (now slightly overdue) update.
+        //    NEVER inject while the captain is mid-utterance OR while a
+        //    student turn is awaiting response. Any turnComplete:false push
+        //    in those windows either makes the Live model abandon its current
+        //    narration (mid-utterance case) or strands Gemini in "user is
+        //    still talking" mode (userTurnPending case — the same class of
+        //    freeze that stopped the mission-phase transition).
+        //    We defer rather than drop: lastRealtimeUpdateS is only advanced
+        //    when we actually inject, so the moment the pipeline goes idle
+        //    the next tick fires the (now slightly overdue) update.
         if (
-            !this.modelSpeaking &&
+            this.canInject() &&
             elapsed - this.lastRealtimeUpdateS >= REALTIME_UPDATE_EVERY_S
         ) {
             this.lastRealtimeUpdateS = elapsed;
             this.injectRealtimeUpdate(elapsed);
         }
+    }
+
+    /**
+     * True when it is safe to sendClientContent(turnComplete:false) — i.e.
+     * the model isn't mid-utterance AND no student turn is awaiting response.
+     * Violating either half hangs the session.
+     */
+    private canInject(): boolean {
+        return !this.modelSpeaking && !this.userTurnPending;
     }
 
     private onPhaseChange(phase: string) {
@@ -301,15 +359,21 @@ export class SessionOrchestrator {
             return;
         }
 
-        // inject this phase's script — the model has never seen it before
+        // inject this phase's script — the model has never seen it before.
+        // If the pipeline isn't idle (model mid-utterance, or a student turn
+        // still awaiting response), DEFER: sending turnComplete:false right
+        // on top of an activityEnd freezes the session. tick() flushes.
         if (!this.injectedPhases.has(phase)) {
             this.injectedPhases.add(phase);
             const script = this.o.promptBuilder.getPhaseScript(this.o.mission, phase);
             if (script) {
-                this.injectDirective(
-                    `NEXT PHASE SCRIPT (${phase}). Finish your current step first, then transition smoothly into this script. Do not announce the transition.\n\n${script}`,
-                    false
-                );
+                const text = `NEXT PHASE SCRIPT (${phase}). Finish your current step first, then transition smoothly into this script. Do not announce the transition.\n\n${script}`;
+                if (this.canInject()) {
+                    this.injectDirective(text, false);
+                } else {
+                    this.pendingPhaseInjection = { phase, text };
+                    this.log({ type: "phase_inject_deferred", phase });
+                }
             }
         }
     }
@@ -415,8 +479,14 @@ export class SessionOrchestrator {
             studentSentences: this.studentSentences,
             durationSeconds: this.elapsedSeconds(),
         });
-        this.o.onForceEnd(reason);
-        this.dispose();
+        // Stop ticking immediately, but DEFER the socket teardown. onForceEnd
+        // closes the WebSocket, and closing it synchronously right after
+        // sendToClient can drop the un-flushed session_end frame — stranding
+        // the UI on the stamp screen with no navigation (the reported "end
+        // screen stays forever" bug). 300ms lets the frame flush; it is
+        // invisible to the child and costs nothing.
+        if (this.timer) { clearInterval(this.timer); this.timer = null; }
+        setTimeout(() => this.o.onForceEnd(reason), 300);
     }
 
     dispose() {

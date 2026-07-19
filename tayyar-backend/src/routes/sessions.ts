@@ -276,7 +276,12 @@ export function setupSessionsWebSocket(wss: WebSocketServer) {
                 }
                 if (parsed.type === 'activity_end' && geminiSession) {
                     geminiSession.sendRealtimeInput({ activityEnd: {} });
-                    orchestrator?.noteUserTurnEnd();
+                    // Only a genuine end-of-utterance (client silence-VAD) is a
+                    // completed student turn. A 'captain-speaks' close just gates
+                    // the mic shut so the captain can't be interrupted; counting
+                    // it as a turn inflated completedExchanges and fired a phantom
+                    // ✓/turn_feedback during pure narration.
+                    if (parsed.reason !== 'captain-speaks') orchestrator?.noteUserTurnEnd();
                     return;
                 }
 
